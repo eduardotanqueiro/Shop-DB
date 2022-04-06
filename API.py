@@ -31,6 +31,75 @@ def db_connection():
 ## ENDPOINTS
 ##########################################################
 
+
+##
+##  REGISTER USER
+##
+
+@app.route('/dbproj/user', methods=['POST'])
+def add_user():
+    logger.info('POST /customer')
+    payload = flask.request.get_json()
+
+    conn = db_connection()
+    cur = conn.cursor()
+
+    logger.debug(f'POST /customer - payload: {payload}')
+
+    # do not forget to validate every argument, e.g.,:
+    if 'username' not in payload or 'mail' not in payload or 'password' not in payload or 'pais' not in payload or 'cidade' not in payload or 'rua' not in payload:
+        response = {'status': StatusCodes['api_error'], 'results': 'Missing value(s) in the payload'}
+        return flask.jsonify(response)
+
+
+
+    # parameterized queries, good for security and performance
+    cur.execute("SELECT MAX(id) FROM utilizador")
+    get_highest_id = cur.fetchall()
+    
+    if get_highest_id == []:
+        id = 0
+    else:        
+        id = get_highest_id[0][0] + 1
+    
+
+
+    statement1 ='INSERT INTO utilizador (id,username,password,mail,nome) VALUES (%s, %s, %s,%s, %s)'
+    values1 = (id, payload['username'], payload['password'], payload['mail'] , payload['nome'])
+
+
+    if len(payload) == 7:
+        statement2 = 'INSERT INTO customer (utilizador_id,pais,cidade,rua) VALUES (%s,%s, %s, %s)'
+        values2 =  (id,payload['pais'], payload['cidade'], payload['rua'] )
+    else:
+        statement2 = 'INSERT INTO customer (utilizador_id,pais,cidade,rua,NIF) VALUES (%s,%s, %s, %s,%s)'
+        values2 =  (id,payload['pais'], payload['cidade'], payload['rua'], payload['nif'])
+
+
+    try:
+        cur.execute(statement1,values1)
+        cur.execute(statement2, values2)
+
+        # commit the transaction
+        conn.commit()
+        response = {'status': StatusCodes['success'], 'results': f'Inserted user {payload["nome"]}'}
+        logger.debug(f'New user inserted with id {id}')
+
+    except (Exception, psycopg2.DatabaseError) as error:
+        logger.error(f'POST /customer - error: {error}')
+        response = {'status': StatusCodes['internal_error'], 'errors': str(error)}
+
+        # an error occurred, rollback
+        conn.rollback()
+
+    finally:
+        if conn is not None:
+            conn.close()
+
+    return flask.jsonify(response)
+
+
+
 ##
 ## GET ALL PRODUCTS 
 ##
@@ -73,7 +142,7 @@ def get_all_products():
 ## GET PRODUCT
 ##
 @app.route('/dbproj/product/<product_id>', methods=['GET'])
-def get_department(product_id):
+def get_product(product_id):
     logger.info('GET /product/<product_id>')
 
     logger.debug(f'product_id: {product_id}')
