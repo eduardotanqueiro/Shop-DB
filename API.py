@@ -3,6 +3,9 @@ import logging
 import psycopg2
 import time
 
+import jwt
+import hashlib as hs
+
 app = flask.Flask(__name__)
 
 StatusCodes = {
@@ -10,6 +13,8 @@ StatusCodes = {
     'api_error': 400,
     'internal_error': 500
 }
+
+jwt_key = 'chave_jwt' #CHANGE TO RANDOM 
 
 ##########################################################
 ## DATABASE ACCESS
@@ -62,10 +67,16 @@ def add_user():
     else:        
         id = get_highest_id[0][0] + 1
     
+    ##TODO
+    ## UNIQUE no ID
+    ##
 
+    #hashing da password
+    bin_pw = str(payload['password']).encode('ascii')
+    hash_pw = hs.md5( bin_pw ).hexdigest()
 
     statement1 ='INSERT INTO utilizador (id,username,password,mail,nome) VALUES (%s, %s, %s,%s, %s)'
-    values1 = (id, payload['username'], payload['password'], payload['mail'] , payload['nome'])
+    values1 = (id, payload['username'], hash_pw , payload['mail'] , payload['nome'])
 
 
     if len(payload) == 7:
@@ -97,6 +108,79 @@ def add_user():
             conn.close()
 
     return flask.jsonify(response)
+
+
+##
+##  LOGIN ROUTINE
+##
+
+@app.route('/dbproj/user', methods=['PUT'])
+def user_login():
+    logger.info('User Login')
+    payload = flask.request.get_json()
+
+    conn = db_connection()
+    cur = conn.cursor()
+
+    logger.debug(f'User login attempt')
+
+    # do not forget to validate every argument, e.g.,:
+    if 'username' not in payload:
+        response = {'status': StatusCodes['api_error'], 'results': 'Missing username value'}
+        return flask.jsonify(response)
+
+    if 'password' not in payload:
+        response = {'status': StatusCodes['api_error'], 'results': 'Missing password value'}
+        return flask.jsonify(response)
+
+
+    #hashing da password
+    bin_pw = str(payload['password']).encode('ascii')
+    hash_pw = hs.md5( bin_pw ).hexdigest()
+
+    #Query searching for matching username and password
+    login_statement = 'SELECT id FROM utilizador WHERE username = %s AND password = %s'
+    values = (payload['username'], hash_pw )
+
+    try:
+        cur.execute(login_statement, values)
+
+        res = cur.fetchall()
+
+        if res == []:
+        #wrong user or password
+            logger.error("Invalid user or password!")
+            response = {'status': StatusCodes['internal_error'], 'errors': 'Invalid username or password!'}
+
+        else:
+        #user and password matched
+            logger.info("User found, creating JWT")
+
+            #create a JWT token
+            token = jwt.encode( {'id': res[0][0],'username': payload['username'], 'user_type':'customer'} ,jwt_key,'HS256')
+
+            #insert token into token's table
+            cur.execute('INSERT INTO login_token (token, utilizador_id) VALUES (%s,%s)',(token,res[0][0]))
+
+            response = {'status': StatusCodes['success'], 'token': token}
+
+        # commit the transaction
+        conn.commit()
+
+    except (Exception, psycopg2.DatabaseError) as error:
+        logger.error(error)
+        response = {'status': StatusCodes['internal_error'], 'errors': str(error)}
+
+        # an error occurred, rollback
+        conn.rollback()
+
+    finally:
+        if conn is not None:
+            conn.close()
+
+    return flask.jsonify(response)
+
+
 
 
 
