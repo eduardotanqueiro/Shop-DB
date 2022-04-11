@@ -1,0 +1,416 @@
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2022 00:11:02] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2022 00:11:02] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:logger:GET /products
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2022 00:11:32] "[35m[1mGET /dbproj/products HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:GET /products
+ERROR:logger:GET /products - error: relation "produto" does not exist
+LINE 1: ...ELECT id,descricao,preco,vendedor_utilizador_id FROM produto
+                                                                ^
+
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2022 00:12:05] "[37mGET /dbproj/products HTTP/1.1[0m" 200 -
+INFO:logger:GET /products
+DEBUG:logger:GET /products - parse
+ERROR:logger:GET /products - error: There are no products to sell
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2022 00:19:34] "[37mGET /dbproj/products HTTP/1.1[0m" 200 -
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'eduardouser', 'mail': 'eduardo@gmail.com', 'password': 'palavrapasse', 'nome': 'eduardo', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Camareiro'}
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2022 00:43:02] "[35m[1mPOST /dbproj/user HTTP/1.1[0m" 500 -
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'eduardouser', 'mail': 'eduardo@gmail.com', 'password': 'palavrapasse', 'nome': 'eduardo', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Camareiro'}
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2022 00:44:37] "[35m[1mPOST /dbproj/user HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'eduardouser', 'mail': 'eduardo@gmail.com', 'password': 'palavrapasse', 'nome': 'eduardo', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Camareiro'}
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2022 00:46:58] "[35m[1mPOST /dbproj/user HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'eduardouser', 'mail': 'eduardo@gmail.com', 'password': 'palavrapasse', 'nome': 'eduardo', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Camareiro'}
+DEBUG:logger:New user inserted with id 0
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2022 00:48:49] "[37mPOST /dbproj/user HTTP/1.1[0m" 200 -
+INFO:logger:User Login
+DEBUG:logger:User login attempt
+INFO:logger:User found, creating JWT
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\json\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\json\\encoder.py', reloading
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2022 00:49:22] "[35m[1mPUT /dbproj/user HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2022 00:52:11] "[33mGET /dbproj/users HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2022 00:52:17] "[33mGET /dbproj/utilizador HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2022 00:52:48] "[33mGET /dbproj/costumer HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2022 00:52:58] "[33mGET /dbproj/produto HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2022 00:53:07] "[33mGET /dbproj/users HTTP/1.1[0m" 404 -
+INFO:logger:GET /products
+DEBUG:logger:GET /products - parse
+ERROR:logger:GET /products - error: There are no products to sell
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2022 00:53:13] "[37mGET /dbproj/products HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:User Login
+DEBUG:logger:User login attempt
+INFO:logger:User found, creating JWT
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2022 11:34:20] "[37mPUT /dbproj/user HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2022 12:06:16] "[35m[1mPOST /dbproj/user HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2022 12:06:58] "[35m[1mPOST /dbproj/user HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:User Login
+DEBUG:logger:User login attempt
+INFO:logger:User found, creating JWT
+ERROR:logger:can't execute an empty query
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2022 13:52:30] "[37mPUT /dbproj/user HTTP/1.1[0m" 200 -
+INFO:logger:User Login
+DEBUG:logger:User login attempt
+INFO:logger:User found, creating JWT
+ERROR:logger:can't execute an empty query
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2022 13:52:45] "[37mPUT /dbproj/user HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'eduardouser', 'mail': 'eduardo@gmail.com', 'password': 'palavrapasse', 'nome': 'eduardo', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Camareiro'}
+ERROR:logger:POST /customer - error: duplicate key value violates unique constraint "utilizador_username_key"
+DETAIL:  Key (username)=(eduardouser) already exists.
+
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2022 13:54:25] "[37mPOST /dbproj/user HTTP/1.1[0m" 200 -
+INFO:logger:User Login
+DEBUG:logger:User login attempt
+INFO:logger:User found, creating JWT
+ERROR:logger:can't execute an empty query
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2022 13:54:41] "[37mPUT /dbproj/user HTTP/1.1[0m" 200 -
+INFO:logger:User Login
+DEBUG:logger:User login attempt
+INFO:logger:User found, creating JWT
+ERROR:logger:can't execute an empty query
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2022 13:54:46] "[37mPUT /dbproj/user HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:User Login
+DEBUG:logger:User login attempt
+INFO:logger:User found, creating JWT
+ERROR:logger:can't execute an empty query
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2022 13:55:09] "[37mPUT /dbproj/user HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:User Login
+DEBUG:logger:User login attempt
+INFO:logger:User found, creating JWT
+ERROR:logger:'int' object does not support indexing
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2022 13:55:32] "[37mPUT /dbproj/user HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:User Login
+DEBUG:logger:User login attempt
+INFO:logger:User found, creating JWT
+ERROR:logger:GET /customer/ - error: column "user_id" does not exist
+LINE 1: SELECT user_id FROM customer WHERE user_id=0
+               ^
+
+ERROR:logger:Object of type Response is not JSON serializable
+INFO:werkzeug:127.0.0.1 - - [11/Apr/2022 13:56:28] "[37mPUT /dbproj/user HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)

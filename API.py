@@ -3,6 +3,7 @@ import logging
 import psycopg2
 import time
 
+
 import jwt
 import hashlib as hs
 
@@ -22,9 +23,9 @@ jwt_key = 'chave_jwt' #CHANGE TO RANDOM
 
 def db_connection():
     db = psycopg2.connect(
-        user='ProjetoBD',
-        password='ProjetoBD',
-        host='127.0.0.1',
+        user='postgres',
+        password='postgres',
+        host='127.17.0.2',
         port='5432',
         database='ProjetoBD'
     )
@@ -61,8 +62,9 @@ def add_user():
     # parameterized queries, good for security and performance
     cur.execute("SELECT MAX(id) FROM utilizador")
     get_highest_id = cur.fetchall()
+    print(get_highest_id)
     
-    if get_highest_id == []:
+    if get_highest_id == [(None,)]:
         id = 0
     else:        
         id = get_highest_id[0][0] + 1
@@ -142,6 +144,8 @@ def user_login():
     login_statement = 'SELECT id FROM utilizador WHERE username = %s AND password = %s'
     values = (payload['username'], hash_pw )
 
+    
+
     try:
         cur.execute(login_statement, values)
 
@@ -152,12 +156,16 @@ def user_login():
             logger.error("Invalid user or password!")
             response = {'status': StatusCodes['internal_error'], 'errors': 'Invalid username or password!'}
 
+        
+
         else:
         #user and password matched
             logger.info("User found, creating JWT")
 
+
             #create a JWT token
-            token = jwt.encode( {'id': res[0][0],'username': payload['username'], 'user_type':'customer'} ,jwt_key,'HS256')
+            token = jwt.encode( {'id': res[0][0],'username': payload['username'], 'user_type':usertype([res[0][0]])} ,jwt_key,'HS256')
+            
 
             #insert token into token's table
             cur.execute('INSERT INTO login_token (token, utilizador_id) VALUES (%s,%s)',(token,res[0][0]))
@@ -258,6 +266,57 @@ def get_product(product_id):
             conn.close()
 
     return flask.jsonify(response)
+
+
+
+def usertype(id):
+    
+    conn = db_connection()
+    cur = conn.cursor()
+
+    try:
+        cur.execute('SELECT utilizador_id FROM customer WHERE utilizador_id=%s', id)
+        rows = cur.fetchall()
+
+        if rows != []:
+            if conn is not None:
+                conn.close()
+            return 'customer'
+            
+        cur.execute('SELECT utilizador_id FROM vendedor WHERE utilizador_id=%s', id)
+        rows = cur.fetchall()
+
+        if rows != []:
+            if conn is not None:
+                conn.close()
+            return 'vendedor'
+        
+        cur.execute('SELECT utilizador_id FROM administrador WHERE utilizador_id =%s', id)
+        rows = cur.fetchall()
+
+        if rows !=[]:
+            if conn is not None:
+                conn.close()
+            return 'administrador'
+        
+    except (psycopg2.DatabaseError) as error:
+        logger.error(f'GET /customer/ - error: {error}')
+        response = {'status': StatusCodes['internal_error'], 'errors': str(error)}
+
+    finally:
+        if conn is not None:
+            conn.close()
+
+    return flask.jsonify(response)
+            
+        
+
+        
+
+   
+
+
+
 
 
 if __name__ == '__main__':
