@@ -17,18 +17,22 @@ StatusCodes = {
 
 jwt_key = 'chave_jwt' #CHANGE TO RANDOM 
 
+user_type_hashed = {'customer': hs.md5('customer'.encode('ascii')).hexdigest(), 'administrador': hs.md5('administrador'.encode('ascii')).hexdigest(), 'vendedor': hs.md5('vendedor'.encode('ascii')).hexdigest()}
+
 ##########################################################
 ## DATABASE ACCESS
 ##########################################################
 
 def db_connection():
     db = psycopg2.connect(
-        user='postgres',
-        password='postgres',
-        host='127.17.0.2',
+        user='ProjetoBD',
+        password='ProjetoBD',
+        host='127.0.0.1',
         port='5432',
         database='ProjetoBD'
     )
+
+    db.set_session(autocommit=False)
 
     return db
 
@@ -126,13 +130,13 @@ def user_login():
 
     logger.debug(f'User login attempt')
 
-    # do not forget to validate every argument, e.g.,:
+    #validate every argument
     if 'username' not in payload:
-        response = {'status': StatusCodes['api_error'], 'results': 'Missing username value'}
+        response = {'status': StatusCodes['api_error'], 'errors': 'Missing username value'}
         return flask.jsonify(response)
 
     if 'password' not in payload:
-        response = {'status': StatusCodes['api_error'], 'results': 'Missing password value'}
+        response = {'status': StatusCodes['api_error'], 'errors': 'Missing password value'}
         return flask.jsonify(response)
 
 
@@ -162,9 +166,14 @@ def user_login():
         #user and password matched
             logger.info("User found, creating JWT")
 
+            #check which user type it is
+            id = str(res[0][0])
+            user_type_check = check_user_type(id)
+
+            logger.debug("Já checkei tipo user")
 
             #create a JWT token
-            token = jwt.encode( {'id': res[0][0],'username': payload['username'], 'user_type':usertype([res[0][0]])} ,jwt_key,'HS256')
+            token = jwt.encode( {'id': id,'username': payload['username'], 'user_type': user_type_hashed[ user_type_check ]} , jwt_key , 'HS256')
             
 
             #insert token into token's table
@@ -189,6 +198,102 @@ def user_login():
     return flask.jsonify(response)
 
 
+##
+## ADD PRODUCT
+##
+
+@app.route('/dbproj/product',methods = ['POST'])
+def add_product():
+
+    logger.info('User Login')
+    payload = flask.request.get_json()
+
+    conn = db_connection()
+    cur = conn.cursor()
+
+    #Check if auth token was received
+    if 'token' not in payload:
+        response = {'status': StatusCodes['api_error'], 'errors': 'Missing auth token'}
+        return flask.jsonify(response)
+
+
+    #1st check if user is customer,seller or admin
+    decode_token = jwt.decode(payload['token'],jwt_key,'HS256')
+    
+    #If user is not seller
+    if decode_token['user_type'] == user_type_hashed['customer'] or decode_token['user_type'] == user_type_hashed['administrador']:
+        response = {'status': StatusCodes['api_error'], 'errors': 'You don\'t have permission to execute this task!'}
+        return flask.jsonify(response)
+
+
+    #2nd check is payload parameters are correct
+    if 'descricao' not in payload or 'preco' not in payload or 'stock' not in payload or 'tipo' not in payload:
+        response = {'status': StatusCodes['api_error'], 'errors': 'Missing values for product in the payload'}
+        return flask.jsonify(response)
+
+
+    if payload['tipo'] == 'smartphone':
+        if 'tamanho' not in payload or 'marca' not in payload or 'ram' not in payload or 'rom' not in payload:
+            response = {'status': StatusCodes['api_error'], 'errors': 'Missing values for product type \'smartphone\' in the payload'}
+            return flask.jsonify(response)
+
+    elif payload['tipo'] == 'tv':
+        if 'tamanho' not in payload or 'marca' not in payload:
+            response = {'status': StatusCodes['api_error'], 'errors': 'Missing values for product type \'tv\' in the payload'}
+            return flask.jsonify(response)
+
+    elif payload['tipo'] == 'pc':
+        if 'cpu' not in payload or 'ram' not in payload or 'rom' not in payload or 'marca' not in payload:
+            response = {'status': StatusCodes['api_error'], 'errors': 'Missing values for product type \'pc\' in the payload'}
+            return flask.jsonify(response)
+    else:
+        response = {'status': StatusCodes['api_error'], 'errors': 'Invalid product type'}
+        return flask.jsonify(response)
+
+
+    #4th Insert product into the correct tables
+
+    try:
+        statement_product = 'INSERT INTO produto (descricao,preco,stock,versao,vendedor_utilizador_id) VALUES (%s,%s,%s,%s,%s)'
+        product_values = (payload['descricao'],payload['preco'],payload['stock'],'1',decode_token['id'])
+        
+        if payload['tipo'] == 'smartphone':
+            statement_specific = 'INSERT INTO smartphone (tamanho,marca,ram,rom,produto_id,produto_versao) VALUES (%s,%s,%s,%s,%s,%s)'
+            #TODO SUBCONSULTA PARA SABER QUAL É O PRODUCT_ID
+            specific_values = (payload['tamanho'],payload['marca'],payload['ram'],payload['rom'], )
+
+        elif payload['tipo'] == 'tv':
+            statement_specific = 'INSERT INTO tv (tamanho,marca,produto_id,produto_versao) VALUES (%s,%s,%s,%s)'
+            #TODO SUBCONSULTA PARA SABER QUAL É O PRODUCT_ID
+            specific_values = (payload['tamanho'],payload['marca'],)
+
+        elif payload['tipo'] == 'pc':
+            statement_specific = 'INSERT INTO pc (cpu,ram,rom,marca,produto_id,produto_versao) VALUES (%s,%s,%s,%s,%s,%s)'
+            #TODO SUBCONSULTA PARA SABER QUAL É O PRODUCT_ID
+            specific_values = (payload['cpu'],payload['ram'],payload['rom'],payload['marca'], )
+
+
+        cur.execute(statement_product,product_values)
+        cur.execute(statement_specific,specific_values)
+
+        conn.commit()
+
+        response = {'status': StatusCodes['success'], 'results': f'Added new product'}
+        logger.debug('New product added')
+
+    except (Exception, psycopg2.DatabaseError) as error:
+        logger.error(error)
+        response = {'status': StatusCodes['internal_error'], 'errors': str(error)}
+
+        # an error occurred, rollback
+        conn.rollback()
+
+    finally:
+        if conn is not None:
+            conn.close()
+
+
+    return flask.jsonify(response)
 
 
 
@@ -269,7 +374,7 @@ def get_product(product_id):
 
 
 
-def usertype(id):
+def check_user_type(id):
     
     conn = db_connection()
     cur = conn.cursor()
@@ -277,6 +382,7 @@ def usertype(id):
     try:
         cur.execute('SELECT utilizador_id FROM customer WHERE utilizador_id=%s', id)
         rows = cur.fetchall()
+
 
         if rows != []:
             if conn is not None:
