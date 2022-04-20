@@ -646,3 +646,303 @@ INFO:logger:POST /customer
 DEBUG:logger:POST /customer - payload: {'username': 'joanauser', 'mail': 'joana@gmail.com', 'password': 'pwjoana', 'nome': 'joana', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joana'}
 DEBUG:logger:New user inserted
 INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 18:08:20] "POST /dbproj/user HTTP/1.1" 200 -
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:User Login
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 19:04:45] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:logger:User Login
+DEBUG:logger:User login attempt
+ERROR:logger:Invalid user or password!
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 19:05:49] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'joanauser', 'mail': 'joana@gmail.com', 'password': 'pwjoana', 'nome': 'joana', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joana'}
+ERROR:logger:POST /customer - error: procedure insert_customer(unknown, unknown, unknown, unknown, unknown, unknown, unknown) does not exist
+LINE 1: call insert_customer('joanauser','7b73d51e27a69e14d39c693bc6...
+             ^
+HINT:  No procedure matches the given name and argument types. You might need to add explicit type casts.
+
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 20:53:50] "POST /dbproj/user HTTP/1.1" 200 -
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'joanauser', 'mail': 'joana@gmail.com', 'password': 'pwjoana', 'nome': 'joana', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joana'}
+INFO:logger:New user inserted
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 20:54:24] "POST /dbproj/user HTTP/1.1" 200 -
+INFO:logger:User Login
+DEBUG:logger:User login attempt
+INFO:logger:User found, creating JWT
+DEBUG:logger:Já checkei tipo user
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 20:54:34] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:User Login
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 20:55:36] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:logger:User Login
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 20:58:59] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:User Login Product Insertion
+ERROR:logger:procedure insert_tv(unknown, numeric, integer, unknown, integer, unknown) does not exist
+LINE 1: call insert_tv('produto1 descricao bonita',3.2,20,'2',15,'LG...
+             ^
+HINT:  No procedure matches the given name and argument types. You might need to add explicit type casts.
+
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 20:59:32] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:User Login Product Insertion
+ERROR:logger:procedure insert_tv(unknown, numeric, integer, unknown, integer, unknown) does not exist
+LINE 1: call insert_tv('produto1 descricao bonita',3.2,20,'2',15,'LG...
+             ^
+HINT:  No procedure matches the given name and argument types. You might need to add explicit type casts.
+
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 21:00:47] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:User Login Product Insertion
+ERROR:logger:procedure insert_tv(unknown, numeric, integer, integer, integer, unknown) does not exist
+LINE 1: call insert_tv('produto1 descricao bonita',3.2,20,2,15,'LG')
+             ^
+HINT:  No procedure matches the given name and argument types. You might need to add explicit type casts.
+
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 21:01:26] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:logger:User Login Product Insertion
+ERROR:logger:procedure insert_tv(unknown, numeric, integer, integer, integer, unknown) does not exist
+LINE 1: call insert_tv('produto1 descricao bonita',3.2,20,2,15,'LG')
+             ^
+HINT:  No procedure matches the given name and argument types. You might need to add explicit type casts.
+
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 21:12:20] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:logger:User Login Product Insertion
+ERROR:logger:null value in column "id" of relation "produto" violates not-null constraint
+DETAIL:  Failing row contains (null, produto1 descricao bonita, 3.2, 20, 1, 2).
+CONTEXT:  SQL statement "insert into produto(id,versao,descricao,preco,stock,vendedor_utilizador_id) values (id_max+1,1,descricao,preco,stock,vendedor_user_id)"
+PL/pgSQL function insert_tv(character varying,real,integer,integer,smallint,character varying) line 18 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 21:15:31] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:User Login Product Insertion
+ERROR:logger:procedure insert_tv(unknown, unknown, unknown, unknown, unknown, unknown) is not unique
+LINE 1: call insert_tv('produto1 descricao bonita','3.20','20','2','...
+             ^
+HINT:  Could not choose a best candidate procedure. You might need to add explicit type casts.
+
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 21:16:02] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:logger:User Login Product Insertion
+ERROR:logger:procedure insert_tv(unknown, numeric, integer, unknown, integer, unknown) does not exist
+LINE 1: call insert_tv('produto1 descricao bonita',3.2,20,'2',15,'LG...
+             ^
+HINT:  No procedure matches the given name and argument types. You might need to add explicit type casts.
+
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 21:17:41] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:User Login Product Insertion
+ERROR:logger:procedure insert_tv(unknown, numeric, integer, integer, integer, unknown) does not exist
+LINE 1: call insert_tv('produto1 descricao bonita',3.2,20,2,15,'LG')
+             ^
+HINT:  No procedure matches the given name and argument types. You might need to add explicit type casts.
+
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 21:18:40] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:User Login Product Insertion
+ERROR:logger:null value in column "id" of relation "produto" violates not-null constraint
+DETAIL:  Failing row contains (null, produto1 descricao bonita, 3.2, 20, 1, 2).
+CONTEXT:  SQL statement "insert into produto(id,versao,descricao,preco,stock,vendedor_utilizador_id) values (id_max+1,1,descricao,preco,stock,vendedor_user_id)"
+PL/pgSQL function insert_tv(character varying,real,integer,integer,smallint,character varying) line 18 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 21:28:11] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:User Login Product Insertion
+ERROR:logger:procedure insert_tv(unknown, numeric, integer, integer, integer, unknown) does not exist
+LINE 1: call insert_tv('produto1 descricao bonita',3.2,20,2,15,'LG')
+             ^
+HINT:  No procedure matches the given name and argument types. You might need to add explicit type casts.
+
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 21:32:03] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:User Login Product Insertion
+ERROR:logger:null value in column "id" of relation "produto" violates not-null constraint
+DETAIL:  Failing row contains (null, produto1 descricao bonita, 3.2, 20, 1, 2).
+CONTEXT:  SQL statement "insert into produto(id,versao,descricao,preco,stock,vendedor_utilizador_id) values (id_max+1,1,descricao,preco,stock,vendedor_user_id)"
+PL/pgSQL function insert_tv(character varying,real,integer,integer,smallint,character varying) line 18 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 21:32:41] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:logger:User Login Product Insertion
+ERROR:logger:null value in column "id" of relation "produto" violates not-null constraint
+DETAIL:  Failing row contains (null, produto1 descricao bonita, 3.2, 20, 1, 2).
+CONTEXT:  SQL statement "insert into produto(id,versao,descricao,preco,stock,vendedor_utilizador_id) values (id_max+1,1,descricao,preco,stock,vendedor_user_id)"
+PL/pgSQL function insert_tv(character varying,real,integer,integer,smallint,character varying) line 18 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 21:37:49] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:logger:User Login Product Insertion
+ERROR:logger:null value in column "id" of relation "produto" violates not-null constraint
+DETAIL:  Failing row contains (null, produto1 descricao bonita, 3.2, 20, 1, 2).
+CONTEXT:  SQL statement "insert into produto(id,versao,descricao,preco,stock,vendedor_utilizador_id) values (id_max+1,1,descricao,preco,stock,vendedor_user_id)"
+PL/pgSQL function insert_tv(character varying,real,integer,integer,smallint,character varying) line 18 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 21:39:05] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:logger:User Login Product Insertion
+ERROR:logger:null value in column "id" of relation "produto" violates not-null constraint
+DETAIL:  Failing row contains (null, produto1 descricao bonita, 3.2, 20, 1, 2).
+CONTEXT:  SQL statement "insert into produto(id,versao,descricao,preco,stock,vendedor_utilizador_id) values (id_max+1,1,descricao,preco,stock,vendedor_user_id)"
+PL/pgSQL function insert_tv(character varying,real,integer,integer,smallint,character varying) line 18 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 21:39:42] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:logger:User Login Product Insertion
+ERROR:logger:null value in column "id" of relation "produto" violates not-null constraint
+DETAIL:  Failing row contains (null, produto1 descricao bonita, 3.2, 20, 1, 2).
+CONTEXT:  SQL statement "insert into produto(id,versao,descricao,preco,stock,vendedor_utilizador_id) values (id_max+1,1,descricao,preco,stock,vendedor_user_id)"
+PL/pgSQL function insert_tv(character varying,real,integer,integer,smallint,character varying) line 18 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 21:42:12] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:User Login Product Insertion
+ERROR:logger:null value in column "id" of relation "produto" violates not-null constraint
+DETAIL:  Failing row contains (null, produto1 descricao bonita, 3.2, 20, 1, 2).
+CONTEXT:  SQL statement "insert into produto(id,versao,descricao,preco,stock,vendedor_utilizador_id) values (id_max+1,1,descricao,preco,stock,vendedor_user_id)"
+PL/pgSQL function insert_tv(character varying,real,integer,integer,smallint,character varying) line 18 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 21:43:16] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:logger:User Login Product Insertion
+ERROR:logger:null value in column "id" of relation "produto" violates not-null constraint
+DETAIL:  Failing row contains (null, produto1 descricao bonita, 3.2, 20, 1, 2).
+CONTEXT:  SQL statement "insert into produto(id,versao,descricao,preco,stock,vendedor_utilizador_id) values (id_max+1,1,descricao,preco,stock,vendedor_user_id)"
+PL/pgSQL function insert_tv(character varying,real,integer,integer,smallint,character varying) line 18 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 21:46:18] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:logger:User Login Product Insertion
+DEBUG:logger:New product added
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 21:53:35] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:logger:User Login Product Insertion
+ERROR:logger:duplicate key value violates unique constraint "produto_pkey"
+DETAIL:  Key (id, versao)=(0, 1) already exists.
+CONTEXT:  SQL statement "insert into produto(id,descricao,preco,stock,versao,vendedor_utilizador_id) values (0,descricao,preco,stock,1,vendedor_user_id)"
+PL/pgSQL function insert_tv(character varying,real,integer,bigint,smallint,character varying) line 27 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 21:54:29] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:logger:User Login Product Insertion
+ERROR:logger:duplicate key value violates unique constraint "produto_versao_key"
+DETAIL:  Key (versao)=(1) already exists.
+CONTEXT:  SQL statement "insert into produto(id,descricao,preco,stock,versao,vendedor_utilizador_id) values (id_max+1,descricao,preco,stock,1,vendedor_user_id)"
+PL/pgSQL function insert_tv(character varying,real,integer,bigint,smallint,character varying) line 19 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 21:55:24] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:logger:User Login Product Insertion
+ERROR:logger:null value in column "id" of relation "produto" violates not-null constraint
+DETAIL:  Failing row contains (null, produto1 descricao bonita, 5, 40, 1, 2).
+CONTEXT:  SQL statement "insert into produto(id,descricao,preco,stock,versao,vendedor_utilizador_id) values (id_max+1,descricao,preco,stock,1,vendedor_user_id)"
+PL/pgSQL function insert_tv(character varying,real,integer,bigint,smallint,character varying) line 19 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 21:57:46] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:logger:User Login Product Insertion
+DEBUG:logger:New product added
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 21:59:36] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:logger:User Login Product Insertion
+ERROR:logger:duplicate key value violates unique constraint "produto_versao_key"
+DETAIL:  Key (versao)=(1) already exists.
+CONTEXT:  SQL statement "insert into produto(id,descricao,preco,stock,versao,vendedor_utilizador_id) values (id_max+1,descricao,preco,stock,1,vendedor_user_id)"
+PL/pgSQL function insert_tv(character varying,real,integer,bigint,smallint,character varying) line 19 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 22:00:18] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:logger:User Login Product Insertion
+ERROR:logger:duplicate key value violates unique constraint "produto_versao_key"
+DETAIL:  Key (versao)=(1) already exists.
+CONTEXT:  SQL statement "insert into produto(id,descricao,preco,stock,versao,vendedor_utilizador_id) values (id_max+1,descricao,preco,stock,1,vendedor_user_id)"
+PL/pgSQL function insert_tv(character varying,real,integer,bigint,smallint,character varying) line 21 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 22:05:16] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'joanauser', 'mail': 'joana@gmail.com', 'password': 'pwjoana', 'nome': 'joana', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joana'}
+INFO:logger:New user inserted
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 22:24:28] "POST /dbproj/user HTTP/1.1" 200 -
+INFO:logger:User Login
+DEBUG:logger:User login attempt
+INFO:logger:User found, creating JWT
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 22:24:36] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:User Login Product Insertion
+DEBUG:logger:New product added
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 22:24:44] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:logger:User Login Product Insertion
+DEBUG:logger:New product added
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 22:25:08] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:User Login Product Insertion
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 22:33:29] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:logger:User Login Product Insertion
+DEBUG:logger:New product added
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 22:33:51] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:logger:User Login Product Insertion
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 22:34:58] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:logger:User Login Product Insertion
+DEBUG:logger:New product added
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 22:35:42] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)

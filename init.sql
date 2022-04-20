@@ -12,21 +12,21 @@ CREATE TABLE vendedor (
 	pais		 VARCHAR(30) NOT NULL,
 	cidade	 VARCHAR(35) NOT NULL,
 	rua		 VARCHAR(130) NOT NULL,
-	utilizador_id INTEGER UNIQUE,
+	utilizador_id INTEGER UNIQUE NOT NULL,
 	PRIMARY KEY(utilizador_id)
 );
 
 CREATE TABLE administrador (
-	utilizador_id INTEGER UNIQUE,
+	utilizador_id INTEGER UNIQUE NOT NULL,
 	PRIMARY KEY(utilizador_id)
 );
 
 CREATE TABLE produto (
-	id		 BIGINT UNIQUE,
+	id		 BIGINT NOT NULL,
 	descricao		 VARCHAR(512),
 	preco			 FLOAT(8) NOT NULL,
 	stock			 INTEGER NOT NULL,
-	versao		 SMALLINT UNIQUE,
+	versao		 SMALLINT NOT NULL,
 	vendedor_utilizador_id BIGINT NOT NULL,
 	PRIMARY KEY(id,versao)
 );
@@ -36,16 +36,16 @@ CREATE TABLE smartphone (
 	marca		 VARCHAR(50) NOT NULL,
 	ram		 SMALLINT NOT NULL,
 	rom		 SMALLINT NOT NULL,
-	produto_id	 BIGINT UNIQUE,
-	produto_versao SMALLINT UNIQUE,
+	produto_id	 BIGINT NOT NULL,
+	produto_versao SMALLINT NOT NULL,
 	PRIMARY KEY(produto_id,produto_versao)
 );
 
 CREATE TABLE tv (
 	tamanho	 SMALLINT NOT NULL,
 	marca		 VARCHAR(50) NOT NULL,
-	produto_id	 BIGINT UNIQUE,
-	produto_versao SMALLINT UNIQUE,
+	produto_id	 BIGINT NOT NULL,
+	produto_versao SMALLINT NOT NULL,
 	PRIMARY KEY(produto_id,produto_versao)
 );
 
@@ -54,13 +54,13 @@ CREATE TABLE pc (
 	ram		 SMALLINT NOT NULL,
 	rom		 SMALLINT NOT NULL,
 	marca		 VARCHAR(50) NOT NULL,
-	produto_id	 BIGINT UNIQUE,
-	produto_versao SMALLINT UNIQUE,
+	produto_id	 BIGINT NOT NULL,
+	produto_versao SMALLINT NOT NULL,
 	PRIMARY KEY(produto_id,produto_versao)
 );
 
 CREATE TABLE comentario_notificacao (
-	id			 SERIAL UNIQUE,
+	id			 SERIAL UNIQUE NOT NULL,
 	id_anterior INTEGER,
 	texto			 VARCHAR(512) NOT NULL,
 	utilizador_id		 BIGINT NOT NULL,
@@ -85,15 +85,15 @@ CREATE TABLE campanha (
 
 --------------------------------------VER
 CREATE TABLE cupao (
-	numero	INTEGER UNIQUE,
+	numero	INTEGER NOT NULL ,
 	cupao_ativo	 BOOL NOT NULL,
 	data_atribuicao DATE NOT NULL,
-	campanha_id	 INTEGER UNIQUE,
+	campanha_id	 INTEGER NOT NULL,
 	PRIMARY KEY(numero,campanha_id)
 );
 
 CREATE TABLE compra_notificacao (
-	id			 SERIAL UNIQUE,
+	id			 SERIAL UNIQUE NOT NULL,
 	data_compra		 DATE NOT NULL,
 	valor_pago		 FLOAT(8) NOT NULL,
 	valor_do_desconto	 FLOAT(8) NOT NULL,
@@ -104,7 +104,7 @@ CREATE TABLE compra_notificacao (
 );
 
 CREATE TABLE utilizador (
-	id	 SERIAL UNIQUE,
+	id	 SERIAL UNIQUE NOT NULL,
 	username VARCHAR(25) UNIQUE NOT NULL,
 	password VARCHAR(100) NOT NULL,
 	mail	 VARCHAR(512) UNIQUE NOT NULL,
@@ -115,7 +115,7 @@ CREATE TABLE utilizador (
 CREATE TABLE rating (
 	classificacao		 INTEGER NOT NULL,
 	descricao		 VARCHAR(512),
-	compra_id		 INTEGER UNIQUE,
+	compra_id		 INTEGER NOT NULL,
 	customer_utilizador_id BIGINT NOT NULL,
 	produto_id		 BIGINT NOT NULL,
 	produto_versao	 SMALLINT NOT NULL,
@@ -123,16 +123,16 @@ CREATE TABLE rating (
 );
 
 CREATE TABLE login_token (
-	token	 VARCHAR(512),
+	token	 VARCHAR(512) NOT NULL,
 	utilizador_id BIGINT NOT NULL,
 	PRIMARY KEY(token)
 );
 
 CREATE TABLE transacao_compra (
-	quantidade	 INTEGER,
-	compra_id	 INTEGER UNIQUE,
-	produto_id	 BIGINT UNIQUE,
-	produto_versao SMALLINT UNIQUE,
+	quantidade	 INTEGER NOT NULL,
+	compra_id	 INTEGER NOT NULL,
+	produto_id	 BIGINT NOT NULL,
+	produto_versao SMALLINT NOT NULL,
 	PRIMARY KEY(compra_id,produto_id,produto_versao)
 );
 
@@ -143,8 +143,8 @@ CREATE TABLE compra_notificacao_cupao (
 
 CREATE TABLE customer_cupao (
 	customer_utilizador_id BIGINT NOT NULL,
-	cupao_numero		 INTEGER UNIQUE,
-	cupao_campanha_id	 INTEGER UNIQUE,
+	cupao_numero		 INTEGER UNIQUE NOT NULL,
+	cupao_campanha_id	 INTEGER UNIQUE NOT NULL,
 	PRIMARY KEY(cupao_numero,cupao_campanha_id)
 );
 

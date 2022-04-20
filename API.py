@@ -147,7 +147,7 @@ def user_login():
             id = str(res[0][0])
             user_type_check = check_user_type(id)
 
-            logger.debug("Já checkei tipo user")
+            #logger.debug("Já checkei tipo user")
 
             #create a JWT token
             token = jwt.encode( {'id': id,'username': payload['username'], 'user_type': user_type_hashed[ user_type_check ]} , jwt_key , 'HS256')
@@ -182,7 +182,7 @@ def user_login():
 @app.route('/dbproj/product',methods = ['POST'])
 def add_product():
 
-    logger.info('User Login')
+    logger.info('User Login Product Insertion')
     payload = flask.request.get_json()
 
     conn = db_connection()
@@ -229,27 +229,28 @@ def add_product():
 
 
     #4th Insert product into the correct tables
+    decode_token[ 'id'] = int(decode_token['id'])
 
     try:
 
         
         if payload['tipo'] == 'smartphone':
 
-            values = (payload['descricao'],payload['preco'],payload['stock'],decode_token['id'],payload['tamanho'],payload['marca'],payload['ram'],payload['rom'])
+            values = (payload['descricao'],payload['preco'],payload['stock'], decode_token['id'] ,payload['tamanho'],payload['marca'],payload['ram'],payload['rom'])
 
-            cur.execute("call insert_smartphone(%s,%s,%s,%s,%s,%s,%s,%s)", values)
+            cur.execute("call insert_smartphone(%s::VARCHAR,%s::FLOAT(8),%s::INTEGER,%s::INTEGER,%s::SMALLINT,%s::VARCHAR,%s::SMALLINT,%s::SMALLINT)", values)
 
         elif payload['tipo'] == 'tv':
 
-            values = (payload['descricao'],payload['preco'],payload['stock'],decode_token['id'],payload['tamanho'],payload['marca'])
+            values = (payload['descricao'],payload['preco'],payload['stock'], decode_token['id'] ,payload['tamanho'],payload['marca'])
 
-            cur.execute("call insert_tv(%s,%s,%s,%s,%s,%s)", values)
+            cur.execute("call insert_tv(%s::VARCHAR,%s::FLOAT(8),%s::INTEGER,%s::INTEGER,%s::SMALLINT,%s::VARCHAR)", values)
 
         elif payload['tipo'] == 'pc':
 
-            values = (payload['descricao'],payload['preco'],payload['stock'],decode_token['id'],payload['cpu'],payload['ram'],payload['rom'],payload['marca'])
+            values = (payload['descricao'],payload['preco'],payload['stock'], decode_token['id'],payload['cpu'],payload['ram'],payload['rom'],payload['marca'])
 
-            cur.execute("call insert_pc(%s,%s,%s,%s,%s,%s,%s,%s)", values)
+            cur.execute("call insert_pc(%s::VARCHAR,%s::FLOAT(8),%s::INTEGER,%s::INTEGER,%s::VARCHAR,%s::SMALLINT,%s::SMALLINT,%s::VARCHAR)", values)
 
 
         conn.commit()

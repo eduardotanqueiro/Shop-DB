@@ -44,12 +44,23 @@ begin
     into id_max;
     close cur_max_id;
 
-    --inserir na tabela produto
-    insert into produto(id,versao,descricao,preco,stock,vendedor_utilizador_id) values (id_max+1,1,descricao,preco,stock,vendedor_user_id);
+    if id_max IS NOT NULL then
 
-    --inserir na tabela smartphone
-    insert into smartphone(tamanho,marca,ram,rom,produto_id,produto_versao) values (tamanho,marca,ram,rom,id_max +1,1);
+        --inserir na tabela produto
+        insert into produto(id,descricao,preco,stock,versao,vendedor_utilizador_id) values (id_max+1,descricao,preco,stock,1,vendedor_user_id);
 
+        --inserir na tabela smartphone
+        insert into smartphone(tamanho,marca,ram,rom,produto_id,produto_versao) values (tamanho,marca,ram,rom,id_max +1,1);
+    
+    else
+
+        --inserir na tabela produto
+        insert into produto(id,descricao,preco,stock,versao,vendedor_utilizador_id) values (0,descricao,preco,stock,1,vendedor_user_id);
+
+        --inserir na tabela smartphone
+        insert into smartphone(tamanho,marca,ram,rom,produto_id,produto_versao) values (tamanho,marca,ram,rom,0,1);
+
+    end if;
 end;
 $$;
 
@@ -69,13 +80,25 @@ begin
     open cur_max_id;
     fetch cur_max_id
     into id_max;
+
+    if id_max IS NOT NULL then
+        
+        --inserir na tabela produto
+        insert into produto(id,descricao,preco,stock,versao,vendedor_utilizador_id) values (id_max+1,descricao,preco,stock,1,vendedor_user_id);
+
+        --inserir na tabela tv
+        insert into tv(tamanho,marca,produto_id,produto_versao) values (tamanho,marca,id_max +1,1);
+    
+    else
+        --inserir na tabela produto
+        insert into produto(id,descricao,preco,stock,versao,vendedor_utilizador_id) values (0,descricao,preco,stock,1,vendedor_user_id);
+
+        --inserir na tabela tv
+        insert into tv(tamanho,marca,produto_id,produto_versao) values (tamanho,marca,0,1);
+
+    end if;
+
     close cur_max_id;
-
-    --inserir na tabela produto
-    insert into produto(id,versao,descricao,preco,stock,vendedor_utilizador_id) values (id_max+1,1,descricao,preco,stock,vendedor_user_id);
-
-    --inserir na tabela tv
-    insert into tv(tamanho,marca,produto_id,produto_versao) values (tamanho,marca,id_max +1,1);
 
 end;
 $$;
@@ -98,11 +121,21 @@ begin
     into id_max;
     close cur_max_id;
 
-    --inserir na tabela produto
-    insert into produto(id,versao,descricao,preco,stock,vendedor_utilizador_id) values (id_max+1,1,descricao,preco,stock,vendedor_user_id);
+    if id_max IS NOT NULL then
 
-    --inserir na tabela pc
-    insert into pc(cpu,ram,rom,marca,produto_id,produto_versao) values (cpu,ram,rom,marca,id_max +1,1);
+        --inserir na tabela produto
+        insert into produto(id,descricao,preco,stock,versao,vendedor_utilizador_id) values (id_max+1,descricao,preco,stock,1,vendedor_user_id);
+
+        --inserir na tabela pc
+        insert into pc(cpu,ram,rom,marca,produto_id,produto_versao) values (cpu,ram,rom,marca,id_max +1,1);
+
+    else
+        --inserir na tabela produto
+        insert into produto(id,descricao,preco,stock,versao,vendedor_utilizador_id) values (0,descricao,preco,stock,1,vendedor_user_id);
+
+        --inserir na tabela pc
+        insert into pc(cpu,ram,rom,marca,produto_id,produto_versao) values (cpu,ram,rom,marca,0,1);
+    end if;
 
 end;
 $$;
