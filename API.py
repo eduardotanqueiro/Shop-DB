@@ -56,51 +56,28 @@ def add_user():
 
     logger.debug(f'POST /customer - payload: {payload}')
 
-    # do not forget to validate every argument, e.g.,:
+    #verify arguments
     if 'username' not in payload or 'mail' not in payload or 'password' not in payload or 'pais' not in payload or 'cidade' not in payload or 'rua' not in payload:
         response = {'status': StatusCodes['api_error'], 'results': 'Missing value(s) in the payload'}
         return flask.jsonify(response)
 
 
-
-    # parameterized queries, good for security and performance
-    cur.execute("SELECT MAX(id) FROM utilizador")
-    get_highest_id = cur.fetchall()
-    print(get_highest_id)
-    
-    if get_highest_id == [(None,)]:
-        id = 0
-    else:        
-        id = get_highest_id[0][0] + 1
-    
-    ##TODO
-    ## UNIQUE no ID
-    ##
-
     #hashing da password
     bin_pw = str(payload['password']).encode('ascii')
     hash_pw = hs.md5( bin_pw ).hexdigest()
 
-    statement1 ='INSERT INTO utilizador (id,username,password,mail,nome) VALUES (%s, %s, %s,%s, %s)'
-    values1 = (id, payload['username'], hash_pw , payload['mail'] , payload['nome'])
+    values = (payload['username'], hash_pw , payload['mail'] , payload['nome'], payload['pais'], payload['cidade'], payload['rua'])
 
-
-    if len(payload) == 7:
-        statement2 = 'INSERT INTO customer (utilizador_id,pais,cidade,rua) VALUES (%s,%s, %s, %s)'
-        values2 =  (id,payload['pais'], payload['cidade'], payload['rua'] )
-    else:
-        statement2 = 'INSERT INTO customer (utilizador_id,pais,cidade,rua,NIF) VALUES (%s,%s, %s, %s,%s)'
-        values2 =  (id,payload['pais'], payload['cidade'], payload['rua'], payload['nif'])
-
+    #TODO -> FAZER A VERIFICAÇÃO SE VIER COM NIF OU NÃO
 
     try:
-        cur.execute(statement1,values1)
-        cur.execute(statement2, values2)
+        cur.execute("call insert_customer(%s,%s,%s,%s,%s,%s,%s)",values)
 
         # commit the transaction
         conn.commit()
+
         response = {'status': StatusCodes['success'], 'results': f'Inserted user {payload["nome"]}'}
-        logger.debug(f'New user inserted with id {id}')
+        logger.info(f'New user inserted')
 
     except (Exception, psycopg2.DatabaseError) as error:
         logger.error(f'POST /customer - error: {error}')
@@ -254,27 +231,26 @@ def add_product():
     #4th Insert product into the correct tables
 
     try:
-        statement_product = 'INSERT INTO produto (descricao,preco,stock,versao,vendedor_utilizador_id) VALUES (%s,%s,%s,%s,%s)'
-        product_values = (payload['descricao'],payload['preco'],payload['stock'],'1',decode_token['id'])
+
         
         if payload['tipo'] == 'smartphone':
-            statement_specific = 'INSERT INTO smartphone (tamanho,marca,ram,rom,produto_id,produto_versao) VALUES (%s,%s,%s,%s,%s,%s)'
-            #TODO SUBCONSULTA PARA SABER QUAL É O PRODUCT_ID
-            specific_values = (payload['tamanho'],payload['marca'],payload['ram'],payload['rom'], )
+
+            values = (payload['descricao'],payload['preco'],payload['stock'],decode_token['id'],payload['tamanho'],payload['marca'],payload['ram'],payload['rom'])
+
+            cur.execute("call insert_smartphone(%s,%s,%s,%s,%s,%s,%s,%s)", values)
 
         elif payload['tipo'] == 'tv':
-            statement_specific = 'INSERT INTO tv (tamanho,marca,produto_id,produto_versao) VALUES (%s,%s,%s,%s)'
-            #TODO SUBCONSULTA PARA SABER QUAL É O PRODUCT_ID
-            specific_values = (payload['tamanho'],payload['marca'],)
+
+            values = (payload['descricao'],payload['preco'],payload['stock'],decode_token['id'],payload['tamanho'],payload['marca'])
+
+            cur.execute("call insert_tv(%s,%s,%s,%s,%s,%s)", values)
 
         elif payload['tipo'] == 'pc':
-            statement_specific = 'INSERT INTO pc (cpu,ram,rom,marca,produto_id,produto_versao) VALUES (%s,%s,%s,%s,%s,%s)'
-            #TODO SUBCONSULTA PARA SABER QUAL É O PRODUCT_ID
-            specific_values = (payload['cpu'],payload['ram'],payload['rom'],payload['marca'], )
 
+            values = (payload['descricao'],payload['preco'],payload['stock'],decode_token['id'],payload['cpu'],payload['ram'],payload['rom'],payload['marca'])
 
-        cur.execute(statement_product,product_values)
-        cur.execute(statement_specific,specific_values)
+            cur.execute("call insert_pc(%s,%s,%s,%s,%s,%s,%s,%s)", values)
+
 
         conn.commit()
 

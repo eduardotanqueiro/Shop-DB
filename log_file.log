@@ -414,3 +414,235 @@ INFO:werkzeug: * Restarting with windowsapi reloader
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 247-247-708
 INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'joaouser', 'mail': 'joao@gmail.com', 'password': 'pwjoao', 'nome': 'joao', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joao'}
+DEBUG:logger:New user inserted with id 2
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2022 18:46:53] "POST /dbproj/user HTTP/1.1" 200 -
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'raulouser', 'mail': 'raul@gmail.com', 'password': 'pwraul', 'nome': 'raul', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Raul'}
+DEBUG:logger:New user inserted with id 3
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2022 18:53:53] "POST /dbproj/user HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'joanauser', 'mail': 'joana@gmail.com', 'password': 'pwjoana', 'nome': 'joana', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joana'}
+ERROR:logger:POST /customer - error: permission denied for sequence utilizador_id
+
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2022 18:55:54] "POST /dbproj/user HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'joanauser', 'mail': 'joana@gmail.com', 'password': 'pwjoana', 'nome': 'joana', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joana'}
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2022 19:03:21] "[35m[1mPOST /dbproj/user HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'joanauser', 'mail': 'joana@gmail.com', 'password': 'pwjoana', 'nome': 'joana', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joana'}
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2022 19:04:04] "[35m[1mPOST /dbproj/user HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'joanauser', 'mail': 'joana@gmail.com', 'password': 'pwjoana', 'nome': 'joana', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joana'}
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2022 19:04:37] "[35m[1mPOST /dbproj/user HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'joanauser', 'mail': 'joana@gmail.com', 'password': 'pwjoana', 'nome': 'joana', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joana'}
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2022 19:04:56] "[35m[1mPOST /dbproj/user HTTP/1.1[0m" 500 -
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'joanauser', 'mail': 'joana@gmail.com', 'password': 'pwjoana', 'nome': 'joana', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joana'}
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2022 19:05:12] "[35m[1mPOST /dbproj/user HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'joanauser', 'mail': 'joana@gmail.com', 'password': 'pwjoana', 'nome': 'joana', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joana'}
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2022 19:05:20] "[35m[1mPOST /dbproj/user HTTP/1.1[0m" 500 -
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'joanauser', 'mail': 'joana@gmail.com', 'password': 'pwjoana', 'nome': 'joana', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joana'}
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2022 19:06:11] "[35m[1mPOST /dbproj/user HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'joanauser', 'mail': 'joana@gmail.com', 'password': 'pwjoana', 'nome': 'joana', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joana'}
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2022 19:06:27] "[35m[1mPOST /dbproj/user HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'joanauser', 'mail': 'joana@gmail.com', 'password': 'pwjoana', 'nome': 'joana', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joana'}
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2022 19:07:04] "[35m[1mPOST /dbproj/user HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'joanauser', 'mail': 'joana@gmail.com', 'password': 'pwjoana', 'nome': 'joana', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joana'}
+ERROR:logger:POST /customer - error: permission denied for sequence utilizador_id
+
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2022 19:07:37] "POST /dbproj/user HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'joanauser', 'mail': 'joana@gmail.com', 'password': 'pwjoana', 'nome': 'joana', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joana'}
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2022 19:10:11] "[35m[1mPOST /dbproj/user HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'joanauser', 'mail': 'joana@gmail.com', 'password': 'pwjoana', 'nome': 'joana', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joana'}
+ERROR:logger:POST /customer - error: permission denied for sequence utilizador_id
+
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2022 19:10:22] "POST /dbproj/user HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'joanauser', 'mail': 'joana@gmail.com', 'password': 'pwjoana', 'nome': 'joana', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joana'}
+ERROR:logger:POST /customer - error: permission denied for sequence utilizador_id
+
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2022 19:10:48] "POST /dbproj/user HTTP/1.1" 200 -
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'joaouser', 'mail': 'joao@gmail.com', 'password': 'pwjoaa', 'nome': 'joaa', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joao'}
+ERROR:logger:POST /customer - error: insert or update on table "customer" violates foreign key constraint "customer_fk1"
+DETAIL:  Key (utilizador_id)=(0) is not present in table "utilizador".
+
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 17:21:18] "POST /dbproj/user HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'joaouser', 'mail': 'joao@gmail.com', 'password': 'pwjoaa', 'nome': 'joaa', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joao'}
+ERROR:logger:POST /customer - error: insert or update on table "customer" violates foreign key constraint "customer_fk1"
+DETAIL:  Key (utilizador_id)=(0) is not present in table "utilizador".
+
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 17:23:51] "POST /dbproj/user HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'joaouser', 'mail': 'joao@gmail.com', 'password': 'pwjoao', 'nome': 'joao', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joao'}
+ERROR:logger:POST /customer - error: 'tuple' object does not support item assignment
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 17:29:51] "POST /dbproj/user HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'joaouser', 'mail': 'joao@gmail.com', 'password': 'pwjoao', 'nome': 'joao', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joao'}
+DEBUG:logger:New user inserted with id 3
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 17:34:01] "POST /dbproj/user HTTP/1.1" 200 -
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'joaouser', 'mail': 'joao@gmail.com', 'password': 'pwjoao', 'nome': 'joao', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joao'}
+ERROR:logger:POST /customer - error: duplicate key value violates unique constraint "utilizador_username_key"
+DETAIL:  Key (username)=(joaouser) already exists.
+CONTEXT:  SQL statement "insert into utilizador(username,password,mail,nome) values (username,pw,mail,nome)"
+PL/pgSQL function insert_customer(character varying,character varying,character varying,character varying,character varying,character varying,character varying) line 12 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 18:06:49] "POST /dbproj/user HTTP/1.1" 200 -
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'joanauser', 'mail': 'joana@gmail.com', 'password': 'pwjoana', 'nome': 'joana', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joana'}
+ERROR:logger:POST /customer - error: missing FROM-clause entry for table "id"
+LINE 3:         where id.username = uname
+                      ^
+QUERY:  select id
+        from utilizador
+        where id.username = uname
+CONTEXT:  PL/pgSQL function insert_customer(character varying,character varying,character varying,character varying,character varying,character varying,character varying) line 15 at OPEN
+
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 18:07:29] "POST /dbproj/user HTTP/1.1" 200 -
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'joanauser', 'mail': 'joana@gmail.com', 'password': 'pwjoana', 'nome': 'joana', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joana'}
+DEBUG:logger:New user inserted
+INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 18:08:20] "POST /dbproj/user HTTP/1.1" 200 -
