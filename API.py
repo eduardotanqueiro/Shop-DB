@@ -405,6 +405,70 @@ def get_product(product_id):
 
     return flask.jsonify(response)
 
+##
+## ADD CAMPAIGN
+##
+@app.route('/dbproj/campaign/', methods=['POST'])
+def add_campaign():
+    logger.info('User Login Campaign Insertion')
+    payload=flask.request.get_json()
+
+    conn=db_connection()
+    cur=conn.cursor()
+
+    #Check if auth token was received
+    if 'token' not in payload:
+        response = {'status': StatusCodes['api_error'], 'errors': 'Missing auth token'}
+        return flask.jsonify(response)
+    #Chek id user customer, seller or admin
+
+    decode_token = jwt.decode(payload['token'],jwt_key,'HS256')
+
+    #If user is not admin
+    if decode_token['user_type'] == user_type_hashed['customer'] or decode_token['user_type'] == user_type_hashed['vendedor']:
+        response = {'status': StatusCodes['api_error'], 'errors': 'You don\'t have permission to execute this task!'}
+        return flask.jsonify(response)
+    
+    #Ckeck is payload parameters are correct
+    if 'desconto' not in payload or 'numero_cupoes' not in payload or 'data_inicio' not in payload or 'data_fim' not in payload or 'validade_cupao' not in payload:
+         response = {'status': StatusCodes['api_error'], 'errors': 'Missing values for product in the payload'}
+         return flask.jsonify(response) 
+
+    #Insert campaign
+
+    decode_token['id']=int(decode_token['id'])
+
+    try:
+        values=(payload['desconto'],payload['numero_cupoes'],payload['data_inicio'],payload['data_fim'],payload['validade_cupao'],decode_token['id'])
+
+        cur.execute("call insert_campaign(%s::INTEGER,%s::INTEGER,%s::DATE,%s::DATE,%s::SMALLINT,%s::INTEGER)",values)
+
+        conn.commit()
+
+        response = {'status': StatusCodes['success'], 'results': f'Added new campaign'}
+        logger.debug('New campaign added')
+    except (Exception, psycopg2.DatabaseError) as error:
+        logger.error(error)
+        response = {'status': StatusCodes['internal_error'], 'errors': str(error)}
+
+        # an error occurred, rollback
+        conn.rollback()
+    finally:
+        if conn is not None:
+            conn.close()
+    
+    return flask.jsonify(response)
+
+
+
+    
+
+
+
+
+
+
+
 
 
 def check_user_type(id):
