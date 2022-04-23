@@ -383,7 +383,7 @@ def add_campaign():
     decode_token['id']=int(decode_token['id'])
 
     try:
-        values=(payload['desconto'],payload['numero_cupoes'],payload['data_inicio'],payload['data_fim'],payload['campanha_ativa'],payload['validade_cupao'],decode_token['id'])
+        values=(payload['desconto'],payload['numero_cupoes'],payload['data_inicio'],payload['data_fim'],payload['validade_cupao'],decode_token['id'])
 
         cur.execute("call insert_campaign(%s::INTEGER,%s::INTEGER,%s::DATE,%s::DATE,%s::SMALLINT,%s::INTEGER)",values)
 
