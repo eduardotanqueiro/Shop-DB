@@ -194,7 +194,7 @@ ALTER TABLE compra_notificacao_cupao ADD CONSTRAINT compra_notificacao_cupao_fk1
 ALTER TABLE customer_cupao ADD CONSTRAINT customer_cupao_fk1 FOREIGN KEY (customer_utilizador_id) REFERENCES customer(utilizador_id);
 ALTER TABLE customer_cupao ADD CONSTRAINT customer_cupao_fk2 FOREIGN KEY (cupao_numero,cupao_campanha_id) REFERENCES cupao(numero,campanha_id);
 
-GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO ProjetoBD;
+--GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO ProjetoBD;
 
 /*
 

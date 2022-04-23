@@ -203,7 +203,8 @@ def add_product():
         return flask.jsonify(response)
 
 
-    #2nd check is payload parameters are correct
+    #---------------------------------------
+    #2nd CHECK PAYLOAD ARGUMENTS
     if 'descricao' not in payload or 'preco' not in payload or 'stock' not in payload or 'tipo' not in payload:
         response = {'status': StatusCodes['api_error'], 'errors': 'Missing values for product in the payload'}
         return flask.jsonify(response)
@@ -227,6 +228,7 @@ def add_product():
         response = {'status': StatusCodes['api_error'], 'errors': 'Invalid product type'}
         return flask.jsonify(response)
 
+    #--------------------------------------
 
     #4th Insert product into the correct tables
     decode_token[ 'id'] = int(decode_token['id'])
@@ -271,6 +273,60 @@ def add_product():
 
 
     return flask.jsonify(response)
+
+
+##
+## PURCHASE PRODUCTS
+##
+
+@app.route('/dbproj/order',methods = ['POST'])
+def make_order():
+
+
+    payload = flask.request.get_json()
+
+    conn = db_connection()
+    cur = conn.cursor()
+
+    #Check if auth token was received
+    if 'token' not in payload:
+        response = {'status': StatusCodes['api_error'], 'errors': 'Missing auth token'}
+        return flask.jsonify(response)
+
+    #Decode Token
+    decode_token = jwt.decode(payload['token'],jwt_key,'HS256')
+
+    #Check payload arguments
+    if 'cart' not in payload or payload['cart'] == []:
+        response = {'status': StatusCodes['api_error'], 'errors': 'No cart given or empty'}
+        return flask.jsonify(response)
+
+
+    #TODO ATENÇÃO: PROBLEMAS DE LOCKS E SINCRONIZAÇÃO DE DADOS NAS TABELAS
+    
+    try:
+        #TODO compra
+        print()
+
+
+
+    except (Exception, psycopg2.DatabaseError) as error:
+        logger.error(error)
+        response = {'status': StatusCodes['internal_error'], 'errors': str(error)}
+
+        # an error occurred, rollback
+        conn.rollback()
+
+    finally:
+        if conn is not None:
+            conn.close()
+
+
+    return flask.jsonify(response)
+
+
+
+
 
 
 

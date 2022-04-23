@@ -139,3 +139,29 @@ begin
 
 end;
 $$;
+
+
+--NÃO ESTÁ ACABADO/REFAZER
+create or replace procedure add_to_order(customer_id utilizador.id%type, product_id produto.id%type, quantdade transacao_compra.quantidade%type)
+language plpgsql
+as $$
+declare
+    total_compra compra_notificacao.valor_pago%type;
+    id_prod produto.id%type;
+    preco_prod produto.preco%type;
+    stock_prod produto.stock%type;
+
+    cur_id_compra cursor for
+        select id
+        from compra_notificacao
+        for update;
+
+    cur_info_prod cursor(id_prod INTEGER) for
+        select id, preco, stock
+        from produto;
+
+begin
+
+
+end:
+$$
