@@ -946,3 +946,22 @@ INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 896-313-328
 INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 19:08:03] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 19:08:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 19:08:07] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 19:08:24] "[33mGET /dbproject HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 19:08:30] "[33mGET /dbproject/user HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 19:08:52] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 19:08:56] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 19:08:56] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 19:08:58] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:logger:User Login Product Insertion
+INFO:werkzeug:127.0.0.1 - - [23/Apr/2022 19:10:46] "[35m[1mPOST /dbproj/product HTTP/1.1[0m" 500 -

@@ -3,7 +3,6 @@ import logging
 import psycopg2
 import time
 
-
 import jwt
 import hashlib as hs
 
@@ -460,15 +459,63 @@ def add_campaign():
     return flask.jsonify(response)
 
 
+##
+## SUBSCRIBE CAMPAIGN
+##
+@app.route('/dbproj/subscribe/', methods=['POST'])
+def subscribe_campaign():
+    logger.info('User Login Campaign Subscribe')
+    payload=flask.request.get_json()
 
+    conn=db_connection()
+    cur=conn.cursor()
+
+    #Check if auth token was received
+    if 'token' not in payload:
+        response = {'status': StatusCodes['api_error'], 'errors': 'Missing auth token'}
+        return flask.jsonify(response)
+    #Chek id user customer, seller or admin
+
+    decode_token = jwt.decode(payload['token'],jwt_key,'HS256')
+
+    #If user is not customer
+    if decode_token['user_type'] == user_type_hashed['administrador'] or decode_token['user_type'] == user_type_hashed['vendedor']:
+        response = {'status': StatusCodes['api_error'], 'errors': 'You don\'t have permission to execute this task!'}
+        return flask.jsonify(response)
     
+    #Ckeck is payload parameters are correct
+    if 'id_campanha' not in payload:
+         response = {'status': StatusCodes['api_error'], 'errors': 'Missing values for product in the payload'}
+         return flask.jsonify(response) 
 
+    #Insert campaign
 
+    decode_token['id']=int(decode_token['id'])
 
+    try:
+        values=(payload['id_campanha'],decode_token['id'])
 
+        cur.execute("select subscribe_campaign(%s::INTEGER,%s::INTEGER)",values)
+        result=cur.fetchone()
+        conn.commit()
 
+        if result[0]==True:
+            response = {'status': StatusCodes['success'], 'results': f'Subscribe campaign'}
+            logger.debug('Subscribe campaign')
+        else:
+             response = {'status': StatusCodes['api_error'], 'errors':'Not subscribe campaign!Invalid campaign!'}
+             logger.debug('Not subscribe campaign')
+    except (Exception, psycopg2.DatabaseError) as error:
+        logger.error(error)
+        response = {'status': StatusCodes['internal_error'], 'errors': str(error)}
 
-
+        # an error occurred, rollback
+        conn.rollback()
+    finally:
+        if conn is not None:
+            conn.close()
+    
+    return flask.jsonify(response)
 
 
 def check_user_type(id):

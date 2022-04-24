@@ -169,30 +169,50 @@ $$
 create or replace procedure insert_campaign(desconto campanha.desconto%type, numero_cupoes campanha.numero_cupoes%type, data_inicio campanha.data_inicio%type, data_fim campanha.data_fim%type,validade_cupao campanha.validade_cupao%type, admin_id campanha.administrador_utilizador_id)
 language plpgsql
 as $$
-declare
-    id_max campanha.id%type;
-
-    cur_max_id cursor for
-        select MAX(id)
-        from campanha;
 begin
-
-    --ir buscar o ultimo id inserido
-    open cur_max_id;
-    fetch cur_max_id
-    into id_max;
-    close cur_max_id;
-
-    if id_max IS NOT NULL then
-        -- campanha que esteja ativa passa a falsa
         update campanha_aux set campanha_ativa='false' where id = (select id from campanha_aux where campanha_ativa='true');
-        --inserir na tabela campanha
-        insert into campanha(id,desconto,numero_cupoes,data_inicio,data_fim,campanha_ativa,validade_cupao,administrador_utilizador_id) values (id_max+1,desconto,numero_cupoes,data_inicio,data_fim,'True',validade_cupao,admin_id);        
-    else
-        insert into campanha(id,desconto,numero_cupoes,data_inicio,data_fim,campanha_ativa,validade_cupao,administrador_utilizador_id) values (0,desconto,numero_cupoes,data_inicio,data_fim,'True',validade_cupao,admin_id);        
-
-    end if;
-
+        insert into campanha(desconto,numero_cupoes,data_inicio,data_fim,campanha_ativa,validade_cupao,administrador_utilizador_id) values (desconto,numero_cupoes,data_inicio,data_fim,'True',validade_cupao,admin_id);        
 end;
 $$;
+--- SUBSCRIBE CAMPAIGN
+create or replace function subscribe_campaign(campaign_id cupao.campanha%type,data_atribuicao cupao.data_atribuicao%type,customer_id customer_cupao.customer_utilizador_id%type)
+returns BOOLEAN
+language plpgsql
+as $$
+declare
+n_cupao_maximo cupao.cupao_numero%type;
+numero_cupoes_permitidos campanha.numero_cupoes%type;
 
+cur_cupao_maximo cursor for
+select MAX(numero)
+from cupao
+group by id having id=campaign_id;
+
+cur_procura_campanha cursor for
+select numero_cupoes
+from campanha
+where id=campaign_id and campanha_ativa=True;
+
+begin
+open cur_procura_campanha;
+fetch cur_procura_campanha
+into numero_cupoes_permitidos;
+close cur_procura_campanha;
+
+if not found then 
+    return false;
+else
+    open cur_cupao_maximo;
+    fetch cur_cupao_maximo
+    into n_cupao_maximo;
+    close cur_cupao_maximo;
+
+    if (n_cupao_maximo+1<=numero_cupoes_permitidos) then
+        insert into cupao(numero,cupao_ativo,data_atribuicao,campanha_id) values(n_cupao_maximo+1,'True',select current_date,campaign_id);
+        insert into customer_cupao (customer_utilizador_id,cupao_numero,cupao_campanha_id) values (customer_id,n_cupao_maximo+1,campaign_id);
+        return true;
+    else return false;
+    end if;
+end if;
+end;
+$$;
