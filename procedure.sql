@@ -1,3 +1,28 @@
+--- check user type
+create or replace function check_user_type(user_id utilizador.id%type)
+returns VARCHAR
+language plpgsql
+as $$
+declare
+begin
+select utilzador_id from customer 
+where utilizador_id=user_id
+if found then return 'custumer'
+end if;
+
+select utilizador_id from administrador
+where utilizador_id=user_id;
+if found then return 'administrador'
+end if;
+
+select utilizador_id from vendedor
+where utilizador_id=user_id;
+if found then return 'vendedor'
+end if;
+end;
+$$;
+
+
 create or replace procedure insert_customer(username utilizador.username%type, pw utilizador.password%type, mail utilizador.mail%type, nome utilizador.nome%type, pais customer.pais%type, cidade customer.cidade%type, rua customer.rua%type )
 language plpgsql
 as $$

@@ -524,30 +524,11 @@ def check_user_type(id):
     cur = conn.cursor()
 
     try:
-        cur.execute('SELECT utilizador_id FROM customer WHERE utilizador_id=%s', id)
-        rows = cur.fetchall()
+        cur.execute("select check_user_type(%s::INTEGER)",id)
+        conn.commit()
 
-
-        if rows != []:
-            if conn is not None:
-                conn.close()
-            return 'customer'
-            
-        cur.execute('SELECT utilizador_id FROM vendedor WHERE utilizador_id=%s', id)
-        rows = cur.fetchall()
-
-        if rows != []:
-            if conn is not None:
-                conn.close()
-            return 'vendedor'
-        
-        cur.execute('SELECT utilizador_id FROM administrador WHERE utilizador_id =%s', id)
-        rows = cur.fetchall()
-
-        if rows !=[]:
-            if conn is not None:
-                conn.close()
-            return 'administrador'
+        result=cur.fetchone()
+        return result[0]
         
     except (psycopg2.DatabaseError) as error:
         logger.error(f'GET /customer/ - error: {error}')
