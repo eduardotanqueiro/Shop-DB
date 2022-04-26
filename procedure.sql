@@ -1,23 +1,23 @@
 --- check user type
 create or replace function check_user_type(user_id utilizador.id%type)
-returns VARCHAR
+returns text
 language plpgsql
 as $$
 declare
 begin
-select utilzador_id from customer 
-where utilizador_id=user_id
-if found then return 'custumer'
+PERFORM utilizador_id from customer 
+where utilizador_id=user_id;
+if found then return 'custumer';
 end if;
 
-select utilizador_id from administrador
+PERFORM utilizador_id from administrador
 where utilizador_id=user_id;
-if found then return 'administrador'
+if found then return 'administrador';
 end if;
 
-select utilizador_id from vendedor
+PERFORM utilizador_id from vendedor
 where utilizador_id=user_id;
-if found then return 'vendedor'
+if found then return 'vendedor';
 end if;
 end;
 $$;

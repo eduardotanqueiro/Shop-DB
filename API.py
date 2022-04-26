@@ -186,15 +186,19 @@ def add_product():
 
     conn = db_connection()
     cur = conn.cursor()
-
-    #Check if auth token was received
-    if 'token' not in payload:
+    
+    #ler token inserido em Header Postman (authorization->Bearer Token)
+    global token
+    header=flask.request.headers
+    if 'Authorization' not in header:
         response = {'status': StatusCodes['api_error'], 'errors': 'Missing auth token'}
         return flask.jsonify(response)
-
+    else:
+        token=(header['Authorization'].split(" ")[1])
 
     #1st check if user is customer,seller or admin
-    decode_token = jwt.decode(payload['token'],jwt_key,'HS256')
+    decode_token = jwt.decode(token,jwt_key,'HS256')
+    
     
     #If user is not seller
     if decode_token['user_type'] == user_type_hashed['customer'] or decode_token['user_type'] == user_type_hashed['administrador']:
