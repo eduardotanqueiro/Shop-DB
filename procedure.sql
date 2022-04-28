@@ -167,29 +167,68 @@ $$;
 
 
 --NÃO ESTÁ ACABADO/REFAZER
-create or replace procedure add_to_order(customer_id utilizador.id%type, product_id produto.id%type, quantdade transacao_compra.quantidade%type)
+create or replace procedure make_order(customer_id utilizador.id%type, cart numeric[][])
 language plpgsql
 as $$
 declare
+    nr_produtos NUMERIC(10,0);
+
+    id_compra INTEGER;
     total_compra compra_notificacao.valor_pago%type;
-    id_prod produto.id%type;
+
+    versao_prod produto.versao%type;
     preco_prod produto.preco%type;
     stock_prod produto.stock%type;
 
     cur_id_compra cursor for
-        select id
+        select MAX(id)
         from compra_notificacao
         for update;
 
     cur_info_prod cursor(id_prod INTEGER) for
-        select id, preco, stock
+        select MAX(versao), preco, stock
         from produto;
+        where produto.id = id_prod;
 
 begin
+
+    nr_produtos = array_lenght(cart,1);
+
+    --gerar nova compra
+    insert into compra_notificacao(data_compra,valor_pago,valor_do_desconto,customer_utilizador_id,notificacao_descricao) values (,0,0,customer_id,"");
+
+    open cur_id_compra;
+    fetch cur_id_compra into id_compra;
+    close cur_id_compra;
+
+
+    if nr_produtos > 0 then
+
+        --Correr todos os produtos
+        for i in 1..nr_produtos loop
+
+            --ir buscar versao do produto e o preco
+            open cur_info_prod( cart[i][1] );
+            fetch cur_id_compra into versao_prod,preco_prod,stock_prod;
+            close cur_info_prod;
+
+            --check se o produto existe/verificar stock
+
+            --insert tabela transacao
+            insert into transacao_compra(quantidade,compra_id,produto_id,produto_versao) values ( cart[i][2], id_compra, cart[i][1] , versao_prod);
+
+            --atualizar stock do produto
+
+        end loop
+
+
+    --atualizar informacoes da compra
+    
 
 
 end:
 $$
+
 --- INSERT CAMPAIGN PROCEDURE
 create or replace procedure insert_campaign(desconto campanha.desconto%type, numero_cupoes campanha.numero_cupoes%type, data_inicio campanha.data_inicio%type, data_fim campanha.data_fim%type,validade_cupao campanha.validade_cupao%type, admin_id campanha.administrador_utilizador_id)
 language plpgsql

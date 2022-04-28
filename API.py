@@ -291,13 +291,17 @@ def make_order():
     conn = db_connection()
     cur = conn.cursor()
 
-    #Check if auth token was received
-    if 'token' not in payload:
+    #ler token inserido em Header Postman (authorization->Bearer Token)
+    global token
+    header=flask.request.headers
+    if 'Authorization' not in header:
         response = {'status': StatusCodes['api_error'], 'errors': 'Missing auth token'}
         return flask.jsonify(response)
+    else:
+        token=(header['Authorization'].split(" ")[1])
 
-    #Decode Token
-    decode_token = jwt.decode(payload['token'],jwt_key,'HS256')
+    #Decode Toke
+    decode_token = jwt.decode(token,jwt_key,'HS256')
 
     #Check payload arguments
     if 'cart' not in payload or payload['cart'] == []:
