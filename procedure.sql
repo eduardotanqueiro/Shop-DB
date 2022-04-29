@@ -237,25 +237,58 @@ language plpgsql
 as $$
 declare
 prod_return json;
+json_aux json;
+max_version produto.versao%type;
+cursor_avg_rating cursor (id_p integer) for
+select row_to_json(a) from (
+  select avg(classificacao)"media_rating" from rating
+  group by produto_id having produto_id=id_p
+) as a;
 begin
-select row_to_json(a) into prod_return from (
-	select * from produto join tv on produto.id=tv.produto_id
-	where produto.id=id_produto
-) as a;
-if found then return prod_return;
+select max(produto.versao) into max_version from produto
+group by produto.id having produto.id=id_produto;
+if not found then return json_build_object('error','id produto nao encontrado');
 end if;
+
 select row_to_json(a) into prod_return from (
-	select * from produto join smartphone on produto.id=smartphone.produto_id
-	where produto.id=id_produto
+	select * from produto join tv on produto.id=tv.produto_id and produto.versao=tv.produto_versao
+	where produto.id=id_produto and produto.versao=max_version
 ) as a;
-if found then return prod_return;
+if found then
+    open cursor_avg_rating (id_produto);
+    fetch cursor_avg_rating into json_aux;
+    if found then prod_return=prod_return::jsonb||json_aux::jsonb;
+    end if;
+    close cursor_avg_rating;
+    return prod_return;
 end if;
+
 select row_to_json(a) into prod_return from (
-	select * from produto join pc on produto.id=pc.produto_id
-	where produto.id=id_produto
+	select * from produto join smartphone on produto.id=smartphone.produto_id and produto.versao=smartphone.produto_versao
+	where produto.id=id_produto and produto.versao=max_version
 ) as a;
-if found then return prod_return;
+if found then 
+    open cursor_avg_rating (id_produto);
+    fetch cursor_avg_rating into json_aux;
+    if found then prod_return=prod_return::jsonb||json_aux::jsonb;
+    end if;
+    close cursor_avg_rating;
+    return prod_return;
 end if;
+
+select row_to_json(a) into prod_return from (
+	select * from produto join pc on produto.id=pc.produto_id and produto.versao=pc.produto_versao
+	where produto.id=id_produto and produto.versao=max_version
+) as a;
+if found then
+    open cursor_avg_rating (id_produto);
+    fetch cursor_avg_rating into json_aux;
+    if found then prod_return=prod_return::jsonb||json_aux::jsonb;
+    end if;
+    close cursor_avg_rating;
+    return prod_return;
+end if;
+
 end;
 $$;
 
