@@ -247,9 +247,10 @@ def add_product():
 
         elif payload['tipo'] == 'tv':
 
-            values = (payload['descricao'],payload['preco'],payload['stock'], decode_token['id'] ,payload['tamanho'],payload['marca'])
+            values = ((payload['descricao']),(payload['preco']),(payload['stock']), (decode_token['id']) ,(payload['tamanho']),(payload['marca']))
+            print(values)
 
-            cur.execute("call insert_tv(%s::VARCHAR,%s::FLOAT(8),%s::INTEGER,%s::INTEGER,%s::SMALLINT,%s::VARCHAR)", values)
+            cur.execute("call insert_tv(%s::VARCHAR(512),%s::FLOAT(8),%s::INTEGER,%s::INTEGER,%s::SMALLINT,%s::VARCHAR(50))", values)
 
         elif payload['tipo'] == 'pc':
 

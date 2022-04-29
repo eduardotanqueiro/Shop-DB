@@ -1620,3 +1620,336 @@ INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 504-209-728
 INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:User Login Product Insertion
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2022 21:19:49] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:logger:User Login Product Insertion
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2022 21:19:56] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:logger:User Login Product Insertion
+ERROR:logger:procedure insert_tv(character varying, real, integer, integer, smallint, character varying) does not exist
+LINE 1: call insert_tv('produto2 descricao bonita'::VARCHAR,2.2::FLO...
+             ^
+HINT:  No procedure matches the given name and argument types. You might need to add explicit type casts.
+
+INFO:werkzeug:127.0.0.1 - - [26/Apr/2022 21:20:08] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 102-388-625
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:User Login Product Insertion
+ERROR:logger:unsupported format character 'f' (0x66) at index 28
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2022 17:16:00] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 102-388-625
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:User Login Product Insertion
+ERROR:logger:unsupported format character 'd' (0x64) at index 37
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2022 17:16:16] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 102-388-625
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 102-388-625
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:User Login Product Insertion
+ERROR:logger:unsupported format character 'd' (0x64) at index 53
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2022 17:16:34] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 102-388-625
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:User Login Product Insertion
+ERROR:logger:not all arguments converted during string formatting
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2022 17:16:40] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 102-388-625
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 102-388-625
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 102-388-625
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 102-388-625
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 102-388-625
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 102-388-625
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 102-388-625
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 102-388-625
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:User Login Product Insertion
+ERROR:logger:not all arguments converted during string formatting
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2022 17:18:13] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 102-388-625
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:User Login Product Insertion
+ERROR:logger:procedure insert_tv(character varying, real, integer, integer, smallint, character varying) does not exist
+LINE 1: call insert_tv('produto2 descricao bonita'::VARCHAR,2.2::FLO...
+             ^
+HINT:  No procedure matches the given name and argument types. You might need to add explicit type casts.
+
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2022 17:19:16] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 102-388-625
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 102-388-625
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:User Login Product Insertion
+ERROR:logger:procedure insert_tv(character varying, real, integer, integer, smallint, character varying) does not exist
+LINE 1: call insert_tv('produto2 descricao bonita'::VARCHAR,2.2::FLO...
+             ^
+HINT:  No procedure matches the given name and argument types. You might need to add explicit type casts.
+
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2022 17:21:16] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 102-388-625
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:User Login Product Insertion
+ERROR:logger:procedure insert_tv(character varying, real, integer, integer, smallint, character varying) does not exist
+LINE 1: call insert_tv('produto2 descricao bonita'::VARCHAR,2.2::FLO...
+             ^
+HINT:  No procedure matches the given name and argument types. You might need to add explicit type casts.
+
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2022 17:21:41] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 102-388-625
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 102-388-625
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:User Login Product Insertion
+ERROR:logger:procedure insert_tv(character varying, real, integer, integer, smallint, character varying) does not exist
+LINE 1: call insert_tv('produto2 descricao bonita'::VARCHAR(512),2.2...
+             ^
+HINT:  No procedure matches the given name and argument types. You might need to add explicit type casts.
+
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2022 17:23:03] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:logger:User Login Product Insertion
+ERROR:logger:procedure insert_tv(character varying, real, integer, integer, smallint, character varying) does not exist
+LINE 1: call insert_tv('produto2 descricao bonita'::VARCHAR(512),2.2...
+             ^
+HINT:  No procedure matches the given name and argument types. You might need to add explicit type casts.
+
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2022 17:23:06] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 102-388-625
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 102-388-625
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:User Login Product Insertion
+ERROR:logger:procedure insert_tv(character varying, real, integer, integer, smallint, character varying) does not exist
+LINE 1: call insert_tv('produto2 descricao bonita'::VARCHAR(512),'2....
+             ^
+HINT:  No procedure matches the given name and argument types. You might need to add explicit type casts.
+
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2022 17:24:13] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 102-388-625
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:User Login Product Insertion
+ERROR:logger:procedure insert_tv(character varying, real, integer, integer, smallint, character varying) does not exist
+LINE 1: call insert_tv('produto2 descricao bonita'::VARCHAR(512),'2....
+             ^
+HINT:  No procedure matches the given name and argument types. You might need to add explicit type casts.
+
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2022 17:24:51] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 102-388-625
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 102-388-625
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 102-388-625
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 102-388-625
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:User Login Product Insertion
+ERROR:logger:procedure insert_tv(character varying, real, integer, integer, smallint, character varying) does not exist
+LINE 1: call insert_tv('produto2 descricao bonita'::VARCHAR(512),2.2...
+             ^
+HINT:  No procedure matches the given name and argument types. You might need to add explicit type casts.
+
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2022 17:25:34] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 102-388-625
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:User Login Product Insertion
+ERROR:logger:permission denied for table produto
+CONTEXT:  SQL statement "select MAX(id)
+        from produto"
+PL/pgSQL function insert_tv(character varying,real,integer,bigint,smallint,character varying) line 12 at OPEN
+
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2022 17:31:56] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:logger:User Login Product Insertion
+ERROR:logger:permission denied for table produto
+CONTEXT:  SQL statement "select MAX(id)
+        from produto"
+PL/pgSQL function insert_tv(character varying,real,integer,bigint,smallint,character varying) line 12 at OPEN
+
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2022 17:32:35] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:logger:User Login Product Insertion
+ERROR:logger:permission denied for table produto
+CONTEXT:  SQL statement "select MAX(id)
+        from produto"
+PL/pgSQL function insert_tv(character varying,real,integer,bigint,smallint,character varying) line 12 at OPEN
+
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2022 17:32:59] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:logger:User Login Product Insertion
+ERROR:logger:permission denied for table produto
+CONTEXT:  SQL statement "select MAX(id)
+        from produto"
+PL/pgSQL function insert_tv(character varying,real,integer,bigint,smallint,character varying) line 12 at OPEN
+
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2022 17:33:36] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 102-388-625
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 102-388-625
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 102-388-625
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:User Login Product Insertion
+DEBUG:logger:New product added
+INFO:werkzeug:127.0.0.1 - - [27/Apr/2022 17:34:03] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:User Login
+DEBUG:logger:User login attempt
+ERROR:logger:permission denied for table utilizador
+
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:45:23] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:User Login
+DEBUG:logger:User login attempt
+ERROR:logger:permission denied for table utilizador
+
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:47:26] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:User Login
+DEBUG:logger:User login attempt
+INFO:logger:User found, creating JWT
+ERROR:logger:duplicate key value violates unique constraint "login_token_pkey"
+DETAIL:  Key (token)=(eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjIiLCJ1c2VybmFtZSI6InVzZXJfdmVuZGVkb3IxIiwidXNlcl90eXBlIjoiMDQwN2U4YzgyODVhYjg1NTA5YWMyODg0MDI1ZGNmNDIifQ.bVH0JktQ3QnlUElblSJR32Es9kEr6GJ1L3x8wdhR5yI) already exists.
+
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:50:52] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:User Login Product Insertion
+DEBUG:logger:New product added
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:51:21] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:logger:GET /products
+DEBUG:logger:GET /products - parse
+DEBUG:logger:(0, 'produto2 descricao bonita', 2.2, 2)
+DEBUG:logger:(1, 'produto2 descricao bonita', 2.2, 2)
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:52:58] "GET /dbproj/products HTTP/1.1" 200 -
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:GET /products
+DEBUG:logger:GET /products - parse
+DEBUG:logger:(0, 'produto2 descricao bonita', 2.2, 2)
+DEBUG:logger:(1, 'produto2 descricao bonita', 2.2, 2)
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:58:30] "GET /dbproj/products HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:GET /products
+DEBUG:logger:GET /products - parse
+DEBUG:logger:(0, 'produto2 descricao bonita', 2.2, 2)
+DEBUG:logger:(1, 'produto2 descricao bonita', 2.2, 2)
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:58:52] "GET /dbproj/products HTTP/1.1" 200 -
+INFO:logger:GET /products
+DEBUG:logger:GET /products - parse
+DEBUG:logger:(0, 'produto2 descricao bonita', 2.2, 2)
+DEBUG:logger:(1, 'produto2 descricao bonita', 2.2, 2)
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:59:24] "GET /dbproj/products HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:59:43] "[31m[1mGET /dbproj/product HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [28/Apr/2022 18:59:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:User Login
+DEBUG:logger:User login attempt
+INFO:logger:User found, creating JWT
+ERROR:logger:duplicate key value violates unique constraint "login_token_pkey"
+DETAIL:  Key (token)=(eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjIiLCJ1c2VybmFtZSI6InVzZXJfdmVuZGVkb3IxIiwidXNlcl90eXBlIjoiMDQwN2U4YzgyODVhYjg1NTA5YWMyODg0MDI1ZGNmNDIifQ.bVH0JktQ3QnlUElblSJR32Es9kEr6GJ1L3x8wdhR5yI) already exists.
+
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2022 13:16:42] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:User Login Product Insertion
+DEBUG:logger:New product added
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2022 13:18:10] "POST /dbproj/product HTTP/1.1" 200 -

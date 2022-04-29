@@ -229,6 +229,36 @@ begin
 end:
 $$
 
+
+---GET PRODUTCT (PRECISA DE ALTERACOES VER MAX VERSAO E + INFORMACOES )
+create or replace function get_product_id(id_produto integer)
+returns json
+language plpgsql
+as $$
+declare
+prod_return json;
+begin
+select row_to_json(a) into prod_return from (
+	select * from produto join tv on produto.id=tv.produto_id
+	where produto.id=id_produto
+) as a;
+if found then return prod_return;
+end if;
+select row_to_json(a) into prod_return from (
+	select * from produto join smartphone on produto.id=smartphone.produto_id
+	where produto.id=id_produto
+) as a;
+if found then return prod_return;
+end if;
+select row_to_json(a) into prod_return from (
+	select * from produto join pc on produto.id=pc.produto_id
+	where produto.id=id_produto
+) as a;
+if found then return prod_return;
+end if;
+end;
+$$;
+
 --- INSERT CAMPAIGN PROCEDURE
 create or replace procedure insert_campaign(desconto campanha.desconto%type, numero_cupoes campanha.numero_cupoes%type, data_inicio campanha.data_inicio%type, data_fim campanha.data_fim%type,validade_cupao campanha.validade_cupao%type, admin_id campanha.administrador_utilizador_id)
 language plpgsql
