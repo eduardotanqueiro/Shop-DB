@@ -238,14 +238,17 @@ as $$
 declare
 prod_return json;
 json_aux json;
+precos TEXT[];
+r TEXT;
 max_version produto.versao%type;
 cursor_avg_rating cursor (id_p integer) for
 select row_to_json(a) from (
-  select avg(classificacao)"media_rating" from rating
+  select avg(classificacao) from rating
   group by produto_id having produto_id=id_p
 ) as a;
+
 begin
-select max(produto.versao) into max_version from produto
+select max(produto.versao)into max_version from produto
 group by produto.id having produto.id=id_produto;
 if not found then return json_build_object('error','id produto nao encontrado');
 end if;
@@ -260,6 +263,14 @@ if found then
     if found then prod_return=prod_return::jsonb||json_aux::jsonb;
     end if;
     close cursor_avg_rating;
+	for r in 
+		select concat('versao',versao,' ',preco) from produto
+		where produto.id=id_produto
+		order by produto.versao DESC
+		LOOP
+		precos=precos||r;
+		END LOOP;
+	prod_return=prod_return::jsonb||json_build_object('precos',precos)::jsonb;
     return prod_return;
 end if;
 
@@ -267,15 +278,22 @@ select row_to_json(a) into prod_return from (
 	select * from produto join smartphone on produto.id=smartphone.produto_id and produto.versao=smartphone.produto_versao
 	where produto.id=id_produto and produto.versao=max_version
 ) as a;
-if found then 
+if found then
     open cursor_avg_rating (id_produto);
     fetch cursor_avg_rating into json_aux;
     if found then prod_return=prod_return::jsonb||json_aux::jsonb;
     end if;
     close cursor_avg_rating;
+	for r in 
+		select concat('versao',versao,' ',preco) from produto
+		where produto.id=id_produto
+		order by produto.versao DESC
+		LOOP
+		precos=precos||r;
+		END LOOP;
+	prod_return=prod_return::jsonb||json_build_object('precos',precos)::jsonb;
     return prod_return;
 end if;
-
 select row_to_json(a) into prod_return from (
 	select * from produto join pc on produto.id=pc.produto_id and produto.versao=pc.produto_versao
 	where produto.id=id_produto and produto.versao=max_version
@@ -286,9 +304,16 @@ if found then
     if found then prod_return=prod_return::jsonb||json_aux::jsonb;
     end if;
     close cursor_avg_rating;
+	for r in 
+		select concat('versao',versao,' ',preco) from produto
+		where produto.id=id_produto
+		order by produto.versao DESC
+		LOOP
+		precos=precos||r;
+		END LOOP;
+	prod_return=prod_return::jsonb||json_build_object('precos',precos)::jsonb;
     return prod_return;
 end if;
-
 end;
 $$;
 
