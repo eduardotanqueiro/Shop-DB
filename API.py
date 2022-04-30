@@ -527,6 +527,61 @@ def subscribe_campaign():
     return flask.jsonify(response)
 
 
+##
+## Rate a product
+##
+
+@app.route('/dbproj/rating/<product_id>',methods = ['POST'])
+def rate_product(product_id):
+
+
+    payload = flask.request.get_json()
+
+    conn = db_connection()
+    cur = conn.cursor()
+
+    #ler token inserido em Header Postman (authorization->Bearer Token)
+    global token
+    header=flask.request.headers
+    if 'Authorization' not in header:
+        response = {'status': StatusCodes['api_error'], 'errors': 'Missing auth token'}
+        return flask.jsonify(response)
+    else:
+        token=(header['Authorization'].split(" ")[1])
+
+    #Decode Token
+    decode_token = jwt.decode(token,jwt_key,'HS256')
+
+    #Check payload arguments
+    if 'rating' not in payload or 'comment' not in payload:
+        response = {'status': StatusCodes['api_error'], 'errors': 'Missing Rating or Comment'}
+        return flask.jsonify(response)
+
+
+
+    try:
+        values = ( token['id'], product_id, payload['rating'], payload['comment'])
+        cur.execute("select create_rating(%s::INTEGER,%s::INTEGER,%s::INTEGER,%s::VARCHAR)",values)
+
+        result=cur.fetchone()
+        conn.commit()
+
+    except (Exception, psycopg2.DatabaseError) as error:
+        logger.error(error)
+        response = {'status': StatusCodes['internal_error'], 'errors': str(error)}
+
+        # an error occurred, rollback
+        conn.rollback()
+
+    finally:
+        if conn is not None:
+            conn.close()
+
+
+    return flask.jsonify(response)
+
+
+
 def check_user_type(id):
     
     conn = db_connection()
