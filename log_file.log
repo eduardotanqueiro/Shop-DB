@@ -1953,3 +1953,198 @@ INFO:werkzeug:127.0.0.1 - - [29/Apr/2022 13:16:42] "PUT /dbproj/user HTTP/1.1" 2
 INFO:logger:User Login Product Insertion
 DEBUG:logger:New product added
 INFO:werkzeug:127.0.0.1 - - [29/Apr/2022 13:18:10] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:User Login
+INFO:werkzeug:127.0.0.1 - - [01/May/2022 18:44:20] "[35m[1mPUT /dbproj/user HTTP/1.1[0m" 500 -
+INFO:logger:User Login
+DEBUG:logger:User login attempt
+INFO:logger:User found, creating JWT
+ERROR:logger:GET /customer/ - error: function check_user_type(integer) does not exist
+LINE 1: select check_user_type('2'::INTEGER)
+               ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+
+ERROR:logger:<Response 257 bytes [200 OK]>
+INFO:werkzeug:127.0.0.1 - - [01/May/2022 18:47:00] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:User Login
+DEBUG:logger:User login attempt
+INFO:logger:User found, creating JWT
+ERROR:logger:duplicate key value violates unique constraint "login_token_pkey"
+DETAIL:  Key (token)=(eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjIiLCJ1c2VybmFtZSI6InVzZXJfdmVuZGVkb3IxIiwidXNlcl90eXBlIjoiMDQwN2U4YzgyODVhYjg1NTA5YWMyODg0MDI1ZGNmNDIifQ.bVH0JktQ3QnlUElblSJR32Es9kEr6GJ1L3x8wdhR5yI) already exists.
+
+INFO:werkzeug:127.0.0.1 - - [01/May/2022 18:48:05] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:User Login
+DEBUG:logger:User login attempt
+INFO:logger:User found, creating JWT
+INFO:werkzeug:127.0.0.1 - - [01/May/2022 18:49:36] "PUT /dbproj/user HTTP/1.1" 200 -
+ERROR:logger:string indices must be integers
+INFO:werkzeug:127.0.0.1 - - [01/May/2022 18:56:32] "POST /dbproj/rating/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+ERROR:logger:string indices must be integers
+INFO:werkzeug:127.0.0.1 - - [01/May/2022 18:58:24] "POST /dbproj/rating/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+ERROR:logger:string indices must be integers
+INFO:werkzeug:127.0.0.1 - - [01/May/2022 18:58:35] "POST /dbproj/rating/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:Rating the product 1
+DEBUG:logger:Decoding token...
+ERROR:logger:string indices must be integers
+INFO:werkzeug:127.0.0.1 - - [01/May/2022 19:00:23] "POST /dbproj/rating/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:Rating the product 1
+DEBUG:logger:Decoding token...
+ERROR:logger:string indices must be integers
+INFO:werkzeug:127.0.0.1 - - [01/May/2022 19:02:22] "POST /dbproj/rating/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:Rating the product 1
+DEBUG:logger:Decoding token...
+DEBUG:logger:teste1
+ERROR:logger:string indices must be integers
+INFO:werkzeug:127.0.0.1 - - [01/May/2022 19:02:45] "POST /dbproj/rating/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:Rating the product 1
+DEBUG:logger:Decoding token...
+DEBUG:logger:teste1
+ERROR:logger:string indices must be integers
+INFO:werkzeug:127.0.0.1 - - [01/May/2022 19:03:17] "POST /dbproj/rating/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:Rating the product 1
+DEBUG:logger:Decoding token...
+DEBUG:logger:{'rating': 3, 'comment': 'produto muito fixe like'}
+ERROR:logger:string indices must be integers
+INFO:werkzeug:127.0.0.1 - - [01/May/2022 19:05:39] "POST /dbproj/rating/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:Rating the product 1
+DEBUG:logger:Decoding token...
+DEBUG:logger:{'rating': 3, 'comment': 'produto muito fixe like'}
+ERROR:logger:string indices must be integers
+INFO:werkzeug:127.0.0.1 - - [01/May/2022 19:06:17] "POST /dbproj/rating/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:Rating the product 1
+DEBUG:logger:Decoding token...
+DEBUG:logger:{'rating': 3, 'comment': 'produto muito fixe like'}
+DEBUG:logger:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjIiLCJ1c2VybmFtZSI6InVzZXJfdmVuZGVkb3IxIiwidXNlcl90eXBlIjoiMDQwN2U4YzgyODVhYjg1NTA5YWMyODg0MDI1ZGNmNDIifQ.bVH0JktQ3QnlUElblSJR32Es9kEr6GJ1L3x8wdhR5yI
+ERROR:logger:string indices must be integers
+INFO:werkzeug:127.0.0.1 - - [01/May/2022 19:07:02] "POST /dbproj/rating/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:Rating the product 1
+DEBUG:logger:{'rating': 3, 'comment': 'produto muito fixe like'}
+DEBUG:logger:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjIiLCJ1c2VybmFtZSI6InVzZXJfdmVuZGVkb3IxIiwidXNlcl90eXBlIjoiMDQwN2U4YzgyODVhYjg1NTA5YWMyODg0MDI1ZGNmNDIifQ.bVH0JktQ3QnlUElblSJR32Es9kEr6GJ1L3x8wdhR5yI
+DEBUG:logger:teste2
+ERROR:logger:invalid input syntax for type integer: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjIiLCJ1c2VybmFtZSI6InVzZXJfdmVuZGVkb3IxIiwidXNlcl90eXBlIjoiMDQwN2U4YzgyODVhYjg1NTA5YWMyODg0MDI1ZGNmNDIifQ.bVH0JktQ3QnlUElblSJR32Es9kEr6GJ1L3x8wdhR5yI"
+LINE 1: select create_rating('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.e...
+                             ^
+
+INFO:werkzeug:127.0.0.1 - - [01/May/2022 19:07:35] "POST /dbproj/rating/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:Rating the product 1
+DEBUG:logger:teste2
+ERROR:logger:column reference "compra_id" is ambiguous
+LINE 1: select compra_id                from transacao_compra where ...
+               ^
+DETAIL:  It could refer to either a PL/pgSQL variable or a table column.
+QUERY:  select compra_id                from transacao_compra where produto_id = prod_id and compra_id in (select id from compra_notificacao where customer_utilizador_id = utilizador_id )
+CONTEXT:  PL/pgSQL function create_rating(bigint,bigint,integer,character varying) line 9 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [01/May/2022 19:08:19] "POST /dbproj/rating/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:Rating the product 1
+ERROR:logger:column reference "compra_id" is ambiguous
+LINE 1: ...m transacao_compra where produto_id = prod_id and compra_id ...
+                                                             ^
+DETAIL:  It could refer to either a PL/pgSQL variable or a table column.
+QUERY:  select transacao_compra.compra_id                from transacao_compra where produto_id = prod_id and compra_id in (select id from compra_notificacao where customer_utilizador_id = utilizador_id )
+CONTEXT:  PL/pgSQL function create_rating(bigint,bigint,integer,character varying) line 9 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [01/May/2022 19:09:23] "POST /dbproj/rating/1 HTTP/1.1" 200 -
+INFO:logger:Rating the product 1
+INFO:werkzeug:127.0.0.1 - - [01/May/2022 19:12:23] "[35m[1mPOST /dbproj/rating/1 HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:Rating the product 1
+INFO:werkzeug:127.0.0.1 - - [01/May/2022 19:13:21] "POST /dbproj/rating/1 HTTP/1.1" 200 -
+INFO:logger:Rating the product 1
+INFO:werkzeug:127.0.0.1 - - [01/May/2022 19:13:36] "POST /dbproj/rating/1 HTTP/1.1" 200 -
+INFO:logger:Rating the product 2
+INFO:werkzeug:127.0.0.1 - - [01/May/2022 19:13:40] "POST /dbproj/rating/2 HTTP/1.1" 200 -
+INFO:logger:GET /products
+DEBUG:logger:GET /products - parse
+DEBUG:logger:(0, 'produto2 descricao bonita', 2.2, 2)
+DEBUG:logger:(1, 'produto3 descricao bonita', 5.0, 2)
+DEBUG:logger:(2, 'produto3 smart', 10.0, 2)
+DEBUG:logger:(3, 'produto3 smart', 150.0, 2)
+INFO:werkzeug:127.0.0.1 - - [01/May/2022 19:15:51] "GET /dbproj/products HTTP/1.1" 200 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+ERROR:logger:GET /product/<product_id> - error: string index out of range
+INFO:werkzeug:127.0.0.1 - - [01/May/2022 19:16:52] "GET /dbproj/product/1 HTTP/1.1" 200 -

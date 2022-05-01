@@ -384,23 +384,23 @@ end
 $$
 
 --Rate a product
-create or replace function create_rating(utilizador_id compra.utilizador_id%type, prod_id rating.produto_id%type, rating rating.classificacao%type, descricao rating.descricao%type)
-return json
+create or replace function create_rating(utilizador_id compra_notificacao.customer_utilizador_id%type, prod_id rating.produto_id%type, rating rating.classificacao%type, descricao rating.descricao%type)
+returns json
 language plpgsql
 as $$
 declare
-    compra_id rating.compra_id%type;
+    compra_id_search rating.compra_id%type;
 
 begin
     
 
     --check se compra existe
-    select compra_id into compra_id from transacao_compra where produto_id = prod_id and compra_id in (select id from compra_notificacao where customer_utilizador_id = utilizador_id );
-    if not found then return json_build_object('error','compra nao encontrado');
+    select transacao_compra.compra_id into compra_id_search from transacao_compra where produto_id = prod_id and transacao_compra.compra_id in (select id from compra_notificacao where customer_utilizador_id = utilizador_id );
+    if not found then return json_build_object('error','compra nao encontrada');
     end if;
 
     --inserir na tabela rating (assumindo que tirámos a versao do produto da tabela)
-    insert into rating(classificacao,descricao,compra_id,customer_utilizador_id,prod_id) values(rating,descricao,compra_id,utilizador_id,prod_id);
+    insert into rating(classificacao,descricao,compra_id,customer_utilizador_id,prod_id) values(rating,descricao,compra_id_search,utilizador_id,prod_id);
 
 
 end

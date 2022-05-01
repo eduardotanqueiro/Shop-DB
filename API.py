@@ -540,6 +540,8 @@ def rate_product(product_id):
     conn = db_connection()
     cur = conn.cursor()
 
+    logger.info(f'Rating the product {product_id}')
+
     #ler token inserido em Header Postman (authorization->Bearer Token)
     global token
     header=flask.request.headers
@@ -548,6 +550,7 @@ def rate_product(product_id):
         return flask.jsonify(response)
     else:
         token=(header['Authorization'].split(" ")[1])
+
 
     #Decode Token
     decode_token = jwt.decode(token,jwt_key,'HS256')
@@ -560,10 +563,12 @@ def rate_product(product_id):
 
 
     try:
-        values = ( token['id'], product_id, payload['rating'], payload['comment'])
+
+
+        values = ( decode_token['id'], str(product_id), str(payload['rating']), payload['comment'])
         cur.execute("select create_rating(%s::INTEGER,%s::INTEGER,%s::INTEGER,%s::VARCHAR)",values)
 
-        result=cur.fetchone()
+        response=cur.fetchone()
         conn.commit()
 
     except (Exception, psycopg2.DatabaseError) as error:
