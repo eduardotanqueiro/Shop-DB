@@ -60,6 +60,24 @@ def add_user():
         response = {'status': StatusCodes['api_error'], 'results': 'Missing value(s) in the payload'}
         return flask.jsonify(response)
 
+    #ler token inserido em Header Postman (authorization->Bearer Token)
+    global token
+    header=flask.request.headers
+    if 'Authorization' not in header:
+        response = {'status': StatusCodes['api_error'], 'errors': 'Missing auth token'}
+        return flask.jsonify(response)
+    else:
+        token=(header['Authorization'].split(" ")[1])
+
+    #1st check if user is customer,seller or admin
+    decode_token = jwt.decode(token,jwt_key,'HS256')
+    
+    
+    #If user is not admin
+    if decode_token['user_type'] == user_type_hashed['customer'] or decode_token['user_type'] == user_type_hashed['vendedor']:
+        response = {'status': StatusCodes['api_error'], 'errors': 'You don\'t have permission to execute this task!'}
+        return flask.jsonify(response)
+
 
     #hashing da password
     bin_pw = str(payload['password']).encode('ascii')
@@ -314,7 +332,10 @@ def make_order():
     
     try:
         #TODO compra
-        print()
+        cur.execute("call make_order(%s::INTEGER,);")
+
+        response = cur.fetchone()
+        conn.commit()
 
 
 
@@ -389,19 +410,19 @@ def get_product(product_id):
     cur = conn.cursor()
 
     try:
-        cur.execute('SELECT descricao,preco FROM produto WHERE produto.id = %s AND produto.versao = (SELECT MAX(produto.versao) FROM produto WHERE produto.id = %s )', product_id  )
-        rows = cur.fetchall()
+        cur.execute('select get_product_id(%s::INTEGER)', (product_id,))
+        rows = cur.fetchone()
 
-        if rows == []:
-            raise Exception("There are no products to sell")
+        json_result=rows[0]
+
+        if 'error' in json_result:
+            print('error')
+            logger.error(f'GET /product/<product_id> - error: {json_result["error"]}')
+            response = {'status': StatusCodes['internal_error'], 'errors': str(json_result["error"])}
         else:
-            row = rows[0]
+            logger.debug('GET /product/<product_id> - parse')
 
-        logger.debug('GET /product/<product_id> - parse')
-        logger.debug(row)
-        content = {'descricao': row[0], 'preco': row[1]}
-
-        response = {'status': StatusCodes['success'], 'results': content}
+            response = {'status': StatusCodes['success'], 'results': json_result}
 
     except (Exception, psycopg2.DatabaseError) as error:
         logger.error(f'GET /product/<product_id> - error: {error}')

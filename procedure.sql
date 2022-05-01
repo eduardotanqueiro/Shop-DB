@@ -180,6 +180,8 @@ declare
     preco_prod produto.preco%type;
     stock_prod produto.stock%type;
 
+    data_compra compra.data_compra%type;
+
     cur_id_compra cursor for
         select MAX(id)
         from compra_notificacao
@@ -195,7 +197,8 @@ begin
     nr_produtos = array_lenght(cart,1);
 
     --gerar nova compra
-    insert into compra_notificacao(data_compra,valor_pago,valor_do_desconto,customer_utilizador_id,notificacao_descricao) values (,0,0,customer_id,"");
+    select current_date into data_compra;
+    insert into compra_notificacao(data_compra,valor_pago,valor_do_desconto,customer_utilizador_id,notificacao_descricao) values (data_compra,0,0,customer_id,"");
 
     open cur_id_compra;
     fetch cur_id_compra into id_compra;
