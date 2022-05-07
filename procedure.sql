@@ -7,7 +7,7 @@ declare
 begin
 PERFORM utilizador_id from customer 
 where utilizador_id=user_id;
-if found then return 'custumer';
+if found then return 'customer';
 end if;
 
 PERFORM utilizador_id from administrador
@@ -51,7 +51,8 @@ end;
 $$;
 
 
-create or replace procedure insert_smartphone(descricao produto.descricao%type, preco produto.preco%type, stock produto.stock%type, vendedor_user_id produto.vendedor_utilizador_id%type, tamanho smartphone.tamanho%type, marca smartphone.marca%type, ram smartphone.ram%type, rom smartphone.rom%type)
+create or replace function insert_smartphone(descricao produto.descricao%type, preco produto.preco%type, stock produto.stock%type, vendedor_user_id produto.vendedor_utilizador_id%type, tamanho smartphone.tamanho%type, marca smartphone.marca%type, ram smartphone.ram%type, rom smartphone.rom%type)
+returns integer
 language plpgsql
 as $$
 declare
@@ -76,7 +77,8 @@ begin
 
         --inserir na tabela smartphone
         insert into smartphone(tamanho,marca,ram,rom,produto_id,produto_versao) values (tamanho,marca,ram,rom,id_max +1,1);
-    
+
+        return id_max+1;
     else
 
         --inserir na tabela produto
@@ -84,12 +86,15 @@ begin
 
         --inserir na tabela smartphone
         insert into smartphone(tamanho,marca,ram,rom,produto_id,produto_versao) values (tamanho,marca,ram,rom,0,1);
+        return 0;
 
     end if;
+
 end;
 $$;
 
-create or replace procedure insert_tv(descricao produto.descricao%type, preco produto.preco%type, stock produto.stock%type, vendedor_user_id produto.vendedor_utilizador_id%type, tamanho tv.tamanho%type, marca tv.marca%type)
+create or replace function insert_tv(descricao produto.descricao%type, preco produto.preco%type, stock produto.stock%type, vendedor_user_id produto.vendedor_utilizador_id%type, tamanho tv.tamanho%type, marca tv.marca%type)
+returns integer
 language plpgsql
 as $$
 declare
@@ -113,7 +118,8 @@ begin
 
         --inserir na tabela tv
         insert into tv(tamanho,marca,produto_id,produto_versao) values (tamanho,marca,id_max +1,1);
-    
+
+        return id_max+1;    
     else
         --inserir na tabela produto
         insert into produto(id,descricao,preco,stock,versao,vendedor_utilizador_id) values (0,descricao,preco,stock,1,vendedor_user_id);
@@ -121,6 +127,7 @@ begin
         --inserir na tabela tv
         insert into tv(tamanho,marca,produto_id,produto_versao) values (tamanho,marca,0,1);
 
+        return 0;
     end if;
 
     close cur_max_id;
@@ -128,7 +135,8 @@ begin
 end;
 $$;
 
-create or replace procedure insert_pc(descricao produto.descricao%type, preco produto.preco%type, stock produto.stock%type, vendedor_user_id produto.vendedor_utilizador_id%type, cpu pc.cpu%type, ram pc.ram%type, rom pc.rom%type, marca pc.marca%type)
+create or replace function insert_pc(descricao produto.descricao%type, preco produto.preco%type, stock produto.stock%type, vendedor_user_id produto.vendedor_utilizador_id%type, cpu pc.cpu%type, ram pc.ram%type, rom pc.rom%type, marca pc.marca%type)
+returns integer
 language plpgsql
 as $$
 declare
@@ -154,12 +162,15 @@ begin
         --inserir na tabela pc
         insert into pc(cpu,ram,rom,marca,produto_id,produto_versao) values (cpu,ram,rom,marca,id_max +1,1);
 
+        return id_max+1;
     else
         --inserir na tabela produto
         insert into produto(id,descricao,preco,stock,versao,vendedor_utilizador_id) values (0,descricao,preco,stock,1,vendedor_user_id);
 
         --inserir na tabela pc
         insert into pc(cpu,ram,rom,marca,produto_id,produto_versao) values (cpu,ram,rom,marca,0,1);
+
+        return 0;
     end if;
 
 end;
@@ -190,13 +201,13 @@ declare
 
     cur_id_compra cursor for
         select MAX(id)
-        from compra
-        for update;
+        from compra;
 
     cur_info_prod cursor(id_prod INTEGER) for
         select MAX(versao), preco, stock
         from produto
-        where produto.id = id_prod;
+        where produto.id = id_prod
+        group by produto.id,preco,stock;
 
     cur_prod_cart cursor(cart_js JSON) for
         select * from json_each(cart_js);
@@ -205,7 +216,8 @@ begin
 
     --gerar nova compra
     select current_date into data_compra;
-    insert into compra(data_compra,valor_pago,valor_do_desconto,customer_utilizador_id) values (data_compra,0,0,customer_id);
+    insert into compra(data_compra,valor_pago,valor_do_desconto,customer_utilizador_id) values (data_compra,1,0,customer_id);
+	total_compra = 0;
 
     --fazer compra
     open cur_id_compra;
@@ -227,7 +239,7 @@ begin
 
         --ir buscar versao do produto e o preco
         open cur_info_prod( id_prod_cart );
-        fetch cur_id_compra into versao_prod,preco_prod,stock_prod;
+        fetch cur_info_prod into versao_prod,preco_prod,stock_prod;
 
         IF NOT FOUND THEN --ERRO, PRODUTO NÃO EXISTE
             RAISE EXCEPTION 'Product % doesn''t exist!', id_prod_cart;
@@ -237,9 +249,9 @@ begin
 
 
         --verificar stock
-        if stock_prod == 0 then
+        if stock_prod = 0 then
             RAISE EXCEPTION 'Product % does not have any stock!', id_prod_cart;
-        elsif quantidade_prod - stock_prod < 0 then
+        elsif stock_prod - quantidade_prod  < 0 then
             RAISE EXCEPTION 'Product % only has % stock, and you tried to order %!', id_prod_cart, stock_prod, quantidade_prod;
         end if;
 
@@ -260,7 +272,7 @@ begin
 
     --verificar cupao e atualizar informacoes da compra
     if id_cupao = -1 then --sem cupao
-        update compra set valor_pago = total_compra and valor_do_desconto = 0 where compra.id = id_compra;
+        update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra;
     else
         --com cupao
 
@@ -448,7 +460,7 @@ end
 $$
 
 --Rate a product
-create or replace function create_rating(utilizador_id compra_notificacao.customer_utilizador_id%type, prod_id rating.produto_id%type, rating rating.classificacao%type, descricao rating.descricao%type)
+create or replace function create_rating(utilizador_id compra.customer_utilizador_id%type, prod_id rating.produto_id%type, rating rating.classificacao%type, descricao rating.descricao%type)
 returns json
 language plpgsql
 as $$
@@ -459,7 +471,7 @@ begin
     
 
     --check se compra existe
-    select transacao_compra.compra_id into compra_id_search from transacao_compra where produto_id = prod_id and transacao_compra.compra_id in (select id from compra_notificacao where customer_utilizador_id = utilizador_id );
+    select transacao_compra.compra_id into compra_id_search from transacao_compra where produto_id = prod_id and transacao_compra.compra_id in (select id from compra where customer_utilizador_id = utilizador_id );
     if not found then return json_build_object('error','compra nao encontrada');
     end if;
 

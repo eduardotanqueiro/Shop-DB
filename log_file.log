@@ -2286,3 +2286,295 @@ INFO:werkzeug: * Debugger PIN: 982-140-900
 INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
 INFO:logger:API v1.0 online: http://127.0.0.1:8080
 INFO:logger:API v1.0 online: http://127.0.0.1:8080
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'joanauser', 'mail': 'joana@gmail.com', 'password': 'pwjoana', 'nome': 'joana', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joana'}
+INFO:werkzeug:127.0.0.1 - - [07/May/2022 18:28:11] "POST /dbproj/user HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'joanauser', 'mail': 'joana@gmail.com', 'password': 'pwjoana', 'nome': 'joana', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joana'}
+ERROR:logger:POST /customer - error: procedure insert_customer(unknown, unknown, unknown, unknown, unknown, unknown, unknown) does not exist
+LINE 1: call insert_customer('joanauser','7b73d51e27a69e14d39c693bc6...
+             ^
+HINT:  No procedure matches the given name and argument types. You might need to add explicit type casts.
+
+INFO:werkzeug:127.0.0.1 - - [07/May/2022 18:28:52] "POST /dbproj/user HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'joanauser', 'mail': 'joana@gmail.com', 'password': 'pwjoana', 'nome': 'joana', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joana'}
+INFO:logger:New user inserted
+INFO:werkzeug:127.0.0.1 - - [07/May/2022 18:29:54] "POST /dbproj/user HTTP/1.1" 200 -
+INFO:logger:User Login
+DEBUG:logger:User login attempt
+INFO:logger:User found, creating JWT
+ERROR:logger:'custumer'
+INFO:werkzeug:127.0.0.1 - - [07/May/2022 18:30:45] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:User Login
+DEBUG:logger:User login attempt
+INFO:logger:User found, creating JWT
+INFO:werkzeug:127.0.0.1 - - [07/May/2022 18:31:49] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:User Login
+DEBUG:logger:User login attempt
+INFO:logger:User found, creating JWT
+INFO:werkzeug:127.0.0.1 - - [07/May/2022 18:33:16] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:User Login Product Insertion
+DEBUG:logger:New product added
+INFO:werkzeug:127.0.0.1 - - [07/May/2022 18:34:45] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:User Login Product Insertion
+DEBUG:logger:New product added
+INFO:werkzeug:127.0.0.1 - - [07/May/2022 18:41:10] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:Rating the product 2
+ERROR:logger:function create_rating(integer, integer, integer, character varying) does not exist
+LINE 1: select create_rating('1'::INTEGER,'2'::INTEGER,'3'::INTEGER,...
+               ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+
+INFO:werkzeug:127.0.0.1 - - [07/May/2022 18:44:35] "POST /dbproj/rating/2 HTTP/1.1" 200 -
+INFO:logger:Rating the product 2
+ERROR:logger:missing FROM-clause entry for table "transacao_compra"
+LINE 1: select transacao_compra.compra_id                       from...
+               ^
+QUERY:  select transacao_compra.compra_id                       from compra where produto_id = prod_id and transacao_compra.compra_id in (select id from compra where customer_utilizador_id = utilizador_id )
+CONTEXT:  PL/pgSQL function create_rating(bigint,bigint,integer,character varying) line 9 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [07/May/2022 18:46:17] "POST /dbproj/rating/2 HTTP/1.1" 200 -
+INFO:logger:Rating the product 2
+ERROR:logger:missing FROM-clause entry for table "transacao_compra"
+LINE 1: select transacao_compra.compra_id                       from...
+               ^
+QUERY:  select transacao_compra.compra_id                       from compra where produto_id = prod_id and transacao_compra.compra_id in (select id from compra where customer_utilizador_id = utilizador_id )
+CONTEXT:  PL/pgSQL function create_rating(bigint,bigint,integer,character varying) line 9 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [07/May/2022 18:47:56] "POST /dbproj/rating/2 HTTP/1.1" 200 -
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:Rating the product 2
+ERROR:logger:missing FROM-clause entry for table "transacao_compra"
+LINE 1: select transacao_compra.compra_id                       from...
+               ^
+QUERY:  select transacao_compra.compra_id                       from compra where produto_id = prod_id and transacao_compra.compra_id in (select id from compra where customer_utilizador_id = utilizador_id )
+CONTEXT:  PL/pgSQL function create_rating(bigint,bigint,integer,character varying) line 9 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [07/May/2022 18:54:17] "POST /dbproj/rating/2 HTTP/1.1" 200 -
+INFO:logger:Rating the product 2
+ERROR:logger:column compra.produto_id does not exist
+LINE 1: ...               from compra,transacao_compra where compra.pro...
+                                                             ^
+QUERY:  select transacao_compra.compra_id                       from compra,transacao_compra where compra.produto_id = prod_id and transacao_compra.compra_id in (select id from compra where customer_utilizador_id = utilizador_id )
+CONTEXT:  PL/pgSQL function create_rating(bigint,bigint,integer,character varying) line 9 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [07/May/2022 18:57:31] "POST /dbproj/rating/2 HTTP/1.1" 200 -
+INFO:logger:Rating the product 2
+INFO:werkzeug:127.0.0.1 - - [07/May/2022 18:59:28] "POST /dbproj/rating/2 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/May/2022 19:06:58] "[31m[1mPOST /dbproj/order HTTP/1.1[0m" 400 -
+ERROR:logger:syntax error at or near "select"
+LINE 1: select make_order('1'::INTEGER,select json_array_elements('"...
+                                       ^
+
+INFO:werkzeug:127.0.0.1 - - [07/May/2022 19:07:14] "POST /dbproj/order HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [07/May/2022 19:18:48] "[31m[1mPOST /dbproj/order HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [07/May/2022 19:22:09] "[31m[1mPOST /dbproj/order HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [07/May/2022 19:22:28] "[31m[1mPOST /dbproj/order HTTP/1.1[0m" 400 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [07/May/2022 19:26:09] "[35m[1mPOST /dbproj/order HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [07/May/2022 19:26:22] "[35m[1mPOST /dbproj/order HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [07/May/2022 19:26:28] "[35m[1mPOST /dbproj/order HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [07/May/2022 19:35:40] "POST /dbproj/order HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+ERROR:logger:new row for relation "compra" violates check constraint "valor_pago"
+DETAIL:  Failing row contains (1, 2022-05-07, 0, 0, 1).
+CONTEXT:  SQL statement "insert into compra(data_compra,valor_pago,valor_do_desconto,customer_utilizador_id) values (data_compra,0,0,customer_id)"
+PL/pgSQL function make_order(integer,json,integer) line 36 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [07/May/2022 19:36:43] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:FOR UPDATE is not allowed with aggregate functions
+CONTEXT:  SQL statement "select MAX(id)
+        from compra
+        for update"
+PL/pgSQL function make_order(integer,json,integer) line 39 at OPEN
+
+INFO:werkzeug:127.0.0.1 - - [07/May/2022 19:39:21] "POST /dbproj/order HTTP/1.1" 200 -
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+ERROR:logger:column "produto.preco" must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: select MAX(versao), preco, stock
+                            ^
+QUERY:  select MAX(versao), preco, stock
+        from produto
+        where produto.id = id_prod
+CONTEXT:  PL/pgSQL function make_order(integer,json,integer) line 56 at OPEN
+
+INFO:werkzeug:127.0.0.1 - - [07/May/2022 19:40:18] "POST /dbproj/order HTTP/1.1" 200 -
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+ERROR:logger:column "produto.preco" must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: select MAX(versao), preco, stock
+                            ^
+QUERY:  select MAX(versao), preco, stock
+        from produto
+        where produto.id = id_prod
+        group by produto.id
+CONTEXT:  PL/pgSQL function make_order(integer,json,integer) line 57 at OPEN
+
+INFO:werkzeug:127.0.0.1 - - [07/May/2022 19:41:36] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:column "produto.stock" must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: select MAX(versao), preco, stock
+                                   ^
+QUERY:  select MAX(versao), preco, stock
+        from produto
+        where produto.id = id_prod
+        group by produto.id,preco
+CONTEXT:  PL/pgSQL function make_order(integer,json,integer) line 57 at OPEN
+
+INFO:werkzeug:127.0.0.1 - - [07/May/2022 19:43:10] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:cursor "cur_id_compra" does not exist
+CONTEXT:  PL/pgSQL function make_order(integer,json,integer) line 58 at FETCH
+
+INFO:werkzeug:127.0.0.1 - - [07/May/2022 19:43:36] "POST /dbproj/order HTTP/1.1" 200 -
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+ERROR:logger:operator does not exist: integer == integer
+LINE 1: stock_prod == 0
+                   ^
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+QUERY:  stock_prod == 0
+CONTEXT:  PL/pgSQL function make_order(integer,json,integer) line 68 at IF
+
+INFO:werkzeug:127.0.0.1 - - [07/May/2022 19:45:15] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:Product 35 doesn't exist!
+CONTEXT:  PL/pgSQL function make_order(integer,json,integer) line 61 at RAISE
+
+INFO:werkzeug:127.0.0.1 - - [07/May/2022 19:46:02] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:argument of AND must be type boolean, not type real
+LINE 1: update compra set valor_pago = total_compra and valor_do_des...
+                                       ^
+QUERY:  update compra set valor_pago = total_compra and valor_do_desconto = 0 where compra.id = id_compra
+CONTEXT:  PL/pgSQL function make_order(integer,json,integer) line 91 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [07/May/2022 19:47:24] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:null value in column "valor_pago" of relation "compra" violates not-null constraint
+DETAIL:  Failing row contains (10, 2022-05-07, null, 0, 1).
+CONTEXT:  SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 91 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [07/May/2022 19:48:26] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:new row for relation "produto" violates check constraint "stock"
+DETAIL:  Failing row contains (1, produtoSAMSUNG descricao bonita, 7.5, -25, 1, 3).
+CONTEXT:  SQL statement "update produto set stock = stock - quantidade_prod where id = id_prod_cart and versao = (SELECT MAX(versao) FROM produto where id = id_prod_cart)"
+PL/pgSQL function make_order(integer,json,integer) line 79 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [07/May/2022 19:50:17] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:You can't buy 0 units of a product!
+CONTEXT:  PL/pgSQL function make_order(integer,json,integer) line 53 at RAISE
+
+INFO:werkzeug:127.0.0.1 - - [07/May/2022 19:54:13] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:new row for relation "produto" violates check constraint "stock"
+DETAIL:  Failing row contains (1, produtoSAMSUNG descricao bonita, 7.5, -25, 1, 3).
+CONTEXT:  SQL statement "update produto set stock = stock - quantidade_prod where id = id_prod_cart and versao = (SELECT MAX(versao) FROM produto where id = id_prod_cart)"
+PL/pgSQL function make_order(integer,json,integer) line 79 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [07/May/2022 19:54:32] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:Product 2 doesn't exist!
+CONTEXT:  PL/pgSQL function make_order(integer,json,integer) line 61 at RAISE
+
+INFO:werkzeug:127.0.0.1 - - [07/May/2022 19:54:56] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:new row for relation "produto" violates check constraint "stock"
+DETAIL:  Failing row contains (1, produtoSAMSUNG descricao bonita, 7.5, -25, 1, 3).
+CONTEXT:  SQL statement "update produto set stock = stock - quantidade_prod where id = id_prod_cart and versao = (SELECT MAX(versao) FROM produto where id = id_prod_cart)"
+PL/pgSQL function make_order(integer,json,integer) line 79 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [07/May/2022 19:55:00] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:Product 1 only has 10 stock, and you tried to order 35!
+CONTEXT:  PL/pgSQL function make_order(integer,json,integer) line 71 at RAISE
+
+INFO:werkzeug:127.0.0.1 - - [07/May/2022 19:55:50] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:null value in column "valor_pago" of relation "compra" violates not-null constraint
+DETAIL:  Failing row contains (17, 2022-05-07, null, 0, 1).
+CONTEXT:  SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 91 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [07/May/2022 19:56:11] "POST /dbproj/order HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/May/2022 19:56:43] "POST /dbproj/order HTTP/1.1" 200 -

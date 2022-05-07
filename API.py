@@ -62,6 +62,8 @@ def add_user():
         return flask.jsonify(response)
 
     #ler token inserido em Header Postman (authorization->Bearer Token)
+    #TODO SE NÃO TEM HEADER É PORQUE É PARA INTRODUZIR UM USER, E ISSO QUALQUER UM PODE FAZER
+    '''
     global token
     header=flask.request.headers
     if 'Authorization' not in header:
@@ -78,7 +80,7 @@ def add_user():
     if decode_token['user_type'] == user_type_hashed['customer'] or decode_token['user_type'] == user_type_hashed['vendedor']:
         response = {'status': StatusCodes['api_error'], 'errors': 'You don\'t have permission to execute this task!'}
         return flask.jsonify(response)
-
+    '''
 
     #hashing da password
     bin_pw = str(payload['password']).encode('ascii')
@@ -262,25 +264,26 @@ def add_product():
 
             values = (payload['descricao'],payload['preco'],payload['stock'], decode_token['id'] ,payload['tamanho'],payload['marca'],payload['ram'],payload['rom'])
 
-            cur.execute("call insert_smartphone(%s::VARCHAR,%s::FLOAT(8),%s::INTEGER,%s::INTEGER,%s::SMALLINT,%s::VARCHAR,%s::SMALLINT,%s::SMALLINT)", values)
+            cur.execute("select insert_smartphone(%s::VARCHAR,%s::FLOAT(8),%s::INTEGER,%s::INTEGER,%s::SMALLINT,%s::VARCHAR,%s::SMALLINT,%s::SMALLINT)", values)
 
         elif payload['tipo'] == 'tv':
 
             values = ((payload['descricao']),(payload['preco']),(payload['stock']), (decode_token['id']) ,(payload['tamanho']),(payload['marca']))
             print(values)
 
-            cur.execute("call insert_tv(%s::VARCHAR(512),%s::FLOAT(8),%s::INTEGER,%s::INTEGER,%s::SMALLINT,%s::VARCHAR(50))", values)
+            cur.execute("select insert_tv(%s::VARCHAR(512),%s::FLOAT(8),%s::INTEGER,%s::INTEGER,%s::SMALLINT,%s::VARCHAR(50))", values)
 
         elif payload['tipo'] == 'pc':
 
             values = (payload['descricao'],payload['preco'],payload['stock'], decode_token['id'],payload['cpu'],payload['ram'],payload['rom'],payload['marca'])
 
-            cur.execute("call insert_pc(%s::VARCHAR,%s::FLOAT(8),%s::INTEGER,%s::INTEGER,%s::VARCHAR,%s::SMALLINT,%s::SMALLINT,%s::VARCHAR)", values)
+            cur.execute("select insert_pc(%s::VARCHAR,%s::FLOAT(8),%s::INTEGER,%s::INTEGER,%s::VARCHAR,%s::SMALLINT,%s::SMALLINT,%s::VARCHAR)", values)
 
 
+        id_prod = cur.fetchone()
         conn.commit()
 
-        response = {'status': StatusCodes['success'], 'results': f'Added new product'}
+        response = {'status': StatusCodes['success'], 'results': id_prod[0]}
         logger.debug('New product added')
 
     except (Exception, psycopg2.DatabaseError) as error:
@@ -312,6 +315,7 @@ def make_order():
     cur = conn.cursor()
 
     #ler token inserido em Header Postman (authorization->Bearer Token)
+    
     global token
     header=flask.request.headers
     if 'Authorization' not in header:
@@ -330,16 +334,23 @@ def make_order():
 
 
     #TODO ATENÇÃO: PROBLEMAS DE LOCKS E SINCRONIZAÇÃO DE DADOS NAS TABELAS
-    
+    #converter carrinho para dicionario json
+    cart_dict = {}
+    for i in payload['cart']:
+        cart_dict[i[0]] = i[1]
+
+    cart_json = json.dumps(cart_dict)
+
+
     try:
         #compra
         if 'coupon' not in payload:
-            values = (token['id'], json.dumps(payload['cart']),'-1')
-            cur.execute("select make_order(%s::INTEGER,select json_array_elements(%s::json),%s::INTEGER);",values)
+            values = (decode_token['id'], cart_json ,'-1')
+            cur.execute("select make_order(%s::INTEGER,%s::json,%s::INTEGER);",values)
 
         else:
-            values = (token['id'], json.dumps(payload['cart']),payload['coupon'])
-            cur.execute("select make_order(%s::INTEGER,select json_array_elements(%s::json),%s::INTEGER);",values)
+            values = (decode_token['id'], cart_json ,payload['coupon'])
+            cur.execute("select make_order(%s::INTEGER,%s::json,%s::INTEGER);",values)
 
         compra_id = cur.fetchone()
         conn.commit()
