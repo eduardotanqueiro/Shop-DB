@@ -466,6 +466,7 @@ language plpgsql
 as $$
 declare
     compra_id_search rating.compra_id%type;
+    max_ver produto.versao%type;
 
 begin
     
@@ -475,8 +476,10 @@ begin
     if not found then return json_build_object('error','compra nao encontrada');
     end if;
 
-    --inserir na tabela rating (assumindo que tirámos a versao do produto da tabela)
-    insert into rating(classificacao,descricao,compra_id,customer_utilizador_id,prod_id) values(rating,descricao,compra_id_search,utilizador_id,prod_id);
+    select MAX(versao) into max_ver from produto where id = prod_id group by versao;
+
+    --inserir na tabela rating
+    insert into rating(classificacao,descricao,compra_id,customer_utilizador_id,produto_id,produto_versao) values(rating,descricao,compra_id_search,utilizador_id,prod_id,max_ver);
 
 
 end

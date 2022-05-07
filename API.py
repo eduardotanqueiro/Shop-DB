@@ -605,9 +605,9 @@ def rate_product(product_id):
 
 
         values = ( decode_token['id'], str(product_id), str(payload['rating']), payload['comment'])
-        cur.execute("select create_rating(%s::INTEGER,%s::INTEGER,%s::INTEGER,%s::VARCHAR)",values)
+        cur.execute("call create_rating(%s::INTEGER,%s::INTEGER,%s::INTEGER,%s::VARCHAR)",values)
 
-        response=cur.fetchone()
+        response = {'status': StatusCodes['success']}
         conn.commit()
 
     except (Exception, psycopg2.DatabaseError) as error:

@@ -2578,3 +2578,48 @@ PL/pgSQL function make_order(integer,json,integer) line 91 at SQL statement
 
 INFO:werkzeug:127.0.0.1 - - [07/May/2022 19:56:11] "POST /dbproj/order HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [07/May/2022 19:56:43] "POST /dbproj/order HTTP/1.1" 200 -
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:Rating the product 1
+ERROR:logger:column "prod_id" of relation "rating" does not exist
+LINE 1: ...icacao,descricao,compra_id,customer_utilizador_id,prod_id) v...
+                                                             ^
+QUERY:  insert into rating(classificacao,descricao,compra_id,customer_utilizador_id,prod_id) values(rating,descricao,compra_id_search,utilizador_id,prod_id)
+CONTEXT:  PL/pgSQL function create_rating(bigint,bigint,integer,character varying) line 14 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [07/May/2022 20:02:25] "POST /dbproj/rating/1 HTTP/1.1" 200 -
+INFO:logger:Rating the product 1
+ERROR:logger:column "produto_id" does not exist
+LINE 1: ...elect MAX(versao)              from produto where produto_id...
+                                                             ^
+QUERY:  select MAX(versao)              from produto where produto_id = prod_id group by versao
+CONTEXT:  PL/pgSQL function create_rating(bigint,bigint,integer,character varying) line 14 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [07/May/2022 20:07:46] "POST /dbproj/rating/1 HTTP/1.1" 200 -
+INFO:logger:Rating the product 1
+ERROR:logger:column "id" does not exist
+LINE 1: ...                      from transacao_compra where id = prod_...
+                                                             ^
+QUERY:  select transacao_compra.compra_id                       from transacao_compra where id = prod_id and transacao_compra.compra_id in (select id from compra where customer_utilizador_id = utilizador_id )
+CONTEXT:  PL/pgSQL function create_rating(bigint,bigint,integer,character varying) line 10 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [07/May/2022 20:08:30] "POST /dbproj/rating/1 HTTP/1.1" 200 -
+INFO:logger:Rating the product 1
+ERROR:logger:control reached end of function without RETURN
+CONTEXT:  PL/pgSQL function create_rating(bigint,bigint,integer,character varying)
+
+INFO:werkzeug:127.0.0.1 - - [07/May/2022 20:08:58] "POST /dbproj/rating/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:Rating the product 1
+INFO:werkzeug:127.0.0.1 - - [07/May/2022 20:11:39] "POST /dbproj/rating/1 HTTP/1.1" 200 -
