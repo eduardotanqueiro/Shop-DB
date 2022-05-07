@@ -334,7 +334,29 @@ begin
 
     --verificar se é do tipo TV
     select row_to_json(a) into prod_return from (
-        select * from produto join tv on produto.id=tv.produto_id and produto.versao=tv.produto_versao
+        select id,descricao,preco,stock,versao,marca,tamanho from produto join tv on produto.id=tv.produto_id and produto.versao=tv.produto_versao
+        where produto.id=id_produto and produto.versao=max_version
+    ) as a;
+    if found then
+        open cursor_avg_rating (id_produto);
+        fetch cursor_avg_rating into json_aux;
+        if found then prod_return=prod_return::jsonb||json_aux::jsonb;
+        end if;
+        close cursor_avg_rating;
+        for r in 
+            select concat('versao',versao,' ',preco) from produto
+            where produto.id=id_produto
+            order by produto.versao DESC
+            LOOP
+            precos=precos||r;
+            END LOOP;
+        prod_return=json_build_object('precos',precos)::jsonb||prod_return::jsonb;
+        return prod_return;
+    end if;
+
+    --- verificar se e smartphone
+    select row_to_json(a) into prod_return from (
+        select id, descricao,preco,stock,versao,marca,tamanho,rom,ram from produto join smartphone on produto.id=smartphone.produto_id and produto.versao=smartphone.produto_versao
         where produto.id=id_produto and produto.versao=max_version
     ) as a;
     if found then
@@ -354,28 +376,9 @@ begin
         return prod_return;
     end if;
 
+    --- verificar se e pc
     select row_to_json(a) into prod_return from (
-        select * from produto join smartphone on produto.id=smartphone.produto_id and produto.versao=smartphone.produto_versao
-        where produto.id=id_produto and produto.versao=max_version
-    ) as a;
-    if found then
-        open cursor_avg_rating (id_produto);
-        fetch cursor_avg_rating into json_aux;
-        if found then prod_return=prod_return::jsonb||json_aux::jsonb;
-        end if;
-        close cursor_avg_rating;
-        for r in 
-            select concat('versao',versao,' ',preco) from produto
-            where produto.id=id_produto
-            order by produto.versao DESC
-            LOOP
-            precos=precos||r;
-            END LOOP;
-        prod_return=prod_return::jsonb||json_build_object('precos',precos)::jsonb;
-        return prod_return;
-    end if;
-    select row_to_json(a) into prod_return from (
-        select * from produto join pc on produto.id=pc.produto_id and produto.versao=pc.produto_versao
+        select id, descricao,preco,stock,versao,marca,cpu,rom,ram from produto join pc on produto.id=pc.produto_id and produto.versao=pc.produto_versao
         where produto.id=id_produto and produto.versao=max_version
     ) as a;
     if found then
@@ -401,9 +404,10 @@ $$;
 create or replace procedure insert_campaign(desconto campanha.desconto%type, numero_cupoes campanha.numero_cupoes%type, data_inicio campanha.data_inicio%type, data_fim campanha.data_fim%type,validade_cupao campanha.validade_cupao%type, admin_id campanha.administrador_utilizador_id)
 language plpgsql
 as $$
+declare
 begin
-        update campanha_aux set campanha_ativa='false' where id = (select id from campanha_aux where campanha_ativa='true');
-        insert into campanha(desconto,numero_cupoes,data_inicio,data_fim,campanha_ativa,validade_cupao,administrador_utilizador_id) values (desconto,numero_cupoes,data_inicio,data_fim,'True',validade_cupao,admin_id);        
+        update campanha set campanha_ativa='false' where campanha.id = (select id from campanha where campanha_ativa='true');
+        insert into campanha(desconto,numero_cupoes,data_inicio,data_fim,campanha_ativa,validade_cupao,administrador_utilizador_id) values (desconto,numero_cupoes,data_inicio,data_fim,'true',validade_cupao,admin_id);        
 end;
 $$;
 --- SUBSCRIBE CAMPAIGN
@@ -482,5 +486,78 @@ begin
     insert into rating(classificacao,descricao,compra_id,customer_utilizador_id,produto_id,produto_versao) values(rating,descricao,compra_id_search,utilizador_id,prod_id,max_ver);
 
 
-end
-$$
+end,
+$$;
+
+create or replace function update_product_id(id_produto integer, detalhes_update json)
+returns json
+language plpgsql
+as $$
+declare
+    prod_details json;
+    max_version integer;
+	keys_aux text;
+begin
+    --ir buscar versão do produto a pesquisar
+    select max(produto.versao)into max_version from produto
+    group by produto.id having produto.id=id_produto;
+    if not found then return json_build_object('error','id produto nao encontrado');
+    end if;
+
+    --verificar se é do tipo TV
+    select row_to_json(a) into prod_details from (
+        select * from produto join tv on produto.id=tv.produto_id and produto.versao=tv.produto_versao
+        where produto.id=id_produto and produto.versao=max_version
+    ) as a;
+    if found then 
+		for keys_aux in 
+			select json_object_keys(detalhes_update)
+		LOOP
+			prod_details=prod_details::jsonb||json_build_object(keys_aux,detalhes_update->>keys_aux)::jsonb;
+		END LOOP;
+        insert into produto(id,descricao,preco,stock,versao,vendedor_utilizador_id) values (id_produto,prod_details->>'descricao',
+		cast(prod_details->>'preco' as FLOAT(8)),cast(prod_details->>'stock' as INTEGER),max_version+1,cast(prod_details->>'vendedor_utilizador_id' as INTEGER));
+        insert into tv(tamanho,marca,produto_id,produto_versao) values 
+		(cast(prod_details->>'tamanho' as  SMALLINT),cast(prod_details->>'marca' as VARCHAR(50)),id_produto,max_version+1);
+	    return json_build_object('success','produto atualizado');
+    end if;
+
+    --- verificar se e smartphone
+    select row_to_json(a) into prod_details from (
+        select * from produto join smartphone on produto.id=smartphone.produto_id and produto.versao=smartphone.produto_versao
+        where produto.id=id_produto and produto.versao=max_version
+    ) as a;
+    if found then
+		for keys_aux in 
+			select json_object_keys(detalhes_update)
+		LOOP
+			prod_details=prod_details::jsonb||json_build_object(keys_aux,detalhes_update->>keys_aux)::jsonb;
+		END LOOP;
+        insert into produto(id,descricao,preco,stock,versao,vendedor_utilizador_id) values (id_produto,prod_details->>'descricao',
+		cast(prod_details->>'preco' as FLOAT(8)),cast(prod_details->>'stock' as INTEGER),max_version+1,cast(prod_details->>'vendedor_utilizador_id' as INTEGER));
+        insert into smartphone(tamanho,marca,ram,rom,produto_id,produto_versao) values 
+		(cast(prod_details->>'tamanho' as  SMALLINT),cast(prod_details->>'marca' as VARCHAR(50)),cast(prod_details->>'ram' as SMALLINT),
+		 cast(prod_details->>'rom' as SMALLINT),id_produto,max_version+1);
+	return json_build_object('success','produto atualizado');
+    end if;
+
+    -- verificar se e pc
+    select row_to_json(a) into prod_details from (
+        select * from produto join pc on produto.id=pc.produto_id and produto.versao=pc.produto_versao
+        where produto.id=id_produto and produto.versao=max_version
+    ) as a;
+    if found then
+		for keys_aux in 
+			select json_object_keys(detalhes_update)
+		LOOP
+			prod_details=prod_details::jsonb||json_build_object(keys_aux,detalhes_update->>keys_aux)::jsonb;
+		END LOOP;
+        insert into produto(id,descricao,preco,stock,versao,vendedor_utilizador_id) values (id_produto,prod_details->>'descricao',
+		cast(prod_details->>'preco' as FLOAT(8)),cast(prod_details->>'stock' as INTEGER),max_version+1,cast(prod_details->>'vendedor_utilizador_id' as INTEGER));
+        insert into pc(cpu,ram,rom,marca,produto_id,produto_versao) values 
+		(cast(prod_details->>'cpu' as  VARCHAR(60)),cast(prod_details->>'ram' as SMALLINT),cast(prod_details->>'rom' as SMALLINT),
+		 cast(prod_details->>'marca' as VARCHAR(50)),id_produto,max_version+1);
+	return json_build_object('sucess','produto atualizado');
+    end if;
+end;
+$$;

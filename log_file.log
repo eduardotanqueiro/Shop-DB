@@ -2623,3 +2623,19 @@ INFO:werkzeug: * Debugger PIN: 982-140-900
 INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
 INFO:logger:Rating the product 1
 INFO:werkzeug:127.0.0.1 - - [07/May/2022 20:11:39] "POST /dbproj/rating/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+ERROR:logger:new row for relation "compra" violates check constraint "valor_pago"
+DETAIL:  Failing row contains (1, 2022-05-07, 0, 0, 1).
+CONTEXT:  SQL statement "insert into compra(data_compra,valor_pago,valor_do_desconto,customer_utilizador_id) values (data_compra,0,0,customer_id)"
+PL/pgSQL function make_order(integer,json,integer) line 36 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [07/May/2022 20:27:24] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:insert or update on table "compra" violates foreign key constraint "compra_fk2"
+DETAIL:  Key (customer_utilizador_id)=(1) is not present in table "customer".
+CONTEXT:  SQL statement "insert into compra(data_compra,valor_pago,valor_do_desconto,customer_utilizador_id) values (data_compra,1,0,customer_id)"
+PL/pgSQL function make_order(integer,json,integer) line 36 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [07/May/2022 20:28:12] "POST /dbproj/order HTTP/1.1" 200 -
