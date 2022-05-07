@@ -59,7 +59,14 @@ CREATE TABLE pc (
 	PRIMARY KEY(produto_id,produto_versao)
 );
 
-CREATE TABLE comentario_notificacao (
+CREATE TABLE notificacao_comentario (
+
+	descricao	 VARCHAR(512) NOT NULL,
+	lida 					INTEGER NOT NULL,
+	comentario_id			INTEGER NOT NULL
+);
+
+CREATE TABLE comentario(
 	id			 SERIAL UNIQUE NOT NULL,
 	id_anterior INTEGER,
 	texto			 VARCHAR(512) NOT NULL,
@@ -67,7 +74,7 @@ CREATE TABLE comentario_notificacao (
 	vendedor_utilizador_id BIGINT NOT NULL,
 	produto_id		 BIGINT NOT NULL,
 	produto_versao	 SMALLINT NOT NULL,
-	notificacao_descricao	 VARCHAR(512),
+
 	PRIMARY KEY(id)
 );
 
@@ -85,21 +92,29 @@ CREATE TABLE campanha (
 
 --------------------------------------VER
 CREATE TABLE cupao (
+	id SERIAL UNIQUE,
 	numero	INTEGER NOT NULL ,
 	cupao_ativo	 BOOL NOT NULL,
-	data_atribuicao DATE NOT NULL,
+	data_atribuicao DATE NOT NULL, 
 	campanha_id	 INTEGER NOT NULL,
-	PRIMARY KEY(numero,campanha_id)
+	PRIMARY KEY(id)
 );
 
-CREATE TABLE compra_notificacao (
+CREATE TABLE notificacao_compra(
+
+	descricao	 VARCHAR(512) NOT NULL,
+	lida INTEGER NOT NULL,
+	compra_id INTEGER NOT NULL
+
+);
+
+CREATE TABLE compra(
 	id			 SERIAL UNIQUE NOT NULL,
 	data_compra		 DATE NOT NULL,
 	valor_pago		 FLOAT(8) NOT NULL,
 	valor_do_desconto	 FLOAT(8) NOT NULL,
-	vendedor_utilizador_id BIGINT NOT NULL,
 	customer_utilizador_id BIGINT NOT NULL,
-	notificacao_descricao	 VARCHAR(512),
+
 	PRIMARY KEY(id)
 );
 
@@ -136,16 +151,14 @@ CREATE TABLE transacao_compra (
 	PRIMARY KEY(compra_id,produto_id,produto_versao)
 );
 
-CREATE TABLE compra_notificacao_cupao (
-	cupao_numero		 INTEGER UNIQUE NOT NULL,
-	cupao_campanha_id INTEGER UNIQUE NOT NULL
+CREATE TABLE compra_cupao (
+	id_compra 			INTEGER NOT NULL,
+	id_cupao			INTEGER NOT NULL
 );
 
 CREATE TABLE customer_cupao (
 	customer_utilizador_id BIGINT NOT NULL,
-	cupao_numero		 INTEGER UNIQUE NOT NULL,
-	cupao_campanha_id	 INTEGER UNIQUE NOT NULL,
-	PRIMARY KEY(cupao_numero,cupao_campanha_id)
+	id_cupao 				INTEGER NOT NULL
 );
 
 ALTER TABLE customer ADD CONSTRAINT customer_fk1 FOREIGN KEY (utilizador_id) REFERENCES utilizador(id);
@@ -164,35 +177,37 @@ ALTER TABLE produto ADD CONSTRAINT versao CHECK (versao >= 0);
 ALTER TABLE smartphone ADD CONSTRAINT smartphone_fk1 FOREIGN KEY (produto_id,produto_versao) REFERENCES produto(id,versao); 
 ALTER TABLE tv ADD CONSTRAINT tv_fk1 FOREIGN KEY (produto_id,produto_versao) REFERENCES produto(id,versao); 
 ALTER TABLE pc ADD CONSTRAINT pc_fk1 FOREIGN KEY (produto_id,produto_versao) REFERENCES produto(id,versao);
-ALTER TABLE comentario_notificacao ADD CONSTRAINT comentario_notificacao_fk1 FOREIGN KEY (utilizador_id) REFERENCES utilizador(id);
-ALTER TABLE comentario_notificacao ADD CONSTRAINT comentario_notificacao_fk2 FOREIGN KEY (vendedor_utilizador_id) REFERENCES vendedor(utilizador_id);
-ALTER TABLE comentario_notificacao ADD CONSTRAINT comentario_notificacao_fk3 FOREIGN KEY (produto_id,produto_versao) REFERENCES produto(id,versao); 
-ALTER TABLE comentario_notificacao ADD CONSTRAINT comentario_notificacao_fk4 FOREIGN KEY (id_anterior) REFERENCES comentario_notificacao(id);
+ALTER TABLE notificacao_comentario ADD CONSTRAINT notificacao_comentario_fk1 FOREIGN KEY (comentario_id) REFERENCES comentario(id);
+ALTER TABLE comentario ADD CONSTRAINT comentario_fk1 FOREIGN KEY (utilizador_id) REFERENCES utilizador(id);
+ALTER TABLE comentario ADD CONSTRAINT comentario_fk2 FOREIGN KEY (vendedor_utilizador_id) REFERENCES vendedor(utilizador_id);
+ALTER TABLE comentario ADD CONSTRAINT comentario_fk3 FOREIGN KEY (produto_id,produto_versao) REFERENCES produto(id,versao); 
+ALTER TABLE comentario ADD CONSTRAINT comentario_fk4 FOREIGN KEY (id_anterior) REFERENCES comentario(id);
 ALTER TABLE campanha ADD CONSTRAINT campanha_fk1 FOREIGN KEY (administrador_utilizador_id) REFERENCES administrador(utilizador_id);
 ALTER TABLE campanha ADD CONSTRAINT desconto CHECK (desconto < 100 AND desconto > 0);
 ALTER TABLE campanha ADD CONSTRAINT numero_cupoes CHECK (numero_cupoes > 0);
 ALTER TABLE campanha ADD CONSTRAINT validade CHECK (validade_cupao > 0);
 ALTER TABLE campanha ADD CONSTRAINT data CHECK (data_inicio < data_fim);
 ALTER TABLE cupao ADD CONSTRAINT cupao_fk1 FOREIGN KEY (campanha_id) REFERENCES campanha(id); 
-ALTER TABLE compra_notificacao ADD CONSTRAINT compra_notificacao_fk1 FOREIGN KEY (vendedor_utilizador_id) REFERENCES vendedor(utilizador_id);
-ALTER TABLE compra_notificacao ADD CONSTRAINT compra_notificacao_fk2 FOREIGN KEY (customer_utilizador_id) REFERENCES customer(utilizador_id);
-ALTER TABLE compra_notificacao ADD CONSTRAINT valor_pago CHECK (valor_pago > 0);
-ALTER TABLE compra_notificacao ADD CONSTRAINT valor_do_desconto CHECK (valor_do_desconto >= 0);
+ALTER TABLE notificacao_compra ADD CONSTRAINT notificacao_compra_fk1 FOREIGN KEY (compra_id) REFERENCES compra(id);
+ALTER TABLE compra ADD CONSTRAINT compra_fk2 FOREIGN KEY (customer_utilizador_id) REFERENCES customer(utilizador_id);
+ALTER TABLE compra ADD CONSTRAINT valor_pago CHECK (valor_pago > 0);
+ALTER TABLE compra ADD CONSTRAINT valor_do_desconto CHECK (valor_do_desconto >= 0);
 ALTER TABLE utilizador ADD CONSTRAINT username CHECK (length(username) > 6);
 ALTER TABLE utilizador ADD CONSTRAINT pw CHECK (length(password) > 8);
 ALTER TABLE utilizador ADD CONSTRAINT nome CHECK (length(nome) > 3);
 ALTER TABLE utilizador ADD CONSTRAINT mail CHECK (mail LIKE '%@%.com');
-ALTER TABLE rating ADD CONSTRAINT rating_fk1 FOREIGN KEY (compra_id) REFERENCES compra_notificacao(id);
+ALTER TABLE rating ADD CONSTRAINT rating_fk1 FOREIGN KEY (compra_id) REFERENCES compra(id);
 ALTER TABLE rating ADD CONSTRAINT rating_fk2 FOREIGN KEY (customer_utilizador_id) REFERENCES customer(utilizador_id);
 ALTER TABLE rating ADD CONSTRAINT rating_fk3 FOREIGN KEY (produto_id,produto_versao) REFERENCES produto(id,versao);
 ALTER TABLE rating ADD CONSTRAINT classificacao CHECK (classificacao >= 0 AND classificacao <= 5);
 ALTER TABLE login_token ADD CONSTRAINT login_token_fk1 FOREIGN KEY (utilizador_id) REFERENCES utilizador(id);
-ALTER TABLE transacao_compra ADD CONSTRAINT transacao_compra_fk1 FOREIGN KEY (compra_id) REFERENCES compra_notificacao(id); 
+ALTER TABLE transacao_compra ADD CONSTRAINT transacao_compra_fk1 FOREIGN KEY (compra_id) REFERENCES compra(id); 
 ALTER TABLE transacao_compra ADD CONSTRAINT transacao_compra_fk2 FOREIGN KEY (produto_id,produto_versao) REFERENCES produto(id,versao);
 ALTER TABLE transacao_compra ADD CONSTRAINT quantidade CHECK (quantidade > 0);
-ALTER TABLE compra_notificacao_cupao ADD CONSTRAINT compra_notificacao_cupao_fk1 FOREIGN KEY (cupao_numero,cupao_campanha_id) REFERENCES cupao(numero,campanha_id); 
+ALTER TABLE compra_cupao ADD CONSTRAINT compra_cupao_fk1 FOREIGN KEY (id_cupao) REFERENCES cupao(id); 
+ALTER TABLE compra_cupao ADD CONSTRAINT compra_cupao_fk2 FOREIGN KEY (id_compra) REFERENCES compra(id);
 ALTER TABLE customer_cupao ADD CONSTRAINT customer_cupao_fk1 FOREIGN KEY (customer_utilizador_id) REFERENCES customer(utilizador_id);
-ALTER TABLE customer_cupao ADD CONSTRAINT customer_cupao_fk2 FOREIGN KEY (cupao_numero,cupao_campanha_id) REFERENCES cupao(numero,campanha_id);
+ALTER TABLE customer_cupao ADD CONSTRAINT customer_cupao_fk2 FOREIGN KEY (id_cupao) REFERENCES cupao(id);
 
 --GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO ProjetoBD;
 

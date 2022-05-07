@@ -5,6 +5,7 @@ import time
 
 import jwt
 import hashlib as hs
+import json
 
 app = flask.Flask(__name__)
 
@@ -323,7 +324,7 @@ def make_order():
     decode_token = jwt.decode(token,jwt_key,'HS256')
 
     #Check payload arguments
-    if 'cart' not in payload or payload['cart'] == []:
+    if 'cart' not in payload or payload['cart'] == '':
         response = {'status': StatusCodes['api_error'], 'errors': 'No cart given or empty'}
         return flask.jsonify(response)
 
@@ -331,12 +332,18 @@ def make_order():
     #TODO ATENÇÃO: PROBLEMAS DE LOCKS E SINCRONIZAÇÃO DE DADOS NAS TABELAS
     
     try:
-        #TODO compra
-        cur.execute("call make_order(%s::INTEGER,);")
+        #compra
+        if 'coupon' not in payload:
+            values = (token['id'], json.dumps(payload['cart']),'-1')
+            cur.execute("select make_order(%s::INTEGER,select json_array_elements(%s::json),%s::INTEGER);",values)
 
-        response = cur.fetchone()
+        else:
+            values = (token['id'], json.dumps(payload['cart']),payload['coupon'])
+            cur.execute("select make_order(%s::INTEGER,select json_array_elements(%s::json),%s::INTEGER);",values)
+
+        compra_id = cur.fetchone()
         conn.commit()
-
+        response = {'status': StatusCodes['success'], 'results': compra_id}
 
 
     except (Exception, psycopg2.DatabaseError) as error:

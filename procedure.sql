@@ -166,15 +166,18 @@ end;
 $$;
 
 
---NÃO ESTÁ ACABADO/REFAZER
-create or replace procedure make_order(customer_id utilizador.id%type, cart numeric[][])
+
+create or replace function make_order(customer_id utilizador.id%type, cart_json json, id_cupao INTEGER)
+returns integer
 language plpgsql
 as $$
 declare
-    nr_produtos NUMERIC(10,0);
 
     id_compra INTEGER;
-    total_compra compra_notificacao.valor_pago%type;
+    total_compra compra.valor_pago%type;
+
+    id_prod_cart produto.id%type;
+    quantidade_prod INTEGER;
 
     versao_prod produto.versao%type;
     preco_prod produto.preco%type;
@@ -182,54 +185,112 @@ declare
 
     data_compra compra.data_compra%type;
 
+    percentagem_desconto campanha.desconto%type;
+    campanha_ativa campanha.campanha_ativa%type;
+
     cur_id_compra cursor for
         select MAX(id)
-        from compra_notificacao
+        from compra
         for update;
 
     cur_info_prod cursor(id_prod INTEGER) for
         select MAX(versao), preco, stock
-        from produto;
+        from produto
         where produto.id = id_prod;
 
-begin
+    cur_prod_cart cursor(cart_js JSON) for
+        select * from json_each(cart_js);
 
-    nr_produtos = array_lenght(cart,1);
+begin   
 
     --gerar nova compra
     select current_date into data_compra;
-    insert into compra_notificacao(data_compra,valor_pago,valor_do_desconto,customer_utilizador_id,notificacao_descricao) values (data_compra,0,0,customer_id,"");
+    insert into compra(data_compra,valor_pago,valor_do_desconto,customer_utilizador_id) values (data_compra,0,0,customer_id);
 
+    --fazer compra
     open cur_id_compra;
     fetch cur_id_compra into id_compra;
     close cur_id_compra;
 
+    open cur_prod_cart(cart_json);
 
-    if nr_produtos > 0 then
+    --Correr todos os produtos
+    loop
 
-        --Correr todos os produtos
-        for i in 1..nr_produtos loop
+        --proximo produto no carrinho
+        fetch cur_prod_cart into id_prod_cart,quantidade_prod; 
+        exit when not found;
 
-            --ir buscar versao do produto e o preco
-            open cur_info_prod( cart[i][1] );
-            fetch cur_id_compra into versao_prod,preco_prod,stock_prod;
-            close cur_info_prod;
+        if quantidade_prod = 0 then
+            raise EXCEPTION 'You can''t buy 0 units of a product!';
+        end if;
 
-            --check se o produto existe/verificar stock
+        --ir buscar versao do produto e o preco
+        open cur_info_prod( id_prod_cart );
+        fetch cur_id_compra into versao_prod,preco_prod,stock_prod;
 
-            --insert tabela transacao
-            insert into transacao_compra(quantidade,compra_id,produto_id,produto_versao) values ( cart[i][2], id_compra, cart[i][1] , versao_prod);
+        IF NOT FOUND THEN --ERRO, PRODUTO NÃO EXISTE
+            RAISE EXCEPTION 'Product % doesn''t exist!', id_prod_cart;
+        END IF;
 
-            --atualizar stock do produto
-
-        end loop
-
-
-    --atualizar informacoes da compra
-    
+        close cur_info_prod;
 
 
-end:
+        --verificar stock
+        if stock_prod == 0 then
+            RAISE EXCEPTION 'Product % does not have any stock!', id_prod_cart;
+        elsif quantidade_prod - stock_prod < 0 then
+            RAISE EXCEPTION 'Product % only has % stock, and you tried to order %!', id_prod_cart, stock_prod, quantidade_prod;
+        end if;
+
+
+        --insert tabela transacao
+        insert into transacao_compra(quantidade,compra_id,produto_id,produto_versao) values ( quantidade_prod, id_compra, id_prod_cart , versao_prod);
+
+        --atualizar stock do produto
+        update produto set stock = stock - quantidade_prod where id = id_prod_cart and versao = (SELECT MAX(versao) FROM produto where id = id_prod_cart);
+
+        --total da compra
+        total_compra = total_compra + preco_prod * quantidade_prod;
+
+    end loop;
+
+    close cur_prod_cart;
+
+
+    --verificar cupao e atualizar informacoes da compra
+    if id_cupao = -1 then --sem cupao
+        update compra set valor_pago = total_compra and valor_do_desconto = 0 where compra.id = id_compra;
+    else
+        --com cupao
+
+        --verificar se o cupao existe/pertence ao user
+        if not EXISTS( select from customer_cupao where customer_utilizador_id = customer_id) then
+            --cupao nao existe ou nao pertence ao utilizador que o introduziu
+            raise EXCEPTION 'Given coupon doesn''t exist or doesn''t belong to the user!';
+        end if;
+
+        --cupao existe e pertence ao user
+        --verificar desconto/campanha
+        select campanha.desconto,campanha.campanha_ativa into percentagem_desconto,campanha_ativa
+        from campanha
+        where campanha.id = (select campanha_id from cupao where id = id_cupao);
+
+        if campanha_ativa is FALSE then
+            --campanha inativa
+            raise EXCEPTION 'Campaing is not active!';
+        end if;
+
+        --inserir na tabela compra-cupao (associar o cupao à compra)
+        insert into compra_cupao(id_compra,id_cupao) values (id_compra,id_cupao);
+
+        --update das informaçoes da compra
+        update compra set valor_pago = total_compra*(1-percentagem_desconto/100) and valor_do_desconto = total_compra*(percentagem_desconto/100) where compra.id = id_compra;
+
+    end if;
+
+    return id_compra;
+end;
 $$
 
 
