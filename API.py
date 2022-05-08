@@ -316,7 +316,6 @@ def make_order():
     cur = conn.cursor()
 
     #ler token inserido em Header Postman (authorization->Bearer Token)
-    
     global token
     header=flask.request.headers
     if 'Authorization' not in header:
@@ -480,7 +479,7 @@ def get_product(product_id):
 ##
 ## ADD CAMPAIGN
 ##
-@app.route('/dbproj/campaign/', methods=['POST'])
+@app.route('/dbproj/campaign', methods=['POST'])
 def add_campaign():
     logger.info('User Login Campaign Insertion')
     payload=flask.request.get_json()
@@ -488,13 +487,17 @@ def add_campaign():
     conn=db_connection()
     cur=conn.cursor()
 
-    #Check if auth token was received
-    if 'token' not in payload:
+    #ler token inserido em Header Postman (authorization->Bearer Token)
+    global token
+    header=flask.request.headers
+    if 'Authorization' not in header:
         response = {'status': StatusCodes['api_error'], 'errors': 'Missing auth token'}
         return flask.jsonify(response)
-    #Chek id user customer, seller or admin
+    else:
+        token=(header['Authorization'].split(" ")[1])
 
-    decode_token = jwt.decode(payload['token'],jwt_key,'HS256')
+    #Decode Token
+    decode_token = jwt.decode(token,jwt_key,'HS256')
 
     #If user is not admin
     if decode_token['user_type'] == user_type_hashed['customer'] or decode_token['user_type'] == user_type_hashed['vendedor']:
@@ -513,12 +516,14 @@ def add_campaign():
     try:
         values=(payload['desconto'],payload['numero_cupoes'],payload['data_inicio'],payload['data_fim'],payload['validade_cupao'],decode_token['id'])
 
-        cur.execute("call insert_campaign(%s::INTEGER,%s::INTEGER,%s::DATE,%s::DATE,%s::SMALLINT,%s::INTEGER)",values)
+        cur.execute("select insert_campaign(%s::INTEGER,%s::INTEGER,%s::DATE,%s::DATE,%s::SMALLINT,%s::INTEGER)",values)
 
+        id_campanha = cur.fetchone();
         conn.commit()
 
-        response = {'status': StatusCodes['success'], 'results': f'Added new campaign'}
+        response = {'status': StatusCodes['success'], 'results': id_campanha}
         logger.debug('New campaign added')
+
     except (Exception, psycopg2.DatabaseError) as error:
         logger.error(error)
         response = {'status': StatusCodes['internal_error'], 'errors': str(error)}
@@ -535,7 +540,7 @@ def add_campaign():
 ##
 ## SUBSCRIBE CAMPAIGN
 ##
-@app.route('/dbproj/subscribe/', methods=['POST'])
+@app.route('/dbproj/subscribe', methods=['POST'])
 def subscribe_campaign():
     logger.info('User Login Campaign Subscribe')
     payload=flask.request.get_json()
@@ -543,13 +548,17 @@ def subscribe_campaign():
     conn=db_connection()
     cur=conn.cursor()
 
-    #Check if auth token was received
-    if 'token' not in payload:
+    #ler token inserido em Header Postman (authorization->Bearer Token)
+    global token
+    header=flask.request.headers
+    if 'Authorization' not in header:
         response = {'status': StatusCodes['api_error'], 'errors': 'Missing auth token'}
         return flask.jsonify(response)
-    #Chek id user customer, seller or admin
+    else:
+        token=(header['Authorization'].split(" ")[1])
 
-    decode_token = jwt.decode(payload['token'],jwt_key,'HS256')
+    #Decode Token
+    decode_token = jwt.decode(token,jwt_key,'HS256')
 
     #If user is not customer
     if decode_token['user_type'] == user_type_hashed['administrador'] or decode_token['user_type'] == user_type_hashed['vendedor']:

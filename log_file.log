@@ -3417,3 +3417,79 @@ INFO:logger:GET /product/<product_id>
 DEBUG:logger:product_id: 1
 DEBUG:logger:GET /product/<product_id> - parse
 INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:53:40] "POST /dbproj/product/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:User Login
+DEBUG:logger:User login attempt
+INFO:logger:User found, creating JWT
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 12:24:15] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 12:30:26] "[35m[1mPOST /dbproj/campaign HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 12:31:57] "[35m[1mPOST /dbproj/campaign HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 12:33:45] "[35m[1mPOST /dbproj/campaign HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:User Login Campaign Insertion
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 12:35:25] "POST /dbproj/campaign HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:User Login Campaign Insertion
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 12:36:52] "POST /dbproj/campaign HTTP/1.1" 200 -
+INFO:logger:User Login Campaign Insertion
+ERROR:logger:date/time field value out of range: "16-05-2022"
+LINE 1: ...ampaign(30::INTEGER,5::INTEGER,'08-05-2022'::DATE,'16-05-202...
+                                                             ^
+HINT:  Perhaps you need a different "datestyle" setting.
+
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 12:39:01] "POST /dbproj/campaign HTTP/1.1" 200 -
+INFO:logger:User Login Campaign Insertion
+ERROR:logger:column "admin_id" does not exist
+LINE 1: ..._cupoes,data_inicio,data_fim,'true',validade_cupao,admin_id)
+                                                              ^
+QUERY:  insert into campanha(desconto,numero_cupoes,data_inicio,data_fim,campanha_ativa,validade_cupao,administrador_utilizador_id) values (desconto,numero_cupoes,data_inicio,data_fim,'true',validade_cupao,admin_id)
+CONTEXT:  PL/pgSQL function insert_campaign(integer,integer,date,date,smallint,bigint) line 4 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 12:41:43] "POST /dbproj/campaign HTTP/1.1" 200 -
+INFO:logger:User Login Campaign Insertion
+DEBUG:logger:New campaign added
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 12:42:42] "POST /dbproj/campaign HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
