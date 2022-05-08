@@ -3598,3 +3598,65 @@ INFO:werkzeug:127.0.0.1 - - [08/May/2022 18:38:59] "PUT /dbproj/subscribe/1 HTTP
 INFO:logger:User Login Campaign Subscribe
 DEBUG:logger:Not subscribe campaign
 INFO:werkzeug:127.0.0.1 - - [08/May/2022 18:39:51] "PUT /dbproj/subscribe/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+ERROR:logger:Product 1 only has 1 stock, and you tried to order 9!
+CONTEXT:  PL/pgSQL function make_order(integer,json,integer) line 72 at RAISE
+
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 18:49:35] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:column reference "id_cupao" is ambiguous
+LINE 1: ...dor_id = customer_id and customer_cupao.id_cupao = id_cupao)
+                                                              ^
+DETAIL:  It could refer to either a PL/pgSQL variable or a table column.
+QUERY:  not EXISTS( select from customer_cupao where customer_utilizador_id = customer_id and customer_cupao.id_cupao = id_cupao)
+CONTEXT:  PL/pgSQL function make_order(integer,json,integer) line 97 at IF
+
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 18:50:10] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:column "id_cupao_var" does not exist
+LINE 1: id_cupao_var = -1
+        ^
+QUERY:  id_cupao_var = -1
+CONTEXT:  PL/pgSQL function make_order(integer,json,integer) line 91 at IF
+
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 18:56:32] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:column "id_cupao_var" of relation "compra_cupao" does not exist
+LINE 1: insert into compra_cupao(id_compra,id_cupao_var) values (id_...
+                                           ^
+QUERY:  insert into compra_cupao(id_compra,id_cupao_var) values (id_compra,id_cupao_var)
+CONTEXT:  PL/pgSQL function make_order(integer,json,integer) line 117 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 18:57:49] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:argument of AND must be type boolean, not type double precision
+LINE 1: update compra set valor_pago = total_compra*(1-percentagem_d...
+                                       ^
+QUERY:  update compra set valor_pago = total_compra*(1-percentagem_desconto/100) and valor_do_desconto = total_compra*(percentagem_desconto/100) where compra.id = id_compra
+CONTEXT:  PL/pgSQL function make_order(integer,json,integer) line 120 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 18:58:30] "POST /dbproj/order HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 18:59:27] "POST /dbproj/order HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+DEBUG:logger:Buying with coupon
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 19:04:55] "POST /dbproj/order HTTP/1.1" 200 -
+DEBUG:logger:Buying with coupon
+ERROR:logger:Product 0 only has 2 stock, and you tried to order 9!
+CONTEXT:  PL/pgSQL function make_order(integer,json,integer) line 72 at RAISE
+
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 19:08:37] "POST /dbproj/order HTTP/1.1" 200 -
+DEBUG:logger:Buying with coupon
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 19:09:03] "POST /dbproj/order HTTP/1.1" 200 -
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 19:11:59] "POST /dbproj/order HTTP/1.1" 200 -

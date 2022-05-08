@@ -178,7 +178,7 @@ $$;
 
 
 
-create or replace function make_order(customer_id utilizador.id%type, cart_json json, id_cupao INTEGER)
+create or replace function make_order(customer_id utilizador.id%type, cart_json json, id_cupao_var INTEGER)
 returns integer
 language plpgsql
 as $$
@@ -271,24 +271,25 @@ begin
 
 
     --verificar cupao e atualizar informacoes da compra
-    if id_cupao = -1 then --sem cupao
+    if id_cupao_var = -1 then --sem cupao
         update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra;
     else
         --com cupao
 
         --verificar se o cupao existe/pertence ao user
-        if not EXISTS( select from customer_cupao where customer_utilizador_id = customer_id) then
+        if not EXISTS( select from customer_cupao where customer_utilizador_id = customer_id and customer_cupao.id_cupao = id_cupao_var) then
             --cupao nao existe ou nao pertence ao utilizador que o introduziu
             raise EXCEPTION 'Given coupon doesn''t exist or doesn''t belong to the user!';
         end if;
 
-        --TODO meter o cupao como usado
+        --meter o cupao como usado
+        update cupao set cupao_ativo = 'false' where cupao.id = id_cupao_var;
 
         --cupao existe e pertence ao user
         --verificar desconto/campanha
         select campanha.desconto,campanha.campanha_ativa into percentagem_desconto,campanha_ativa
         from campanha
-        where campanha.id = (select campanha_id from cupao where id = id_cupao);
+        where campanha.id = (select campanha_id from cupao where id = id_cupao_var);
 
         if campanha_ativa is FALSE then
             --campanha inativa
@@ -296,10 +297,10 @@ begin
         end if;
 
         --inserir na tabela compra-cupao (associar o cupao à compra)
-        insert into compra_cupao(id_compra,id_cupao) values (id_compra,id_cupao);
+        insert into compra_cupao(id_compra,id_cupao) values (id_compra,id_cupao_var);
 
         --update das informaçoes da compra
-        update compra set valor_pago = total_compra*(1-percentagem_desconto/100) and valor_do_desconto = total_compra*(percentagem_desconto/100) where compra.id = id_compra;
+        update compra set valor_pago = total_compra*(1-percentagem_desconto::float/100),valor_do_desconto = total_compra*(percentagem_desconto::float/100) where compra.id = id_compra;
 
     end if;
 
@@ -422,7 +423,7 @@ language plpgsql
 as $$
 declare
     n_cupao_maximo cupao.numero%type;
-    id_cupao_maximo cupao.id%type;
+    id_cupao_var_maximo cupao.id%type;
     numero_cupoes_permitidos campanha.numero_cupoes%type;
     nr_cupoes_atribuidos_campanha INTEGER;
 
@@ -439,7 +440,7 @@ declare
     cur_check_coupouns cursor (camp_id INTEGER) for
         select COUNT(*)
         from customer_cupao
-        where id_cupao in (select id from cupao where cupao.campanha_id = camp_id)
+        where id_cupao_var in (select id from cupao where cupao.campanha_id = camp_id)
         group by customer_utilizador_id;
 
 
@@ -472,9 +473,9 @@ else
     end if;
 
     if (n_cupao_maximo+1<=numero_cupoes_permitidos) then
-        insert into cupao(numero,cupao_ativo,data_atribuicao,campanha_id) values(n_cupao_maximo+1,'true',current_date,campaign_id) returning id into id_cupao_maximo;
-        insert into customer_cupao (customer_utilizador_id,id_cupao) values (customer_id,id_cupao_maximo);
-        return json_build_object('campanha subscrita id_cupao',id_cupao_maximo);
+        insert into cupao(numero,cupao_ativo,data_atribuicao,campanha_id) values(n_cupao_maximo+1,'true',current_date,campaign_id) returning id into id_cupao_var_maximo;
+        insert into customer_cupao (customer_utilizador_id,id_cupao_var) values (customer_id,id_cupao_var_maximo);
+        return json_build_object('campanha subscrita id_cupao_var',id_cupao_var_maximo);
     else return json_build_object('error','campanha nao pode ser subscrita, maximo cupoes');
     end if;
 end if;

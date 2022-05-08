@@ -349,6 +349,7 @@ def make_order():
             cur.execute("select make_order(%s::INTEGER,%s::json,%s::INTEGER);",values)
 
         else:
+            logger.debug("Buying with coupon")
             values = (decode_token['id'], cart_json ,payload['coupon'])
             cur.execute("select make_order(%s::INTEGER,%s::json,%s::INTEGER);",values)
 
@@ -591,7 +592,7 @@ def subscribe_campaign(campaign_id):
         print(result[0])
 
         if 'error' in result[0]:
-             response = {'status': StatusCodes['api_error'], 'errors': result}
+             response = {'status': StatusCodes['api_error'], 'errors': result['error']}
              logger.debug('Not subscribe campaign')
         else:
             response = {'status': StatusCodes['success'], 'results': result}
