@@ -3493,3 +3493,108 @@ INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 982-140-900
 INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 18:21:42] "[35m[1mPUT /dbproj/subscribe/1 HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:User Login Campaign Subscribe
+ERROR:logger:function subscribe_campaign(integer, integer) does not exist
+LINE 1: select subscribe_campaign('1'::INTEGER,1::INTEGER)
+               ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 18:22:09] "PUT /dbproj/subscribe/1 HTTP/1.1" 200 -
+INFO:logger:User Login Campaign Subscribe
+ERROR:logger:function subscribe_campaign(integer, integer) does not exist
+LINE 1: select subscribe_campaign('1'::INTEGER,1::INTEGER)
+               ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 18:22:43] "PUT /dbproj/subscribe/1 HTTP/1.1" 200 -
+INFO:logger:User Login Campaign Subscribe
+ERROR:logger:operator does not exist: boolean = integer
+LINE 3: where id=campaign_id and campanha_ativa=1
+                                               ^
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+QUERY:  select numero_cupoes
+from campanha
+where id=campaign_id and campanha_ativa=1
+CONTEXT:  PL/pgSQL function subscribe_campaign(integer,bigint) line 18 at OPEN
+
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 18:25:04] "PUT /dbproj/subscribe/1 HTTP/1.1" 200 -
+INFO:logger:User Login Campaign Subscribe
+DEBUG:logger:Subscribe campaign
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 18:25:30] "PUT /dbproj/subscribe/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:User Login Campaign Subscribe
+DEBUG:logger:Subscribe campaign
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 18:26:53] "PUT /dbproj/subscribe/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:User Login Campaign Subscribe
+DEBUG:logger:Subscribe campaign
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 18:27:13] "PUT /dbproj/subscribe/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:User Login Campaign Subscribe
+DEBUG:logger:Not subscribe campaign
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 18:27:19] "PUT /dbproj/subscribe/1 HTTP/1.1" 200 -
+INFO:logger:User Login Campaign Subscribe
+ERROR:logger:<NULL>s
+CONTEXT:  PL/pgSQL function subscribe_campaign(integer,bigint) line 32 at RAISE
+
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 18:28:56] "PUT /dbproj/subscribe/1 HTTP/1.1" 200 -
+INFO:logger:User Login Campaign Subscribe
+ERROR:logger:column "cupao_ativo" is of type boolean but expression is of type integer
+LINE 1: ...a_atribuicao,campanha_id) values(n_cupao_maximo+1,1,current_...
+                                                             ^
+HINT:  You will need to rewrite or cast the expression.
+QUERY:  insert into cupao(numero,cupao_ativo,data_atribuicao,campanha_id) values(n_cupao_maximo+1,1,current_date,campaign_id) returning id
+CONTEXT:  PL/pgSQL function subscribe_campaign(integer,bigint) line 37 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 18:30:20] "PUT /dbproj/subscribe/1 HTTP/1.1" 200 -
+INFO:logger:User Login Campaign Subscribe
+DEBUG:logger:Subscribe campaign
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 18:31:08] "PUT /dbproj/subscribe/1 HTTP/1.1" 200 -
+INFO:logger:User Login Campaign Subscribe
+DEBUG:logger:Subscribe campaign
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 18:32:02] "PUT /dbproj/subscribe/1 HTTP/1.1" 200 -
+INFO:logger:User Login Campaign Subscribe
+ERROR:logger:column cupao.campaign_id does not exist
+LINE 3: ...    where id_cupao in (select id from cupao where cupao.camp...
+                                                             ^
+HINT:  Perhaps you meant to reference the column "cupao.campanha_id".
+QUERY:  select COUNT(*)
+        from customer_cupao
+        where id_cupao in (select id from cupao where cupao.campaign_id = camp_id)
+        group by customer_utilizador_id
+CONTEXT:  PL/pgSQL function subscribe_campaign(integer,bigint) line 40 at OPEN
+
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 18:38:59] "PUT /dbproj/subscribe/1 HTTP/1.1" 200 -
+INFO:logger:User Login Campaign Subscribe
+DEBUG:logger:Not subscribe campaign
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 18:39:51] "PUT /dbproj/subscribe/1 HTTP/1.1" 200 -

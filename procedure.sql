@@ -416,24 +416,32 @@ end;
 $$;
 
 --- SUBSCRIBE CAMPAIGN
-create or replace function subscribe_campaign(campaign_id campanha.id%type,data_atribuicao cupao.data_atribuicao%type,customer_id customer_cupao.customer_utilizador_id%type)
+create or replace function subscribe_campaign(campaign_id campanha.id%type,customer_id customer_cupao.customer_utilizador_id%type)
 returns json
 language plpgsql
 as $$
 declare
-n_cupao_maximo cupao.numero%type;
-id_cupao_maximo cupao.id%type;
-numero_cupoes_permitidos campanha.numero_cupoes%type;
+    n_cupao_maximo cupao.numero%type;
+    id_cupao_maximo cupao.id%type;
+    numero_cupoes_permitidos campanha.numero_cupoes%type;
+    nr_cupoes_atribuidos_campanha INTEGER;
 
-cur_cupao_maximo cursor for
-select MAX(numero)
-from cupao
-group by campanha_id having campanha_id=campaign_id;
+    cur_cupao_maximo cursor for
+    select MAX(numero)
+    from cupao
+    group by campanha_id having campanha_id=campaign_id;
 
-cur_procura_campanha cursor for
-select numero_cupoes
-from campanha
-where id=campaign_id and campanha_ativa=1;
+    cur_procura_campanha cursor for
+    select numero_cupoes
+    from campanha
+    where id=campaign_id and campanha_ativa='true';
+
+    cur_check_coupouns cursor (camp_id INTEGER) for
+        select COUNT(*)
+        from customer_cupao
+        where id_cupao in (select id from cupao where cupao.campanha_id = camp_id)
+        group by customer_utilizador_id;
+
 
 begin
 open cur_procura_campanha;
@@ -449,8 +457,22 @@ else
     into n_cupao_maximo;
     close cur_cupao_maximo;
 
+    --verificar se o user já tem cupao daquela campanha
+    open cur_check_coupouns(campaign_id);
+    fetch cur_check_coupouns into nr_cupoes_atribuidos_campanha;
+
+    if nr_cupoes_atribuidos_campanha is not NULL then
+        return json_build_object('error','o user já subscreveu esta campanha!');
+    end if;
+    close cur_check_coupouns;
+
+    --quando ainda não foi atribuído nenhum cupão
+    if n_cupao_maximo is NULL then
+        n_cupao_maximo = 0;
+    end if;
+
     if (n_cupao_maximo+1<=numero_cupoes_permitidos) then
-        insert into cupao(numero,cupao_ativo,data_atribuicao,campanha_id) values(n_cupao_maximo+1,1,current_date,campaign_id) returning id into id_cupao_maximo;
+        insert into cupao(numero,cupao_ativo,data_atribuicao,campanha_id) values(n_cupao_maximo+1,'true',current_date,campaign_id) returning id into id_cupao_maximo;
         insert into customer_cupao (customer_utilizador_id,id_cupao) values (customer_id,id_cupao_maximo);
         return json_build_object('campanha subscrita id_cupao',id_cupao_maximo);
     else return json_build_object('error','campanha nao pode ser subscrita, maximo cupoes');

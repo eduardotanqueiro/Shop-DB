@@ -540,10 +540,17 @@ def add_campaign():
 ##
 ## SUBSCRIBE CAMPAIGN
 ##
-@app.route('/dbproj/subscribe', methods=['POST'])
-def subscribe_campaign():
+@app.route('/dbproj/subscribe/<campaign_id>', methods=['PUT'])
+def subscribe_campaign(campaign_id):
+
+    if int(campaign_id) < 0:
+        response = {'status': StatusCodes['api_error'], 'errors': 'Missing values for product in the payload'}
+        return flask.jsonify(response)
+    
+    
     logger.info('User Login Campaign Subscribe')
     payload=flask.request.get_json()
+
 
     conn=db_connection()
     cur=conn.cursor()
@@ -566,27 +573,31 @@ def subscribe_campaign():
         return flask.jsonify(response)
     
     #Ckeck is payload parameters are correct
-    if 'id_campanha' not in payload:
-         response = {'status': StatusCodes['api_error'], 'errors': 'Missing values for product in the payload'}
-         return flask.jsonify(response) 
-
+    #if 'id_campanha' not in payload:
+    #     response = {'status': StatusCodes['api_error'], 'errors': 'Missing values for product in the payload'}
+    #     return flask.jsonify(response)
+    
     #Insert campaign
 
     decode_token['id']=int(decode_token['id'])
 
     try:
-        values=(payload['id_campanha'],decode_token['id'])
+        values=(campaign_id,decode_token['id'])
 
         cur.execute("select subscribe_campaign(%s::INTEGER,%s::INTEGER)",values)
         result=cur.fetchone()
         conn.commit()
 
-        if result[0]==True:
-            response = {'status': StatusCodes['success'], 'results': f'Subscribe campaign'}
-            logger.debug('Subscribe campaign')
-        else:
-             response = {'status': StatusCodes['api_error'], 'errors':'Not subscribe campaign!Invalid campaign!'}
+        print(result[0])
+
+        if 'error' in result[0]:
+             response = {'status': StatusCodes['api_error'], 'errors': result}
              logger.debug('Not subscribe campaign')
+        else:
+            response = {'status': StatusCodes['success'], 'results': result}
+            logger.debug('Subscribe campaign')
+
+
     except (Exception, psycopg2.DatabaseError) as error:
         logger.error(error)
         response = {'status': StatusCodes['internal_error'], 'errors': str(error)}
