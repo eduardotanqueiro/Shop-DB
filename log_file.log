@@ -3660,3 +3660,118 @@ WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 982-140-900
 INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
 INFO:werkzeug:127.0.0.1 - - [08/May/2022 19:11:59] "POST /dbproj/order HTTP/1.1" 200 -
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+ERROR:logger:column "User % comprou: " does not exist
+LINE 1: texto_notificacao = "User % comprou: ",new.customer_utilizad...
+                            ^
+QUERY:  texto_notificacao = "User % comprou: ",new.customer_utilizador_id
+CONTEXT:  PL/pgSQL function notificacao_compra() line 14 at assignment
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 19:51:15] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:column "User % comprou: " does not exist
+LINE 1: ...xto_notificacao = CONCAT(texto_notificacao,format("User % co...
+                                                             ^
+QUERY:  texto_notificacao = CONCAT(texto_notificacao,format("User % comprou: ",new.customer_utilizador_id))
+CONTEXT:  PL/pgSQL function notificacao_compra() line 14 at assignment
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 19:52:11] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:column "User comprou:" does not exist
+LINE 1: texto_notificacao = "User comprou:"
+                            ^
+QUERY:  texto_notificacao = "User comprou:"
+CONTEXT:  PL/pgSQL function notificacao_compra() line 14 at assignment
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 19:52:59] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:column "User % comprou" does not exist
+LINE 1: format("User % comprou",new.id)
+               ^
+QUERY:  format("User % comprou",new.id)
+CONTEXT:  PL/pgSQL function notificacao_compra() line 11 during statement block local variable initialization
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 19:55:42] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:unrecognized format() type specifier " "
+HINT:  For a single "%" use "%%".
+CONTEXT:  PL/pgSQL function notificacao_compra() line 11 during statement block local variable initialization
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 20:00:03] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:unrecognized format() type specifier " "
+HINT:  For a single "%" use "%%".
+CONTEXT:  PL/pgSQL function notificacao_compra() line 11 during statement block local variable initialization
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 20:00:29] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:unrecognized format() type specifier " "
+HINT:  For a single "%" use "%%".
+CONTEXT:  PL/pgSQL function notificacao_compra() line 11 during statement block local variable initialization
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 20:01:02] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:unrecognized format() type specifier " "
+HINT:  For a single "%" use "%%".
+CONTEXT:  PL/pgSQL function notificacao_compra() line 11 during statement block local variable initialization
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 20:05:28] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:unrecognized format() type specifier " "
+HINT:  For a single "%" use "%%".
+CONTEXT:  PL/pgSQL function notificacao_compra() line 11 during statement block local variable initialization
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 20:05:48] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:unrecognized format() type specifier " "
+HINT:  For a single "%" use "%%".
+CONTEXT:  PL/pgSQL function notificacao_compra() line 11 during statement block local variable initialization
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 20:07:09] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:unrecognized format() type specifier ","
+HINT:  For a single "%" use "%%".
+CONTEXT:  PL/pgSQL function notificacao_compra() line 22 at assignment
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 20:08:14] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:unrecognized format() type specifier " "
+HINT:  For a single "%" use "%%".
+CONTEXT:  PL/pgSQL function notificacao_compra() line 12 during statement block local variable initialization
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 20:09:45] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:unrecognized format() type specifier ","
+HINT:  For a single "%" use "%%".
+CONTEXT:  PL/pgSQL function notificacao_compra() line 22 at assignment
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 20:10:00] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:control reached end of trigger procedure without RETURN
+CONTEXT:  PL/pgSQL function notificacao_compra()
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 20:10:20] "POST /dbproj/order HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 20:11:07] "POST /dbproj/order HTTP/1.1" 200 -
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 20:14:36] "POST /dbproj/order HTTP/1.1" 200 -

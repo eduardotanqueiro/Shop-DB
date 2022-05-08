@@ -579,3 +579,41 @@ begin
     end if;
 end;
 $$;
+
+
+--trigger notificação compra
+
+create or replace function notificacao_compra() returns trigger
+language plpgsql
+as $$
+declare
+    id_prod produto.id%type;
+    quantidade_prod INTEGER;
+	texto_notificacao varchar(512) := CONCAT('User ',new.id,' comprou:');
+	
+    cur_produtos_comprados cursor (id_compra INTEGER)for
+        select produto_id,quantidade
+        from transacao_compra
+        where compra_id = id_compra;
+begin 
+
+    open cur_produtos_comprados(new.id);
+
+    loop
+
+        fetch cur_produtos_comprados into id_prod,quantidade_prod;
+        exit when not found;
+
+        texto_notificacao = CONCAT( texto_notificacao, ' produto:',id_prod, 'quantidade:',quantidade_prod);
+    end loop;
+
+    insert into notificacao_compra(descricao,lida,compra_id) values (texto_notificacao,0,new.id);
+	
+	return new;
+end;
+$$;
+
+create trigger trig_compra
+after update on compra
+for each row
+execute procedure notificacao_compra();
