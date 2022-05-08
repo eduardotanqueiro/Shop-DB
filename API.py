@@ -437,7 +437,6 @@ def get_product(product_id):
             json_result=rows[0]
 
             if 'error' in json_result:
-                print('error')
                 logger.error(f'GET /product/<product_id> - error: {json_result["error"]}')
                 response = {'status': StatusCodes['internal_error'], 'errors': str(json_result["error"])}
             else:
@@ -461,7 +460,6 @@ def get_product(product_id):
             json_result=rows[0]
 
             if 'error' in json_result:
-                print('error')
                 logger.error(f'GET /product/<product_id> - error: {json_result["error"]}')
                 response = {'status': StatusCodes['internal_error'], 'errors': str(json_result["error"])}
             else:

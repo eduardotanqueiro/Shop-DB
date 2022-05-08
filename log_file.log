@@ -3416,3 +3416,4 @@ INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
 INFO:logger:GET /product/<product_id>
 DEBUG:logger:product_id: 1
 DEBUG:logger:GET /product/<product_id> - parse
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:53:40] "POST /dbproj/product/1 HTTP/1.1" 200 -
