@@ -457,50 +457,6 @@ else
     end if;
 end if;
 end;
-$$;create or replace function subscribe_campaign(campaign_id campanha.id%type,data_atribuicao cupao.data_atribuicao%type,customer_id customer_cupao.customer_utilizador_id%type)
-returns json
-language plpgsql
-as $$
-declare
-n_cupao_maximo cupao.numero%type;
-id_cupao_maximo cupao.id%type;
-numero_cupoes_permitidos campanha.numero_cupoes%type;
-
-cur_cupao_maximo cursor for
-select id,numero from cupao
-where numero = (
-	select MAX(numero)
-	from cupao
-	group by campanha_id having campanha_id=campaign_id
-);
-
-cur_procura_campanha cursor for
-select numero_cupoes
-from campanha
-where id=campaign_id and campanha_ativa=1;
-
-begin
-open cur_procura_campanha;
-fetch cur_procura_campanha
-into numero_cupoes_permitidos;
-close cur_procura_campanha;
-
-if not found then 
-    return json_build_object('error','campanha nao encontrada');
-else
-    open cur_cupao_maximo;
-    fetch cur_cupao_maximo
-    into id_cupao_maximo,n_cupao_maximo;
-    close cur_cupao_maximo;
-
-    if (n_cupao_maximo+1<=numero_cupoes_permitidos) then
-        insert into cupao(id,numero,cupao_ativo,data_atribuicao,campanha_id) values(id_cupao_maximo+1,n_cupao_maximo+1,1,current_date,campaign_id);
-        insert into customer_cupao (customer_utilizador_id,id_cupao) values (customer_id,id_cupao_maximo+1);
-        return json_build_object('campanha subscrita id_cupao',id_cupao_maximo+1);
-    else return json_build_object('error','campanha nao pode ser subscrita, maximo cupoes');
-    end if;
-end if;
-end;
 $$;
 
 --Rate a product
