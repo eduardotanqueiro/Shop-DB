@@ -282,6 +282,8 @@ begin
             raise EXCEPTION 'Given coupon doesn''t exist or doesn''t belong to the user!';
         end if;
 
+        --TODO meter o cupao como usado
+
         --cupao existe e pertence ao user
         --verificar desconto/campanha
         select campanha.desconto,campanha.campanha_ativa into percentagem_desconto,campanha_ativa
@@ -464,8 +466,7 @@ end
 $$
 
 --Rate a product
-create or replace function create_rating(utilizador_id compra.customer_utilizador_id%type, prod_id rating.produto_id%type, rating rating.classificacao%type, descricao rating.descricao%type)
-returns json
+create or replace procedure create_rating(utilizador_id compra.customer_utilizador_id%type, prod_id rating.produto_id%type, rating rating.classificacao%type, descricao rating.descricao%type)
 language plpgsql
 as $$
 declare
@@ -477,7 +478,7 @@ begin
 
     --check se compra existe
     select transacao_compra.compra_id into compra_id_search from transacao_compra where produto_id = prod_id and transacao_compra.compra_id in (select id from compra where customer_utilizador_id = utilizador_id );
-    if not found then return json_build_object('error','compra nao encontrada');
+    if not found then raise EXCEPTION 'Compra nao encontrada';
     end if;
 
     select MAX(versao) into max_ver from produto where id = prod_id group by versao;
