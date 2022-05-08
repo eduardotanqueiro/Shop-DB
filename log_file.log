@@ -426,12 +426,12 @@ INFO:logger:POST /customer
 DEBUG:logger:POST /customer - payload: {'username': 'raulouser', 'mail': 'raul@gmail.com', 'password': 'pwraul', 'nome': 'raul', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Raul'}
 DEBUG:logger:New user inserted with id 3
 INFO:werkzeug:127.0.0.1 - - [12/Apr/2022 18:53:53] "POST /dbproj/user HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 896-313-328
 INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 896-313-328
@@ -441,27 +441,27 @@ DEBUG:logger:POST /customer - payload: {'username': 'joanauser', 'mail': 'joana@
 ERROR:logger:POST /customer - error: permission denied for sequence utilizador_id
 
 INFO:werkzeug:127.0.0.1 - - [12/Apr/2022 18:55:54] "POST /dbproj/user HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 896-313-328
 INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 896-313-328
 INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 896-313-328
 INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 896-313-328
 INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 896-313-328
@@ -469,7 +469,7 @@ INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
 INFO:logger:POST /customer
 DEBUG:logger:POST /customer - payload: {'username': 'joanauser', 'mail': 'joana@gmail.com', 'password': 'pwjoana', 'nome': 'joana', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joana'}
 INFO:werkzeug:127.0.0.1 - - [12/Apr/2022 19:03:21] "[35m[1mPOST /dbproj/user HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 896-313-328
@@ -477,7 +477,7 @@ INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
 INFO:logger:POST /customer
 DEBUG:logger:POST /customer - payload: {'username': 'joanauser', 'mail': 'joana@gmail.com', 'password': 'pwjoana', 'nome': 'joana', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joana'}
 INFO:werkzeug:127.0.0.1 - - [12/Apr/2022 19:04:04] "[35m[1mPOST /dbproj/user HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 896-313-328
@@ -485,7 +485,7 @@ INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
 INFO:logger:POST /customer
 DEBUG:logger:POST /customer - payload: {'username': 'joanauser', 'mail': 'joana@gmail.com', 'password': 'pwjoana', 'nome': 'joana', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joana'}
 INFO:werkzeug:127.0.0.1 - - [12/Apr/2022 19:04:37] "[35m[1mPOST /dbproj/user HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 896-313-328
@@ -496,7 +496,7 @@ INFO:werkzeug:127.0.0.1 - - [12/Apr/2022 19:04:56] "[35m[1mPOST /dbproj/user H
 INFO:logger:POST /customer
 DEBUG:logger:POST /customer - payload: {'username': 'joanauser', 'mail': 'joana@gmail.com', 'password': 'pwjoana', 'nome': 'joana', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joana'}
 INFO:werkzeug:127.0.0.1 - - [12/Apr/2022 19:05:12] "[35m[1mPOST /dbproj/user HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 896-313-328
@@ -507,7 +507,7 @@ INFO:werkzeug:127.0.0.1 - - [12/Apr/2022 19:05:20] "[35m[1mPOST /dbproj/user H
 INFO:logger:POST /customer
 DEBUG:logger:POST /customer - payload: {'username': 'joanauser', 'mail': 'joana@gmail.com', 'password': 'pwjoana', 'nome': 'joana', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joana'}
 INFO:werkzeug:127.0.0.1 - - [12/Apr/2022 19:06:11] "[35m[1mPOST /dbproj/user HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 896-313-328
@@ -515,7 +515,7 @@ INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
 INFO:logger:POST /customer
 DEBUG:logger:POST /customer - payload: {'username': 'joanauser', 'mail': 'joana@gmail.com', 'password': 'pwjoana', 'nome': 'joana', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joana'}
 INFO:werkzeug:127.0.0.1 - - [12/Apr/2022 19:06:27] "[35m[1mPOST /dbproj/user HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 896-313-328
@@ -523,7 +523,7 @@ INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
 INFO:logger:POST /customer
 DEBUG:logger:POST /customer - payload: {'username': 'joanauser', 'mail': 'joana@gmail.com', 'password': 'pwjoana', 'nome': 'joana', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joana'}
 INFO:werkzeug:127.0.0.1 - - [12/Apr/2022 19:07:04] "[35m[1mPOST /dbproj/user HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 896-313-328
@@ -533,7 +533,7 @@ DEBUG:logger:POST /customer - payload: {'username': 'joanauser', 'mail': 'joana@
 ERROR:logger:POST /customer - error: permission denied for sequence utilizador_id
 
 INFO:werkzeug:127.0.0.1 - - [12/Apr/2022 19:07:37] "POST /dbproj/user HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 896-313-328
@@ -541,7 +541,7 @@ INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
 INFO:logger:POST /customer
 DEBUG:logger:POST /customer - payload: {'username': 'joanauser', 'mail': 'joana@gmail.com', 'password': 'pwjoana', 'nome': 'joana', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joana'}
 INFO:werkzeug:127.0.0.1 - - [12/Apr/2022 19:10:11] "[35m[1mPOST /dbproj/user HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 896-313-328
@@ -551,7 +551,7 @@ DEBUG:logger:POST /customer - payload: {'username': 'joanauser', 'mail': 'joana@
 ERROR:logger:POST /customer - error: permission denied for sequence utilizador_id
 
 INFO:werkzeug:127.0.0.1 - - [12/Apr/2022 19:10:22] "POST /dbproj/user HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 896-313-328
@@ -571,7 +571,7 @@ ERROR:logger:POST /customer - error: insert or update on table "customer" violat
 DETAIL:  Key (utilizador_id)=(0) is not present in table "utilizador".
 
 INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 17:21:18] "POST /dbproj/user HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 896-313-328
@@ -582,22 +582,22 @@ ERROR:logger:POST /customer - error: insert or update on table "customer" violat
 DETAIL:  Key (utilizador_id)=(0) is not present in table "utilizador".
 
 INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 17:23:51] "POST /dbproj/user HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 896-313-328
 INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 896-313-328
 INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 896-313-328
 INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 896-313-328
@@ -606,7 +606,7 @@ INFO:logger:POST /customer
 DEBUG:logger:POST /customer - payload: {'username': 'joaouser', 'mail': 'joao@gmail.com', 'password': 'pwjoao', 'nome': 'joao', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joao'}
 ERROR:logger:POST /customer - error: 'tuple' object does not support item assignment
 INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 17:29:51] "POST /dbproj/user HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 896-313-328
@@ -679,9 +679,9 @@ INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 20:54:24] "POST /dbproj/user HTTP/1.1" 
 INFO:logger:User Login
 DEBUG:logger:User login attempt
 INFO:logger:User found, creating JWT
-DEBUG:logger:Já checkei tipo user
+DEBUG:logger:Jï¿½ checkei tipo user
 INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 20:54:34] "PUT /dbproj/user HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 896-313-328
@@ -690,7 +690,7 @@ INFO:logger:User Login
 INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 20:55:36] "POST /dbproj/product HTTP/1.1" 200 -
 INFO:logger:User Login
 INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 20:58:59] "POST /dbproj/product HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 896-313-328
@@ -702,12 +702,12 @@ LINE 1: call insert_tv('produto1 descricao bonita',3.2,20,'2',15,'LG...
 HINT:  No procedure matches the given name and argument types. You might need to add explicit type casts.
 
 INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 20:59:32] "POST /dbproj/product HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 896-313-328
 INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 896-313-328
@@ -719,7 +719,7 @@ LINE 1: call insert_tv('produto1 descricao bonita',3.2,20,'2',15,'LG...
 HINT:  No procedure matches the given name and argument types. You might need to add explicit type casts.
 
 INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 21:00:47] "POST /dbproj/product HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 896-313-328
@@ -745,7 +745,7 @@ CONTEXT:  SQL statement "insert into produto(id,versao,descricao,preco,stock,ven
 PL/pgSQL function insert_tv(character varying,real,integer,integer,smallint,character varying) line 18 at SQL statement
 
 INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 21:15:31] "POST /dbproj/product HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 896-313-328
@@ -764,7 +764,7 @@ LINE 1: call insert_tv('produto1 descricao bonita',3.2,20,'2',15,'LG...
 HINT:  No procedure matches the given name and argument types. You might need to add explicit type casts.
 
 INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 21:17:41] "POST /dbproj/product HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 896-313-328
@@ -776,7 +776,7 @@ LINE 1: call insert_tv('produto1 descricao bonita',3.2,20,2,15,'LG')
 HINT:  No procedure matches the given name and argument types. You might need to add explicit type casts.
 
 INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 21:18:40] "POST /dbproj/product HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 896-313-328
@@ -788,7 +788,7 @@ CONTEXT:  SQL statement "insert into produto(id,versao,descricao,preco,stock,ven
 PL/pgSQL function insert_tv(character varying,real,integer,integer,smallint,character varying) line 18 at SQL statement
 
 INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 21:28:11] "POST /dbproj/product HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 896-313-328
@@ -800,7 +800,7 @@ LINE 1: call insert_tv('produto1 descricao bonita',3.2,20,2,15,'LG')
 HINT:  No procedure matches the given name and argument types. You might need to add explicit type casts.
 
 INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 21:32:03] "POST /dbproj/product HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 896-313-328
@@ -921,12 +921,12 @@ INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 896-313-328
 INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 896-313-328
 INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 896-313-328
@@ -941,7 +941,7 @@ INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 22:34:58] "POST /dbproj/product HTTP/1.
 INFO:logger:User Login Product Insertion
 DEBUG:logger:New product added
 INFO:werkzeug:127.0.0.1 - - [20/Apr/2022 22:35:42] "POST /dbproj/product HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 896-313-328
@@ -1028,7 +1028,8 @@ ERROR:logger:GET /customer/ - error: column "utilzador_id" does not exist
 LINE 1: select utilzador_id from customer 
                ^
 HINT:  Perhaps you meant to reference the column "customer.utilizador_id".
-QUERY:  select utilzador_id from customer 
+QUERY:  select utilzador_id from customer 
+
 where utilizador_id=user_id
 CONTEXT:  PL/pgSQL function check_user_type(integer) line 4 at SQL statement
 
@@ -1041,7 +1042,8 @@ ERROR:logger:GET /customer/ - error: column "utilzador_id" does not exist
 LINE 1: select utilzador_id from customer 
                ^
 HINT:  Perhaps you meant to reference the column "customer.utilizador_id".
-QUERY:  select utilzador_id from customer 
+QUERY:  select utilzador_id from customer 
+
 where utilizador_id=user_id
 CONTEXT:  PL/pgSQL function check_user_type(integer) line 4 at SQL statement
 
@@ -1054,7 +1056,8 @@ ERROR:logger:GET /customer/ - error: column "utilzador_id" does not exist
 LINE 1: select utilzador_id from customer 
                ^
 HINT:  Perhaps you meant to reference the column "customer.utilizador_id".
-QUERY:  select utilzador_id from customer 
+QUERY:  select utilzador_id from customer 
+
 where utilizador_id=user_id
 CONTEXT:  PL/pgSQL function check_user_type(integer) line 4 at SQL statement
 
@@ -1067,7 +1070,8 @@ ERROR:logger:GET /customer/ - error: column "utilzador_id" does not exist
 LINE 1: select utilzador_id from customer 
                ^
 HINT:  Perhaps you meant to reference the column "customer.utilizador_id".
-QUERY:  select utilzador_id from customer 
+QUERY:  select utilzador_id from customer 
+
 where utilizador_id=user_id
 CONTEXT:  PL/pgSQL function check_user_type(integer) line 4 at SQL statement
 
@@ -1080,7 +1084,8 @@ ERROR:logger:GET /customer/ - error: column "utilzador_id" does not exist
 LINE 1: select utilzador_id from customer 
                ^
 HINT:  Perhaps you meant to reference the column "customer.utilizador_id".
-QUERY:  select utilzador_id from customer 
+QUERY:  select utilzador_id from customer 
+
 where utilizador_id=user_id
 CONTEXT:  PL/pgSQL function check_user_type(integer) line 4 at SQL statement
 
@@ -1093,7 +1098,8 @@ ERROR:logger:GET /customer/ - error: column "utilzador_id" does not exist
 LINE 1: select utilzador_id from customer 
                ^
 HINT:  Perhaps you meant to reference the column "customer.utilizador_id".
-QUERY:  select utilzador_id from customer 
+QUERY:  select utilzador_id from customer 
+
 where utilizador_id=user_id
 CONTEXT:  PL/pgSQL function check_user_type(integer) line 4 at SQL statement
 
@@ -1111,7 +1117,8 @@ ERROR:logger:GET /customer/ - error: column "utilzador_id" does not exist
 LINE 1: select utilzador_id from customer 
                ^
 HINT:  Perhaps you meant to reference the column "customer.utilizador_id".
-QUERY:  select utilzador_id from customer 
+QUERY:  select utilzador_id from customer 
+
 where utilizador_id=user_id
 CONTEXT:  PL/pgSQL function check_user_type(integer) line 4 at SQL statement
 
@@ -1124,7 +1131,8 @@ ERROR:logger:GET /customer/ - error: column "utilzador_id" does not exist
 LINE 1: select utilzador_id from customer 
                ^
 HINT:  Perhaps you meant to reference the column "customer.utilizador_id".
-QUERY:  select utilzador_id from customer 
+QUERY:  select utilzador_id from customer 
+
 where utilizador_id=user_id
 CONTEXT:  PL/pgSQL function check_user_type(integer) line 4 at SQL statement
 
@@ -1142,7 +1150,8 @@ ERROR:logger:GET /customer/ - error: column "utilzador_id" does not exist
 LINE 1: select utilzador_id from customer 
                ^
 HINT:  Perhaps you meant to reference the column "customer.utilizador_id".
-QUERY:  select utilzador_id from customer 
+QUERY:  select utilzador_id from customer 
+
 where utilizador_id=user_id
 CONTEXT:  PL/pgSQL function check_user_type(integer) line 4 at SQL statement
 
@@ -1982,26 +1991,26 @@ INFO:logger:User found, creating JWT
 INFO:werkzeug:127.0.0.1 - - [01/May/2022 18:49:36] "PUT /dbproj/user HTTP/1.1" 200 -
 ERROR:logger:string indices must be integers
 INFO:werkzeug:127.0.0.1 - - [01/May/2022 18:56:32] "POST /dbproj/rating/1 HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 982-140-900
 INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
 ERROR:logger:string indices must be integers
 INFO:werkzeug:127.0.0.1 - - [01/May/2022 18:58:24] "POST /dbproj/rating/1 HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 982-140-900
 INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
 ERROR:logger:string indices must be integers
 INFO:werkzeug:127.0.0.1 - - [01/May/2022 18:58:35] "POST /dbproj/rating/1 HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 982-140-900
 INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
@@ -2011,7 +2020,7 @@ INFO:logger:Rating the product 1
 DEBUG:logger:Decoding token...
 ERROR:logger:string indices must be integers
 INFO:werkzeug:127.0.0.1 - - [01/May/2022 19:00:23] "POST /dbproj/rating/1 HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 982-140-900
@@ -2020,7 +2029,7 @@ INFO:logger:Rating the product 1
 DEBUG:logger:Decoding token...
 ERROR:logger:string indices must be integers
 INFO:werkzeug:127.0.0.1 - - [01/May/2022 19:02:22] "POST /dbproj/rating/1 HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 982-140-900
@@ -2030,7 +2039,7 @@ DEBUG:logger:Decoding token...
 DEBUG:logger:teste1
 ERROR:logger:string indices must be integers
 INFO:werkzeug:127.0.0.1 - - [01/May/2022 19:02:45] "POST /dbproj/rating/1 HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 982-140-900
@@ -2040,7 +2049,7 @@ DEBUG:logger:Decoding token...
 DEBUG:logger:teste1
 ERROR:logger:string indices must be integers
 INFO:werkzeug:127.0.0.1 - - [01/May/2022 19:03:17] "POST /dbproj/rating/1 HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 982-140-900
@@ -2050,7 +2059,7 @@ DEBUG:logger:Decoding token...
 DEBUG:logger:{'rating': 3, 'comment': 'produto muito fixe like'}
 ERROR:logger:string indices must be integers
 INFO:werkzeug:127.0.0.1 - - [01/May/2022 19:05:39] "POST /dbproj/rating/1 HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 982-140-900
@@ -2060,7 +2069,7 @@ DEBUG:logger:Decoding token...
 DEBUG:logger:{'rating': 3, 'comment': 'produto muito fixe like'}
 ERROR:logger:string indices must be integers
 INFO:werkzeug:127.0.0.1 - - [01/May/2022 19:06:17] "POST /dbproj/rating/1 HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 982-140-900
@@ -2071,12 +2080,12 @@ DEBUG:logger:{'rating': 3, 'comment': 'produto muito fixe like'}
 DEBUG:logger:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjIiLCJ1c2VybmFtZSI6InVzZXJfdmVuZGVkb3IxIiwidXNlcl90eXBlIjoiMDQwN2U4YzgyODVhYjg1NTA5YWMyODg0MDI1ZGNmNDIifQ.bVH0JktQ3QnlUElblSJR32Es9kEr6GJ1L3x8wdhR5yI
 ERROR:logger:string indices must be integers
 INFO:werkzeug:127.0.0.1 - - [01/May/2022 19:07:02] "POST /dbproj/rating/1 HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 982-140-900
 INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 982-140-900
@@ -2090,12 +2099,12 @@ LINE 1: select create_rating('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.e...
                              ^
 
 INFO:werkzeug:127.0.0.1 - - [01/May/2022 19:07:35] "POST /dbproj/rating/1 HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 982-140-900
 INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 982-140-900
@@ -2110,7 +2119,7 @@ QUERY:  select compra_id                from transacao_compra where produto_id =
 CONTEXT:  PL/pgSQL function create_rating(bigint,bigint,integer,character varying) line 9 at SQL statement
 
 INFO:werkzeug:127.0.0.1 - - [01/May/2022 19:08:19] "POST /dbproj/rating/1 HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 982-140-900
@@ -2126,7 +2135,7 @@ CONTEXT:  PL/pgSQL function create_rating(bigint,bigint,integer,character varyin
 INFO:werkzeug:127.0.0.1 - - [01/May/2022 19:09:23] "POST /dbproj/rating/1 HTTP/1.1" 200 -
 INFO:logger:Rating the product 1
 INFO:werkzeug:127.0.0.1 - - [01/May/2022 19:12:23] "[35m[1mPOST /dbproj/rating/1 HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 982-140-900
@@ -2148,12 +2157,12 @@ INFO:logger:GET /product/<product_id>
 DEBUG:logger:product_id: 1
 ERROR:logger:GET /product/<product_id> - error: string index out of range
 INFO:werkzeug:127.0.0.1 - - [01/May/2022 19:16:52] "GET /dbproj/product/1 HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 982-140-900
 INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 982-140-900
@@ -2178,7 +2187,7 @@ CONTEXT:  SQL statement "insert into utilizador(username,password,mail,nome) val
 PL/pgSQL function insert_customer(character varying,character varying,character varying,character varying,character varying,character varying,character varying) line 12 at SQL statement
 
 INFO:werkzeug:127.0.0.1 - - [01/May/2022 19:37:28] "POST /dbproj/user HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 982-140-900
@@ -2186,7 +2195,7 @@ INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
 INFO:logger:POST /customer
 DEBUG:logger:POST /customer - payload: {'username': 'joanauser', 'mail': 'joana@gmail.com', 'password': 'pwjoana', 'nome': 'joana', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joana'}
 INFO:werkzeug:127.0.0.1 - - [01/May/2022 19:39:51] "POST /dbproj/user HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 982-140-900
@@ -2199,7 +2208,7 @@ INFO:logger:GET /product/<product_id>
 DEBUG:logger:product_id: 9
 ERROR:logger:GET /product/<product_id> - error: id produto nao encontrado
 INFO:werkzeug:127.0.0.1 - - [01/May/2022 19:42:22] "GET /dbproj/product/9 HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 982-140-900
@@ -2208,7 +2217,7 @@ INFO:logger:GET /product/<product_id>
 DEBUG:logger:product_id: 10
 ERROR:logger:GET /product/<product_id> - error: not all arguments converted during string formatting
 INFO:werkzeug:127.0.0.1 - - [01/May/2022 19:42:43] "GET /dbproj/product/10 HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 982-140-900
@@ -2217,7 +2226,7 @@ INFO:logger:GET /product/<product_id>
 DEBUG:logger:product_id: 10
 ERROR:logger:GET /product/<product_id> - error: 'int' object does not support indexing
 INFO:werkzeug:127.0.0.1 - - [01/May/2022 19:42:48] "GET /dbproj/product/10 HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 982-140-900
@@ -2226,7 +2235,7 @@ INFO:logger:GET /product/<product_id>
 DEBUG:logger:product_id: 10
 ERROR:logger:GET /product/<product_id> - error: not all arguments converted during string formatting
 INFO:werkzeug:127.0.0.1 - - [01/May/2022 19:44:22] "GET /dbproj/product/10 HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 982-140-900
@@ -2235,7 +2244,7 @@ INFO:logger:GET /product/<product_id>
 DEBUG:logger:product_id: 10
 ERROR:logger:GET /product/<product_id> - error: unsupported format character 'd' (0x64) at index 23
 INFO:werkzeug:127.0.0.1 - - [01/May/2022 19:46:31] "GET /dbproj/product/10 HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 982-140-900
@@ -2244,7 +2253,7 @@ INFO:logger:GET /product/<product_id>
 DEBUG:logger:product_id: 10
 ERROR:logger:GET /product/<product_id> - error: unsupported format character 'i' (0x69) at index 23
 INFO:werkzeug:127.0.0.1 - - [01/May/2022 19:46:41] "GET /dbproj/product/10 HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 982-140-900
@@ -2257,7 +2266,7 @@ INFO:logger:GET /product/<product_id>
 DEBUG:logger:product_id: 10
 ERROR:logger:GET /product/<product_id> - error: unsupported format character 'i' (0x69) at index 23
 INFO:werkzeug:127.0.0.1 - - [01/May/2022 19:49:33] "GET /dbproj/product/10 HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 982-140-900
@@ -2270,7 +2279,7 @@ INFO:logger:GET /product/<product_id>
 DEBUG:logger:product_id: 10
 ERROR:logger:GET /product/<product_id> - error: not all arguments converted during string formatting
 INFO:werkzeug:127.0.0.1 - - [01/May/2022 19:53:28] "GET /dbproj/product/10 HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 982-140-900
@@ -2279,7 +2288,7 @@ INFO:logger:GET /product/<product_id>
 DEBUG:logger:product_id: 10
 ERROR:logger:GET /product/<product_id> - error: id produto nao encontrado
 INFO:werkzeug:127.0.0.1 - - [01/May/2022 19:53:43] "GET /dbproj/product/10 HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 982-140-900
@@ -2293,17 +2302,17 @@ INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
 INFO:logger:POST /customer
 DEBUG:logger:POST /customer - payload: {'username': 'joanauser', 'mail': 'joana@gmail.com', 'password': 'pwjoana', 'nome': 'joana', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joana'}
 INFO:werkzeug:127.0.0.1 - - [07/May/2022 18:28:11] "POST /dbproj/user HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 982-140-900
 INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 982-140-900
 INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 982-140-900
@@ -2316,7 +2325,7 @@ LINE 1: call insert_customer('joanauser','7b73d51e27a69e14d39c693bc6...
 HINT:  No procedure matches the given name and argument types. You might need to add explicit type casts.
 
 INFO:werkzeug:127.0.0.1 - - [07/May/2022 18:28:52] "POST /dbproj/user HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 982-140-900
@@ -2334,7 +2343,7 @@ DEBUG:logger:User login attempt
 INFO:logger:User found, creating JWT
 ERROR:logger:'custumer'
 INFO:werkzeug:127.0.0.1 - - [07/May/2022 18:30:45] "PUT /dbproj/user HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 982-140-900
@@ -2357,7 +2366,7 @@ INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
 INFO:logger:User Login Product Insertion
 DEBUG:logger:New product added
 INFO:werkzeug:127.0.0.1 - - [07/May/2022 18:41:10] "POST /dbproj/product HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 982-140-900
@@ -2413,12 +2422,12 @@ LINE 1: select make_order('1'::INTEGER,select json_array_elements('"...
                                        ^
 
 INFO:werkzeug:127.0.0.1 - - [07/May/2022 19:07:14] "POST /dbproj/order HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 982-140-900
 INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 982-140-900
@@ -2426,7 +2435,7 @@ INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
 INFO:werkzeug:127.0.0.1 - - [07/May/2022 19:18:48] "[31m[1mPOST /dbproj/order HTTP/1.1[0m" 400 -
 INFO:werkzeug:127.0.0.1 - - [07/May/2022 19:22:09] "[31m[1mPOST /dbproj/order HTTP/1.1[0m" 400 -
 INFO:werkzeug:127.0.0.1 - - [07/May/2022 19:22:28] "[31m[1mPOST /dbproj/order HTTP/1.1[0m" 400 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 982-140-900
@@ -2443,17 +2452,17 @@ WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 982-140-900
 INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
 INFO:werkzeug:127.0.0.1 - - [07/May/2022 19:35:40] "POST /dbproj/order HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 982-140-900
 INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 982-140-900
 INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 982-140-900
@@ -2611,12 +2620,12 @@ ERROR:logger:control reached end of function without RETURN
 CONTEXT:  PL/pgSQL function create_rating(bigint,bigint,integer,character varying)
 
 INFO:werkzeug:127.0.0.1 - - [07/May/2022 20:08:58] "POST /dbproj/rating/1 HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 982-140-900
 INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
-INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2ï¿½ Ano\\2semestre\\BD\\Trabalho Prï¿½tico\\Code\\Shop-DB\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 982-140-900
@@ -2639,3 +2648,771 @@ CONTEXT:  SQL statement "insert into compra(data_compra,valor_pago,valor_do_desc
 PL/pgSQL function make_order(integer,json,integer) line 36 at SQL statement
 
 INFO:werkzeug:127.0.0.1 - - [07/May/2022 20:28:12] "POST /dbproj/order HTTP/1.1" 200 -
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+DEBUG:logger:GET /product/<product_id> - parse
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:06:18] "GET /dbproj/product/1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:07:41] "[31m[1mPOST /dbproj/product/1 HTTP/1.1[0m" 405 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:08:48] "[31m[1mPOST /dbproj/product/1 HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:08:49] "[31m[1mPOST /dbproj/product/1 HTTP/1.1[0m" 405 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+DEBUG:logger:GET /product/<product_id> - parse
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:08:58] "GET /dbproj/product/1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:09:03] "[31m[1mPOST /dbproj/product/1 HTTP/1.1[0m" 405 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+DEBUG:logger:GET /product/<product_id> - parse
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:09:07] "GET /dbproj/product/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+DEBUG:logger:GET /product/<product_id> - parse
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:09:34] "GET /dbproj/product/1 HTTP/1.1" 200 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+DEBUG:logger:GET /product/<product_id> - parse
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:09:38] "POST /dbproj/product/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+DEBUG:logger:GET /product/<product_id> - parse
+
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:10:48] "POST /dbproj/product/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:GET /product/<product_id>
+
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:12:57] "POST /dbproj/product/1 HTTP/1.1" 200 -
+INFO:logger:GET /product/<product_id>
+
+
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:13:05] "POST /dbproj/product/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+ERROR:logger:GET /product/<product_id> - error: invalid input syntax for type json
+LINE 1: select update_product_id('1'::INTEGER,'{''marca'': ''Adidas'...
+                                              ^
+DETAIL:  Token "'" is invalid.
+CONTEXT:  JSON data, line 1: {'...
+
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:13:40] "POST /dbproj/product/1 HTTP/1.1" 200 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+ERROR:logger:GET /product/<product_id> - error: invalid input syntax for type json
+LINE 1: select update_product_id('1'::INTEGER,'{''query'': ''\n    q...
+                                              ^
+DETAIL:  Token "'" is invalid.
+CONTEXT:  JSON data, line 1: {'...
+
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:13:58] "POST /dbproj/product/1 HTTP/1.1" 200 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+ERROR:logger:GET /product/<product_id> - error: invalid input syntax for type json
+LINE 1: select update_product_id('1'::INTEGER,'{''marca'': ''Adidas'...
+                                              ^
+DETAIL:  Token "'" is invalid.
+CONTEXT:  JSON data, line 1: {'...
+
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:14:01] "POST /dbproj/product/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+ERROR:logger:GET /product/<product_id> - error: can't adapt type 'dict'
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:14:27] "POST /dbproj/product/1 HTTP/1.1" 200 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+ERROR:logger:GET /product/<product_id> - error: can't adapt type 'dict'
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:14:28] "POST /dbproj/product/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+DEBUG:logger:GET /product/<product_id> - parse
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:15:53] "POST /dbproj/product/1 HTTP/1.1" 200 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+DEBUG:logger:GET /product/<product_id> - parse
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:16:11] "POST /dbproj/product/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+DEBUG:logger:GET /product/<product_id> - parse
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:18:27] "GET /dbproj/product/1 HTTP/1.1" 200 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+DEBUG:logger:GET /product/<product_id> - parse
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:18:46] "GET /dbproj/product/1 HTTP/1.1" 200 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+DEBUG:logger:GET /product/<product_id> - parse
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:18:53] "POST /dbproj/product/1 HTTP/1.1" 200 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+DEBUG:logger:GET /product/<product_id> - parse
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:18:57] "GET /dbproj/product/1 HTTP/1.1" 200 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+DEBUG:logger:GET /product/<product_id> - parse
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:19:45] "POST /dbproj/product/1 HTTP/1.1" 200 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+DEBUG:logger:GET /product/<product_id> - parse
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:21:00] "POST /dbproj/product/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+ERROR:logger:GET /product/<product_id> - error: invalid input syntax for type json
+LINE 1: select update_product_id('1'::INTEGER,'{''marca'': ''Microso...
+                                              ^
+DETAIL:  Token "'" is invalid.
+CONTEXT:  JSON data, line 1: {'...
+
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:21:42] "POST /dbproj/product/1 HTTP/1.1" 200 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:21:53] "[31m[1mPOST /dbproj/product/1 HTTP/1.1[0m" 400 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:22:13] "[31m[1mPOST /dbproj/product/1 HTTP/1.1[0m" 400 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+ERROR:logger:GET /product/<product_id> - error: 'module' object is not callable
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:22:53] "POST /dbproj/product/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+ERROR:logger:GET /product/<product_id> - error: 'dict' object has no attribute 'read'
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:23:15] "POST /dbproj/product/1 HTTP/1.1" 200 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+ERROR:logger:GET /product/<product_id> - error: 'dict' object has no attribute 'read'
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:23:16] "POST /dbproj/product/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+DEBUG:logger:GET /product/<product_id> - parse
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:24:40] "POST /dbproj/product/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 2
+DEBUG:logger:GET /product/<product_id> - parse
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:26:00] "POST /dbproj/product/2 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+DEBUG:logger:GET /product/<product_id> - parse
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:26:41] "POST /dbproj/product/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:29:51] "[35m[1mPOST /dbproj/product/1 HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+ERROR:logger:GET /product/<product_id> - error: can't adapt type 'dict'
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:30:05] "POST /dbproj/product/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+ERROR:logger:GET /product/<product_id> - error: can't adapt type 'dict'
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:30:56] "POST /dbproj/product/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+ERROR:logger:GET /product/<product_id> - error: can't adapt type 'dict'
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:31:40] "POST /dbproj/product/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+ERROR:logger:GET /product/<product_id> - error: can't adapt type 'dict'
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:31:54] "POST /dbproj/product/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+ERROR:logger:GET /product/<product_id> - error: invalid input syntax for type json
+LINE 1: select update_product_id('1'::INTEGER,'''{"marca": "Microsof...
+                                              ^
+DETAIL:  Token "'" is invalid.
+CONTEXT:  JSON data, line 1: '...
+
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:33:02] "POST /dbproj/product/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+ERROR:logger:GET /product/<product_id> - error: invalid input syntax for type json
+LINE 1: select update_product_id('1'::INTEGER,'''{"marca": "Microsof...
+                                              ^
+DETAIL:  Token "'" is invalid.
+CONTEXT:  JSON data, line 1: '...
+
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:33:19] "POST /dbproj/product/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+DEBUG:logger:GET /product/<product_id> - parse
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:33:39] "POST /dbproj/product/1 HTTP/1.1" 200 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+DEBUG:logger:GET /product/<product_id> - parse
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:34:02] "POST /dbproj/product/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+ERROR:logger:GET /product/<product_id> - error: invalid input syntax for type json
+LINE 1: select update_product_id('1'::INTEGER,'''{"marca": "Windows"...
+                                              ^
+DETAIL:  Token "'" is invalid.
+CONTEXT:  JSON data, line 1: '...
+
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:34:56] "POST /dbproj/product/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+DEBUG:logger:GET /product/<product_id> - parse
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:35:32] "POST /dbproj/product/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+ERROR:logger:GET /product/<product_id> - error: 'module' object is not callable
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:39:19] "POST /dbproj/product/1 HTTP/1.1" 200 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+ERROR:logger:GET /product/<product_id> - error: 'module' object is not callable
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:39:20] "POST /dbproj/product/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+DEBUG:logger:GET /product/<product_id> - parse
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:39:33] "POST /dbproj/product/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+DEBUG:logger:GET /product/<product_id> - parse
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:39:54] "POST /dbproj/product/1 HTTP/1.1" 200 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+DEBUG:logger:GET /product/<product_id> - parse
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:40:00] "POST /dbproj/product/1 HTTP/1.1" 200 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+DEBUG:logger:GET /product/<product_id> - parse
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:40:00] "POST /dbproj/product/1 HTTP/1.1" 200 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 0
+DEBUG:logger:GET /product/<product_id> - parse
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:40:04] "POST /dbproj/product/0 HTTP/1.1" 200 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 0
+DEBUG:logger:GET /product/<product_id> - parse
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:41:48] "POST /dbproj/product/0 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:42:06] "[33mGET /dbproj/product/ HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:42:06] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\test.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\test.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\test.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\test.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\test.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\test.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\test.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\test.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\test.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\test.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\test.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\test.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+ERROR:logger:GET /product/<product_id> - error: can only concatenate tuple (not "str") to tuple
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:46:44] "POST /dbproj/product/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+ERROR:logger:GET /product/<product_id> - error: invalid input syntax for type json
+LINE 1: select update_product_id('1'::INTEGER,'''{"marca": "Asus"}''...
+                                              ^
+DETAIL:  Token "'" is invalid.
+CONTEXT:  JSON data, line 1: '...
+
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:47:43] "POST /dbproj/product/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+ERROR:logger:GET /product/<product_id> - error: invalid input syntax for type json
+LINE 1: select update_product_id('1'::INTEGER,'''{"marca": "Asus"}''...
+                                              ^
+DETAIL:  Token "'" is invalid.
+CONTEXT:  JSON data, line 1: '...
+
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:48:05] "POST /dbproj/product/1 HTTP/1.1" 200 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+ERROR:logger:GET /product/<product_id> - error: invalid input syntax for type json
+LINE 1: select update_product_id('1'::INTEGER,'''{"marca": "Asus"}''...
+                                              ^
+DETAIL:  Token "'" is invalid.
+CONTEXT:  JSON data, line 1: '...
+
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:48:06] "POST /dbproj/product/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+ERROR:logger:GET /product/<product_id> - error: can only concatenate str (not "dict") to str
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:49:40] "POST /dbproj/product/1 HTTP/1.1" 200 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+ERROR:logger:GET /product/<product_id> - error: can only concatenate str (not "dict") to str
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:49:42] "POST /dbproj/product/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+ERROR:logger:GET /product/<product_id> - error: invalid input syntax for type json
+LINE 1: select update_product_id('1'::INTEGER,'''{''marca'': ''Asus'...
+                                              ^
+DETAIL:  Token "'" is invalid.
+CONTEXT:  JSON data, line 1: '...
+
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:50:05] "POST /dbproj/product/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+ERROR:logger:GET /product/<product_id> - error: invalid input syntax for type json
+LINE 1: select update_product_id('1'::INTEGER,'{''marca'': ''Asus''}...
+                                              ^
+DETAIL:  Token "'" is invalid.
+CONTEXT:  JSON data, line 1: {'...
+
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:50:30] "POST /dbproj/product/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+ERROR:logger:GET /product/<product_id> - error: invalid input syntax for type json
+LINE 1: select update_product_id('1'::INTEGER,'{''marca'': ''Asus''}...
+                                              ^
+DETAIL:  Token "'" is invalid.
+CONTEXT:  JSON data, line 1: {'...
+
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:50:44] "POST /dbproj/product/1 HTTP/1.1" 200 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+ERROR:logger:GET /product/<product_id> - error: invalid input syntax for type json
+LINE 1: select update_product_id('1'::INTEGER,'{''marca'': ''Asus''}...
+                                              ^
+DETAIL:  Token "'" is invalid.
+CONTEXT:  JSON data, line 1: {'...
+
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:50:45] "POST /dbproj/product/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+ERROR:logger:GET /product/<product_id> - error: dump() missing 1 required positional argument: 'fp'
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:51:11] "POST /dbproj/product/1 HTTP/1.1" 200 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+ERROR:logger:GET /product/<product_id> - error: dump() missing 1 required positional argument: 'fp'
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:51:12] "POST /dbproj/product/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+DEBUG:logger:GET /product/<product_id> - parse
+INFO:werkzeug:127.0.0.1 - - [08/May/2022 10:51:21] "POST /dbproj/product/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 126-867-606
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+DEBUG:logger:GET /product/<product_id> - parse
