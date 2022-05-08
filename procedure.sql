@@ -582,7 +582,6 @@ $$;
 
 
 --trigger notificação compra
-
 create or replace function notificacao_compra() returns trigger
 language plpgsql
 as $$
@@ -617,3 +616,18 @@ create trigger trig_compra
 after update on compra
 for each row
 execute procedure notificacao_compra();
+
+--stats 12 meses
+create or replace function stats_year()
+return json
+as $$
+begin
+
+    return select json_agg(t) from (
+                                    select DATE_TRUNC('month', compra.data_compra) as "Month", COUNT(*) as "orders", SUM(compra.valor_pago) as "total_value"
+                                    from compra
+                                    GROUP BY DATE_TRUNC('month', compra.data_compra) 
+                                    ) AS t;
+
+end;
+$$;
