@@ -23,30 +23,60 @@ end;
 $$;
 
 
-create or replace procedure insert_customer(username utilizador.username%type, pw utilizador.password%type, mail utilizador.mail%type, nome utilizador.nome%type, pais customer.pais%type, cidade customer.cidade%type, rua customer.rua%type )
+create or replace function insert_customer(username utilizador.username%type, pw utilizador.password%type, mail utilizador.mail%type, nome utilizador.nome%type, pais customer.pais%type, cidade customer.cidade%type, rua customer.rua%type )
+returns integer
 language plpgsql
 as $$
 declare
     id_inserido INT;
 
-    cur_id cursor (uname utilizador.username%type) for
-        select id
-        from utilizador
-        where utilizador.username = uname;
 begin
 
     --inserir na tabela users
-    insert into utilizador(username,password,mail,nome) values (username,pw,mail,nome);
-
-    --buscar id inserido
-    open cur_id(username);
-    fetch cur_id
-    into id_inserido;
-    close cur_id;
+    insert into utilizador(username,password,mail,nome) values (username,pw,mail,nome) returning id into id_inserido;
 
     --inserir na tabela dos customers
     insert into customer(utilizador_id,pais,cidade,rua) values (id_inserido,pais,cidade,rua);
 
+    return id_inserido;
+end;
+$$;
+
+create or replace function insert_vendedor(username utilizador.username%type, pw utilizador.password%type, mail utilizador.mail%type, nome utilizador.nome%type, pais customer.pais%type, cidade customer.cidade%type, rua customer.rua%type )
+returns integer
+language plpgsql
+as $$
+declare
+    id_inserido INT;
+
+begin
+
+    --inserir na tabela users
+    insert into utilizador(username,password,mail,nome) values (username,pw,mail,nome) returning id into id_inserido;
+
+    --inserir na tabela dos customers
+    insert into vendedor(utilizador_id,pais,cidade,rua) values (id_inserido,pais,cidade,rua);
+
+    return id_inserido;
+end;
+$$;
+
+create or replace function insert_admin(username utilizador.username%type, pw utilizador.password%type, mail utilizador.mail%type, nome utilizador.nome%type)
+returns integer
+language plpgsql
+as $$
+declare
+    id_inserido INT;
+
+begin
+
+    --inserir na tabela users
+    insert into utilizador(username,password,mail,nome) values (username,pw,mail,nome) returning id into id_inserido;
+
+    --inserir na tabela dos customers
+    insert into admin(utilizador_id) values (id_inserido);
+
+    return id_inserido;
 end;
 $$;
 

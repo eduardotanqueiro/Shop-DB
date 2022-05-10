@@ -57,14 +57,8 @@ def add_user():
 
     logger.debug(f'POST /customer - payload: {payload}')
 
-    #verify arguments
-    if 'username' not in payload or 'mail' not in payload or 'password' not in payload or 'pais' not in payload or 'cidade' not in payload or 'rua' not in payload:
-        response = {'status': StatusCodes['api_error'], 'results': 'Missing value(s) in the payload'}
-        return flask.jsonify(response)
 
     #ler token inserido em Header Postman (authorization->Bearer Token)
-    #TODO SE NÃO TEM HEADER É PORQUE É PARA INTRODUZIR UM USER, E ISSO QUALQUER UM PODE FAZER
-    '''
     global token
     header=flask.request.headers
     if 'Authorization' not in header:
@@ -73,31 +67,61 @@ def add_user():
     else:
         token=(header['Authorization'].split(" ")[1])
 
-    #1st check if user is customer,seller or admin
     decode_token = jwt.decode(token,jwt_key,'HS256')
     
+    if 'type' in payload:
+        #é para introduzir vendedor ou admin, e isto só os admins podem fazer
+
+        #If user is not admin
+        if decode_token['user_type'] == user_type_hashed['customer'] or decode_token['user_type'] == user_type_hashed['vendedor']:
+            response = {'status': StatusCodes['api_error'], 'errors': 'You don\'t have permission to execute this task!'}
+            return flask.jsonify(response)
+        
+        if payload[ 'type'] == 'vendedor':
+                #verify arguments
+                if 'username' not in payload or 'mail' not in payload or 'password' not in payload or 'pais' not in payload or 'cidade' not in payload or 'rua' not in payload:
+                    response = {'status': StatusCodes['api_error'], 'results': 'Missing value(s) in the payload'}
+                    return flask.jsonify(response)
+
+    else:
+        #verify arguments
+        if 'username' not in payload or 'mail' not in payload or 'password' not in payload or 'pais' not in payload or 'cidade' not in payload or 'rua' not in payload:
+            response = {'status': StatusCodes['api_error'], 'results': 'Missing value(s) in the payload'}
+            return flask.jsonify(response)
     
-    #If user is not admin
-    if decode_token['user_type'] == user_type_hashed['customer'] or decode_token['user_type'] == user_type_hashed['vendedor']:
-        response = {'status': StatusCodes['api_error'], 'errors': 'You don\'t have permission to execute this task!'}
-        return flask.jsonify(response)
-    '''
+
 
     #hashing da password
     bin_pw = str(payload['password']).encode('ascii')
     hash_pw = hs.md5( bin_pw ).hexdigest()
 
-    values = (payload['username'], hash_pw , payload['mail'] , payload['nome'], payload['pais'], payload['cidade'], payload['rua'])
+
 
     #TODO -> FAZER A VERIFICAÇÃO SE VIER COM NIF OU NÃO
 
     try:
-        cur.execute("call insert_customer(%s,%s,%s,%s,%s,%s,%s)",values)
+
+        if 'type' not in payload:
+            values = (payload['username'], hash_pw , payload['mail'] , payload['nome'], payload['pais'], payload['cidade'], payload['rua'])
+
+            cur.execute("select insert_customer(%s,%s,%s,%s,%s,%s,%s)",values)
+        else:   
+            
+            if payload['type'] ==  'admin':
+                values = (payload['username'], hash_pw , payload['mail'] , payload['nome'])
+                cur.execute("select insert_admin(%s,%s,%s,%s)",values)
+
+
+            elif payload['type'] == 'vendedor':
+                values = (payload['username'], hash_pw , payload['mail'] , payload['nome'], payload['pais'], payload['cidade'], payload['rua'])
+                cur.execute("select insert_vendedor(%s,%s,%s,%s,%s,%s,%s)",values)
+
 
         # commit the transaction
+        id_result = cur.fetchone()
         conn.commit()
 
-        response = {'status': StatusCodes['success'], 'results': f'Inserted user {payload["nome"]}'}
+        response = {'status': StatusCodes['success'], 'results': id_result}
         logger.info(f'New user inserted')
 
     except (Exception, psycopg2.DatabaseError) as error:
@@ -433,7 +457,7 @@ def get_product(product_id):
         try:
 
             #TODO só pode dar update o vendedor que está a vender o produto, e mais ninguém
-            
+
             cur.execute('select update_product_id(%s::INTEGER,%s::json)', (product_id,str(str(json.dumps(payload)))))
             rows = cur.fetchone()
 
