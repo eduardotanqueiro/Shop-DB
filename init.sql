@@ -62,7 +62,9 @@ CREATE TABLE pc (
 CREATE TABLE notificacao_comentario (
 
 	descricao	 VARCHAR(512) NOT NULL,
-	lida 					INTEGER NOT NULL,
+	lida INTEGER NOT NULL,
+	data_notificacao DATE NOT NULL,
+	user_id BIGINT NOT NULL,
 	comentario_id			INTEGER NOT NULL
 );
 
@@ -105,7 +107,7 @@ CREATE TABLE notificacao_compra(
 	descricao	 VARCHAR(512) NOT NULL,
 	lida INTEGER NOT NULL,
 	data_notificacao DATE NOT NULL,
-	user_id BIGINT NOT NULL,
+	user_id BIGINT NOT NULL
 
 );
 

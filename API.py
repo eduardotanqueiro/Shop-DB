@@ -698,7 +698,58 @@ def rate_product(product_id):
     return flask.jsonify(response)
 
 
+##
+## Get notifications
+##
 
+@app.route('/dbproj/notification',methods = ['GET'])
+def get_notifications():
+
+
+    payload = flask.request.get_json()
+
+    conn = db_connection()
+    cur = conn.cursor()
+
+    logger.info(f'Get notification')
+
+    #ler token inserido em Header Postman (authorization->Bearer Token)
+    global token
+    header=flask.request.headers
+    if 'Authorization' not in header:
+        response = {'status': StatusCodes['api_error'], 'errors': 'Missing auth token'}
+        return flask.jsonify(response)
+    else:
+        token=(header['Authorization'].split(" ")[1])
+
+
+    #Decode Token
+    decode_token = jwt.decode(token,jwt_key,'HS256')
+
+    try:
+        
+        cur.execute("select get_notifications(%s::INTEGER)",(decode_token['id']))
+
+        notifications = cur.fetchall()
+
+        response = {'status': StatusCodes['success'],'results': notifications}
+        conn.commit()
+
+    except (Exception, psycopg2.DatabaseError) as error:
+        logger.error(error)
+        response = {'status': StatusCodes['internal_error'], 'errors': str(error)}
+
+        # an error occurred, rollback
+        conn.rollback()
+
+    finally:
+        if conn is not None:
+            conn.close()
+
+
+    return flask.jsonify(response)
+
+"""
 def check_user_type(id):
     
     conn = db_connection()
@@ -720,14 +771,7 @@ def check_user_type(id):
             conn.close()
 
     return flask.jsonify(response)
-            
-        
-
-        
-
-   
-
-
+"""  
 
 
 

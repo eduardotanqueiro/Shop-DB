@@ -666,3 +666,28 @@ begin
 
 end;
 $$;
+
+
+--get notificaçoes
+create or update function get_notifications(id_user utilizador.id%type)
+returns json
+language plpgsql
+as $$
+declare
+
+    cur_notifications cursor(id_us utilizador.id%type) for
+        select descricao
+        from notificacao_compra
+		where user_id = id_us and lida = 0
+		union
+		select descricao
+		from notificacao_comentario
+		where user_id = id_us  and lida = 0
+        
+begin
+
+    --TODO por acabar
+
+
+end;
+$$;
