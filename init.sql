@@ -104,7 +104,8 @@ CREATE TABLE notificacao_compra(
 
 	descricao	 VARCHAR(512) NOT NULL,
 	lida INTEGER NOT NULL,
-	compra_id INTEGER NOT NULL
+	data_notificacao DATE NOT NULL,
+	user_id BIGINT NOT NULL,
 
 );
 

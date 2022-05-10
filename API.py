@@ -431,6 +431,9 @@ def get_product(product_id):
     cur = conn.cursor()
     if payload!=None:
         try:
+
+            #TODO só pode dar update o vendedor que está a vender o produto, e mais ninguém
+            
             cur.execute('select update_product_id(%s::INTEGER,%s::json)', (product_id,str(str(json.dumps(payload)))))
             rows = cur.fetchone()
 

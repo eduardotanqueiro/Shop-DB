@@ -494,7 +494,8 @@ begin
     
 
     --check se compra existe
-    select transacao_compra.compra_id into compra_id_search from transacao_compra where produto_id = prod_id and transacao_compra.compra_id in (select id from compra where customer_utilizador_id = utilizador_id );
+    --escolhe a última compra sem rating
+    select MAX(transacao_compra.compra_id) into compra_id_search from transacao_compra where produto_id = prod_id and transacao_compra.compra_id in (select id from compra where customer_utilizador_id = utilizador_id);
     if not found then raise EXCEPTION 'Compra nao encontrada';
     end if;
 
@@ -588,25 +589,29 @@ as $$
 declare
     id_prod produto.id%type;
     quantidade_prod INTEGER;
+    vendedor_id produto.vendedor_utilizador_id%type;
 	texto_notificacao varchar(512) := CONCAT('User ',new.id,' comprou:');
 	
     cur_produtos_comprados cursor (id_compra INTEGER)for
-        select produto_id,quantidade
-        from transacao_compra
-        where compra_id = id_compra;
+        select produto_id,quantidade,produto.vendedor_utilizador_id
+        from transacao_compra,produto
+        where compra_id = id_compra and produto_id = produto.id;
 begin 
 
     open cur_produtos_comprados(new.id);
 
     loop
 
-        fetch cur_produtos_comprados into id_prod,quantidade_prod;
+        fetch cur_produtos_comprados into id_prod,quantidade_prod,vendedor_id;
         exit when not found;
+
+        --TODO FAZER NOTIFICAÇÃO PARA CADA VENDEDOR COM JSON
 
         texto_notificacao = CONCAT( texto_notificacao, ' produto:',id_prod, 'quantidade:',quantidade_prod);
     end loop;
 
-    insert into notificacao_compra(descricao,lida,compra_id) values (texto_notificacao,0,new.id);
+    --notificacao customer
+    insert into notificacao_compra(descricao,lida,data_compra,user_id) values (texto_notificacao,0,current_date,new.id);
 	
 	return new;
 end;

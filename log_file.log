@@ -3775,3 +3775,45 @@ WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 982-140-900
 INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
 INFO:werkzeug:127.0.0.1 - - [08/May/2022 20:14:36] "POST /dbproj/order HTTP/1.1" 200 -
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [10/May/2022 13:58:53] "[31m[1mGET /dbproj/product/10 HTTP/1.1[0m" 405 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 10
+ERROR:logger:GET /product/<product_id> - error: function get_product_id(integer) does not exist
+LINE 1: select get_product_id('10'::INTEGER)
+               ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+
+INFO:werkzeug:127.0.0.1 - - [10/May/2022 13:59:40] "POST /dbproj/product/10 HTTP/1.1" 200 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 10
+ERROR:logger:GET /product/<product_id> - error: id produto nao encontrado
+INFO:werkzeug:127.0.0.1 - - [10/May/2022 14:00:19] "POST /dbproj/product/10 HTTP/1.1" 200 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+DEBUG:logger:GET /product/<product_id> - parse
+INFO:werkzeug:127.0.0.1 - - [10/May/2022 14:00:23] "POST /dbproj/product/1 HTTP/1.1" 200 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 0
+DEBUG:logger:GET /product/<product_id> - parse
+INFO:werkzeug:127.0.0.1 - - [10/May/2022 14:00:39] "POST /dbproj/product/0 HTTP/1.1" 200 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 0
+ERROR:logger:GET /product/<product_id> - error: function update_product_id(integer, json) does not exist
+LINE 1: select update_product_id('0'::INTEGER,'{"marca": "OZONE"}'::...
+               ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+
+INFO:werkzeug:127.0.0.1 - - [10/May/2022 14:01:13] "POST /dbproj/product/0 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 0
+DEBUG:logger:GET /product/<product_id> - parse
+INFO:werkzeug:127.0.0.1 - - [10/May/2022 14:02:19] "POST /dbproj/product/0 HTTP/1.1" 200 -
