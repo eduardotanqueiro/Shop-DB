@@ -2,13 +2,13 @@ CREATE TABLE customer (
 	pais		 VARCHAR(30) NOT NULL,
 	cidade	 VARCHAR(35) NOT NULL,
 	rua		 VARCHAR(130) NOT NULL,
-	nif		 INTEGER,
+	nif		 INTEGER, --tirar nif??? muito trabalho
 	utilizador_id INTEGER UNIQUE,
 	PRIMARY KEY(utilizador_id)
 );
 
 CREATE TABLE vendedor (
-	nif		 INTEGER UNIQUE NOT NULL,
+	nif		 INTEGER UNIQUE NOT NULL, --tirar nif??? muito trabalho
 	pais		 VARCHAR(30) NOT NULL,
 	cidade	 VARCHAR(35) NOT NULL,
 	rua		 VARCHAR(130) NOT NULL,

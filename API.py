@@ -97,7 +97,7 @@ def add_user():
 
 
 
-    #TODO -> FAZER A VERIFICAÇÃO SE VIER COM NIF OU NÃO
+    #TODO -> FAZER A VERIFICAÇÃO SE VIER COM NIF OU NÃO (TIRAR NIF??)
 
     try:
 
@@ -358,6 +358,7 @@ def make_order():
 
 
     #TODO ATENÇÃO: PROBLEMAS DE LOCKS E SINCRONIZAÇÃO DE DADOS NAS TABELAS
+
     #converter carrinho para dicionario json
     cart_dict = {}
     for i in payload['cart']:
@@ -747,7 +748,7 @@ def get_notifications():
 
     return flask.jsonify(response)
 
-"""
+
 def check_user_type(id):
     
     conn = db_connection()
@@ -769,7 +770,6 @@ def check_user_type(id):
             conn.close()
 
     return flask.jsonify(response)
-"""  
 
 
 
