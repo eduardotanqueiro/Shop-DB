@@ -706,8 +706,6 @@ def rate_product(product_id):
 def get_notifications():
 
 
-    payload = flask.request.get_json()
-
     conn = db_connection()
     cur = conn.cursor()
 

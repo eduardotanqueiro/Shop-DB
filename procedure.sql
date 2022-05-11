@@ -675,19 +675,28 @@ language plpgsql
 as $$
 declare
 
+    return_values json;
+
     cur_notifications cursor(id_us utilizador.id%type) for
-        select descricao
-        from notificacao_compra
-		where user_id = id_us and lida = 0
-		union
-		select descricao
-		from notificacao_comentario
-		where user_id = id_us  and lida = 0
+        select row_to_json(a) from(
+                    select descricao
+                    from notificacao_compra
+                    where user_id = id_us and lida = 0
+                    union
+                    select descricao
+                    from notificacao_comentario
+                    where user_id = id_us  and lida = 0);
         
 begin
 
-    --TODO por acabar
+    open cur_notifications(id_user);
+    fetch cur_notifications into return_values;
+    close cur_notifications;
 
+    --TODO por verificar
+    update notificacao_compra set lida = 1 where user_id = 1 and lida = 0
+    update notificacao_comentario set lida = 1 where user_id = 1 and lida = 0
 
+    return return_values;
 end;
 $$;

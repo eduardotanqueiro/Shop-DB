@@ -64,8 +64,8 @@ CREATE TABLE notificacao_comentario (
 	descricao	 VARCHAR(512) NOT NULL,
 	lida INTEGER NOT NULL,
 	data_notificacao DATE NOT NULL,
-	user_id BIGINT NOT NULL,
-	comentario_id			INTEGER NOT NULL
+	user_id BIGINT NOT NULL, --FALTA FOREIGN KEY
+	comentario_id			INTEGER NOT NULL --FALTA FOREIGN KEY
 );
 
 CREATE TABLE comentario(
@@ -107,7 +107,7 @@ CREATE TABLE notificacao_compra(
 	descricao	 VARCHAR(512) NOT NULL,
 	lida INTEGER NOT NULL,
 	data_notificacao DATE NOT NULL,
-	user_id BIGINT NOT NULL
+	user_id BIGINT NOT NULL --FALTA FOREIGN KEY
 
 );
 
