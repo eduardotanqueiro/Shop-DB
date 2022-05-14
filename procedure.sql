@@ -671,13 +671,13 @@ $$;
 --get notificaçoes
 
 create or replace function get_notifications(id_user utilizador.id%type)
-returns text[]
+returns jsonb[]
 language plpgsql
 as $$
 declare
 	
 	notificacao_row json;
-	all_notifications text[];
+	all_notifications jsonb[];
     
 begin
 
@@ -690,7 +690,7 @@ begin
 				from notificacao_comentario
 				where user_id = id_user  and lida = 0) as a
 	loop
-		all_notifications = array_append(all_notifications, notificacao_row::text);
+		all_notifications = array_append(all_notifications, notificacao_row::jsonb);
 	end loop;
 
 
