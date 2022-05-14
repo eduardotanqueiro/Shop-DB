@@ -674,9 +674,7 @@ def rate_product(product_id):
         return flask.jsonify(response)
 
 
-
     try:
-
 
         values = ( decode_token['id'], str(product_id), str(payload['rating']), payload['comment'])
         cur.execute("call create_rating(%s::INTEGER,%s::INTEGER,%s::INTEGER,%s::VARCHAR)",values)
@@ -730,8 +728,12 @@ def get_notifications():
         cur.execute("select get_notifications(%s::INTEGER)",(decode_token['id']))
 
         notifications = cur.fetchall()
-
-        response = {'status': StatusCodes['success'],'results': notifications}
+        
+        if notifications[0][0] is None:
+            response = {'status': StatusCodes['success'],'results': 'No new notifications' }
+        else:
+            response = {'status': StatusCodes['success'],'results': notifications[0][0] }
+        
         conn.commit()
 
     except (Exception, psycopg2.DatabaseError) as error:
@@ -747,6 +749,71 @@ def get_notifications():
 
 
     return flask.jsonify(response)
+
+##
+## Make a comment
+##
+
+@app.route('/dbproj/questions/<product_id>', defaults = {'parent_id': None}, methods = ['POST'])
+@app.route('/dbproj/questions/<product_id>/<parent_id>', methods = ['POST'])
+def make_comment(product_id,parent_id):
+
+
+    payload = flask.request.get_json()
+
+    conn = db_connection()
+    cur = conn.cursor()
+
+    logger.info(f'Make Comment')
+
+    #ler token inserido em Header Postman (authorization->Bearer Token)
+    global token
+    header=flask.request.headers
+    if 'Authorization' not in header:
+        response = {'status': StatusCodes['api_error'], 'errors': 'Missing auth token'}
+        return flask.jsonify(response)
+    else:
+        token=(header['Authorization'].split(" ")[1])
+
+
+    #Decode Token
+    decode_token = jwt.decode(token,jwt_key,'HS256')
+
+    #check payload
+    if 'question' not in payload:
+        response = {'status': StatusCodes['api_error'], 'errors': 'Missing question'}
+        return flask.jsonify(response)
+
+
+    try:
+        
+        if parent_id is None:
+            values = (int(product_id),-1,decode_token['id'])
+        else:
+            values = (int(product_id), int(parent_id),decode_token['id'])
+
+        cur.execute("select make_question(%s::INTEGER,%s::INTEGER,%s::INTEGER)",values)
+        #TODO funcao SQL e ajustar esta call
+
+        response = cur.fetchall()  
+
+        response = {'status': StatusCodes['success'],'results': response}
+        conn.commit()
+
+    except (Exception, psycopg2.DatabaseError) as error:
+        logger.error(error)
+        response = {'status': StatusCodes['internal_error'], 'errors': str(error)}
+
+        # an error occurred, rollback
+        conn.rollback()
+
+    finally:
+        if conn is not None:
+            conn.close()
+
+
+    return flask.jsonify(response)
+
 
 
 def check_user_type(id):

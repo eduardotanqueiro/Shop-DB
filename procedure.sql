@@ -669,34 +669,39 @@ $$;
 
 
 --get notificaçoes
-create or update function get_notifications(id_user utilizador.id%type)
-returns json
+
+create or replace function get_notifications(id_user utilizador.id%type)
+returns text[]
 language plpgsql
 as $$
 declare
-
-    return_values json;
-
-    cur_notifications cursor(id_us utilizador.id%type) for
-        select row_to_json(a) from(
-                    select descricao
-                    from notificacao_compra
-                    where user_id = id_us and lida = 0
-                    union
-                    select descricao
-                    from notificacao_comentario
-                    where user_id = id_us  and lida = 0);
-        
+	
+	notificacao_row json;
+	all_notifications text[];
+    
 begin
 
-    open cur_notifications(id_user);
-    fetch cur_notifications into return_values;
-    close cur_notifications;
+	for notificacao_row in 
+				select row_to_json(a) from (select data_notificacao,descricao 
+				from notificacao_compra
+				where user_id = id_user and lida = 0
+				union
+				select data_notificacao,descricao 
+				from notificacao_comentario
+				where user_id = id_user  and lida = 0) as a
+	loop
+		all_notifications = array_append(all_notifications, notificacao_row::text);
+	end loop;
 
-    --TODO por verificar
-    update notificacao_compra set lida = 1 where user_id = 1 and lida = 0
-    update notificacao_comentario set lida = 1 where user_id = 1 and lida = 0
 
-    return return_values;
+    --Set notificacoes como lidas
+    update notificacao_compra set lida = 1 where user_id = id_user and lida = 0;
+    update notificacao_comentario set lida = 1 where user_id = id_user and lida = 0;
+	
+
+    return all_notifications;
 end;
 $$;
+	
+	
+
