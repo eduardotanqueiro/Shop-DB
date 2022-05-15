@@ -434,6 +434,7 @@ end;
 $$;
 
 --- INSERT CAMPAIGN PROCEDURE
+-- verificar ao inserir campanha se data de inicio maior do q todas as outras datas de fim
 create or replace function insert_campaign(desconto campanha.desconto%type, numero_cupoes campanha.numero_cupoes%type, data_inicio campanha.data_inicio%type, data_fim campanha.data_fim%type,validade_cupao campanha.validade_cupao%type, administrador_id campanha.administrador_utilizador_id%type)
 returns integer
 language plpgsql
@@ -506,7 +507,7 @@ else
         insert into cupao(numero,cupao_ativo,data_atribuicao,campanha_id) values(n_cupao_maximo+1,'true',current_date,campaign_id) returning id into id_cupao_var_maximo;
         insert into customer_cupao (customer_utilizador_id,id_cupao_var) values (customer_id,id_cupao_var_maximo);
         return json_build_object('campanha subscrita id_cupao_var',id_cupao_var_maximo);
-    else return json_build_object('error','campanha nao pode ser subscrita, maximo cupoes');
+    else return json_build_object('error','campanha nao pode ser subscrita, maximo cupoes'); --falta update p campanha ficar inativa
     end if;
 end if;
 end;
