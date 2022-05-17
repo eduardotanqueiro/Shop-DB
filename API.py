@@ -283,7 +283,8 @@ def add_product():
     decode_token[ 'id'] = int(decode_token['id'])
 
     try:
-
+        #verificar se token + id existe na tabela 
+        cur.execute("call check_token_type(%s::VARCHAR(512),%s::INTEGER)",(token,decode_token['id']))
         
         if payload['tipo'] == 'smartphone':
 
@@ -368,6 +369,8 @@ def make_order():
 
 
     try:
+        #verificar se token + id existe na tabela 
+        cur.execute("call check_token_type(%s::VARCHAR(512),%s::INTEGER)",(token,decode_token['id']))
         #compra
         if 'coupon' not in payload:
             values = (decode_token['id'], cart_json ,'-1')
@@ -486,6 +489,9 @@ def update_product(product_id):
     cur = conn.cursor()
     try:
 
+        # #verificar se token + id existe na tabela 
+        # cur.execute("call check_token_type(%s::VARCHAR(512),%s::INTEGER)",(token,decode_token['id']))
+
         #TODO só pode dar update o vendedor que está a vender o produto, e mais ninguém
 
         cur.execute('select update_product_id(%s::INTEGER,%s::json)', (product_id,str(str(json.dumps(payload)))))
@@ -550,6 +556,9 @@ def add_campaign():
     decode_token['id']=int(decode_token['id'])
 
     try:
+        #verificar se token + id existe na tabela 
+        cur.execute("call check_token_type(%s::VARCHAR(512),%s::INTEGER)",(token,decode_token['id']))
+
         values=(payload['desconto'],payload['numero_cupoes'],payload['data_inicio'],payload['data_fim'],payload['validade_cupao'],decode_token['id'])
 
         cur.execute("select insert_campaign(%s::INTEGER,%s::INTEGER,%s::DATE,%s::DATE,%s::SMALLINT,%s::INTEGER)",values)
@@ -618,6 +627,9 @@ def subscribe_campaign(campaign_id):
     decode_token['id']=int(decode_token['id'])
 
     try:
+        #verificar se token + id existe na tabela 
+        cur.execute("call check_token_type(%s::VARCHAR(512),%s::INTEGER)",(token,decode_token['id']))
+
         values=(campaign_id,decode_token['id'])
 
         cur.execute("select subscribe_campaign(%s::INTEGER,%s::INTEGER)",values)
@@ -682,6 +694,8 @@ def rate_product(product_id):
 
 
     try:
+        #verificar se token + id existe na tabela 
+        cur.execute("call check_token_type(%s::VARCHAR(512),%s::INTEGER)",(token,decode_token['id']))
 
         values = ( decode_token['id'], str(product_id), str(payload['rating']), payload['comment'])
         cur.execute("call create_rating(%s::INTEGER,%s::INTEGER,%s::INTEGER,%s::VARCHAR)",values)
@@ -731,6 +745,8 @@ def get_notifications():
     decode_token = jwt.decode(token,jwt_key,'HS256')
 
     try:
+        #verificar se token + id existe na tabela 
+        cur.execute("call check_token_type(%s::VARCHAR(512),%s::INTEGER)",(token,decode_token['id']))
         
         cur.execute("select get_notifications(%s::INTEGER)",(decode_token['id']))
 
@@ -793,6 +809,8 @@ def make_comment(product_id,parent_id):
 
 
     try:
+        #verificar se token + id existe na tabela 
+        cur.execute("call check_token_type(%s::VARCHAR(512),%s::INTEGER)",(token,decode_token['id']))
         
         if parent_id is None:
             values = (int(product_id),-1,decode_token['id'],payload['question'])

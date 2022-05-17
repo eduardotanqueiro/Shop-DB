@@ -1,3 +1,18 @@
+--- check if token is valid
+create or replace procedure check_token_type(token_in login_token.token%type,utilizador_in login_token.utilizador_id%type)
+language plpgsql
+as $$
+declare
+begin
+PERFORM utilizador_id from login_token
+where token=token_in and utilizador_id=utilizador_in;
+if not found then
+    raise exception 'Token invalid!';
+end if;
+end;
+$$;
+
+
 --- check user type
 create or replace function check_user_type(user_id utilizador.id%type)
 returns text
