@@ -442,67 +442,74 @@ def get_all_products():
     return flask.jsonify(response)
 
 ##
-## GET PRODUCT//UPDATE PRODUCT
+## GET PRODUCT
 ##
-@app.route('/dbproj/product/<product_id>', methods=['POST'])
+@app.route('/dbproj/product/<product_id>', methods=['GET'])
 def get_product(product_id):
     logger.info('GET /product/<product_id>')
 
     logger.debug(f'product_id: {product_id}')
     
-    payload = flask.request.get_json()
-
     conn = db_connection()
     cur = conn.cursor()
-    if payload!=None:
-        try:
+    try:
+        cur.execute('select get_product_id(%s::INTEGER)', (product_id,))
+        rows = cur.fetchone()
 
-            #TODO só pode dar update o vendedor que está a vender o produto, e mais ninguém
+        json_result=rows[0]
 
-            cur.execute('select update_product_id(%s::INTEGER,%s::json)', (product_id,str(str(json.dumps(payload)))))
-            rows = cur.fetchone()
-
-            json_result=rows[0]
-
-            if 'error' in json_result:
+        if 'error' in json_result:
                 logger.error(f'GET /product/<product_id> - error: {json_result["error"]}')
                 response = {'status': StatusCodes['internal_error'], 'errors': str(json_result["error"])}
-            else:
+        else:
                 logger.debug('GET /product/<product_id> - parse')
 
                 response = {'status': StatusCodes['success'], 'results': json_result}
 
-        except (Exception, psycopg2.DatabaseError) as error:
+    except (Exception, psycopg2.DatabaseError) as error:
             logger.error(f'GET /product/<product_id> - error: {error}')
             response = {'status': StatusCodes['internal_error'], 'errors': str(error)}
 
-        finally:
-            if conn is not None:
-                conn.commit()
-                conn.close()
-    if payload==None:
-        try:
-            cur.execute('select get_product_id(%s::INTEGER)', (product_id,))
-            rows = cur.fetchone()
-
-            json_result=rows[0]
-
-            if 'error' in json_result:
-                logger.error(f'GET /product/<product_id> - error: {json_result["error"]}')
-                response = {'status': StatusCodes['internal_error'], 'errors': str(json_result["error"])}
-            else:
-                logger.debug('GET /product/<product_id> - parse')
-
-                response = {'status': StatusCodes['success'], 'results': json_result}
-
-        except (Exception, psycopg2.DatabaseError) as error:
-            logger.error(f'GET /product/<product_id> - error: {error}')
-            response = {'status': StatusCodes['internal_error'], 'errors': str(error)}
-
-        finally:
+    finally:
             if conn is not None:
                 conn.close()
 
+    return flask.jsonify(response)
+
+##
+## UPDATE PRODUCT
+##
+@app.route('/dbproj/product/<product_id>', methods=['PUT'])
+def update_product(product_id):
+    payload = flask.request.get_json()
+    conn = db_connection()
+    cur = conn.cursor()
+    try:
+
+        #TODO só pode dar update o vendedor que está a vender o produto, e mais ninguém
+
+        cur.execute('select update_product_id(%s::INTEGER,%s::json)', (product_id,str(str(json.dumps(payload)))))
+        rows = cur.fetchone()
+
+        json_result=rows[0]
+
+        if 'error' in json_result:
+            logger.error(f'GET /product/<product_id> - error: {json_result["error"]}')
+            response = {'status': StatusCodes['internal_error'], 'errors': str(json_result["error"])}
+        else:
+            logger.debug('GET /product/<product_id> - parse')
+
+            response = {'status': StatusCodes['success'], 'results': json_result}
+
+    except (Exception, psycopg2.DatabaseError) as error:
+        logger.error(f'GET /product/<product_id> - error: {error}')
+        response = {'status': StatusCodes['internal_error'], 'errors': str(error)}
+
+    finally:
+        if conn is not None:
+            conn.commit()
+            conn.close()
+    
     return flask.jsonify(response)
 
 ##
