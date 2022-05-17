@@ -457,6 +457,7 @@ declare
     id_cupao_var_maximo cupao.id%type;
     numero_cupoes_permitidos campanha.numero_cupoes%type;
     nr_cupoes_atribuidos_campanha INTEGER;
+    data_fim_campaign campanha.data_fim%type;
 
     cur_cupao_maximo cursor for
     select MAX(numero)
@@ -464,7 +465,7 @@ declare
     group by campanha_id having campanha_id=campaign_id;
 
     cur_procura_campanha cursor for
-    select numero_cupoes
+    select numero_cupoes,data_fim
     from campanha
     where id=campaign_id and campanha_ativa='true';
 
@@ -478,11 +479,18 @@ declare
 begin
 open cur_procura_campanha;
 fetch cur_procura_campanha
-into numero_cupoes_permitidos;
+into numero_cupoes_permitidos, data_fim_campaign;
 close cur_procura_campanha;
 
 if not found then 
+    -- campanha nao exixte
     return json_build_object('error','campanha nao encontrada');
+
+elsif data_fim_campaign < current_date  then
+    --campanha já passou o dia de fim
+    update campanha set campanha_ativa = 'false' where campanha.id = campaign_id;
+    return json_build_object('error','campanha já está inativa');
+
 else
     open cur_cupao_maximo;
     fetch cur_cupao_maximo
@@ -506,7 +514,14 @@ else
     if (n_cupao_maximo+1<=numero_cupoes_permitidos) then
         insert into cupao(numero,cupao_ativo,data_atribuicao,campanha_id) values(n_cupao_maximo+1,'true',current_date,campaign_id) returning id into id_cupao_var_maximo;
         insert into customer_cupao (customer_utilizador_id,id_cupao_var) values (customer_id,id_cupao_var_maximo);
+
+        if n_cupao_maximo+1 == numero_cupoes_permitidos then
+            --último cupao atribuído, colocar a campanha como inativa
+            update campanha set campanha_ativa = 'false' where campanha.id = campaign_id;
+        end if;
+
         return json_build_object('campanha subscrita id_cupao_var',id_cupao_var_maximo);
+
     else return json_build_object('error','campanha nao pode ser subscrita, maximo cupoes'); --falta update p campanha ficar inativa
     end if;
 end if;
@@ -670,7 +685,6 @@ $$;
 
 
 --get notificaçoes
-
 create or replace function get_notifications(id_user utilizador.id%type)
 returns jsonb[]
 language plpgsql
@@ -704,5 +718,53 @@ begin
 end;
 $$;
 	
-	
+--create a new comment
+create or replace function make_comment(id_product produto.id%type, id_last_comment comentario.id_anterior%type, id_user utilizador.id%type, comment comentario.texto%type )
+returns INTEGER
+language plpgsql
+as $$
+declare
+    id_vendedor utilizador.id%type;
+    version produto.versao%type;
+    id_new_comment comentario.id%type;
 
+    c_check_product cursor(id_prod produto.id%type) for
+        select vendedor_utilizador_id,MAX(versao)
+        from produto
+        where produto.id = id_prod;
+
+begin
+
+    --check if product exists
+    open c_check_product(id_product);
+    fetch c_check_product into id_vendedor,version;
+    if not found then raise EXCEPTION 'Product does not exist!';
+    end if;
+    close c_check_product;
+
+    --insert into comments table
+    if id_last_comment = -1 then
+        insert into comentario (id_anterior,texto,utilizador_id,vendedor_utilizador_id,prod_id,produto_versao) values (NULL,comment,id_user,id_vendedor,id_product,version) returning id into id_new_comment;
+    else
+        insert into comentario (id_anterior,texto,utilizador_id,vendedor_utilizador_id,prod_id,produto_versao) values (id_last_comment,comment,id_user,id_vendedor,version) returning id into id_new_comment;
+    end if;
+	
+	return id_new_comment;
+end;
+$$
+
+--trigger notificação comentario
+create or replace function notificacao_comentario() returns trigger
+language plpgsql
+as $$
+declare
+
+begin 
+	return new;
+end;
+$$;
+
+create trigger trig_comment
+after insert on comentario
+for each row
+execute procedure notificacao_comentario();

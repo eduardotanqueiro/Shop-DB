@@ -795,11 +795,11 @@ def make_comment(product_id,parent_id):
     try:
         
         if parent_id is None:
-            values = (int(product_id),-1,decode_token['id'])
+            values = (int(product_id),-1,decode_token['id'],payload['question'])
         else:
-            values = (int(product_id), int(parent_id),decode_token['id'])
+            values = (int(product_id), int(parent_id),decode_token['id'],payload['question'])
 
-        cur.execute("select make_question(%s::INTEGER,%s::INTEGER,%s::INTEGER)",values)
+        cur.execute("select make_comment(%s::INTEGER,%s::INTEGER,%s::INTEGER,%s::VARCHAR)",values)
         #TODO funcao SQL e ajustar esta call
 
         response = cur.fetchall()  
