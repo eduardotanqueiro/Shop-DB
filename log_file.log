@@ -4085,3 +4085,415 @@ INFO:logger:GET /product/<product_id>
 DEBUG:logger:product_id: 1
 DEBUG:logger:GET /product/<product_id> - parse
 INFO:werkzeug:127.0.0.1 - - [17/May/2022 08:52:09] "GET /dbproj/product/1 HTTP/1.1" 200 -
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 410-045-901
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+ERROR:logger:insert or update on table "compra" violates foreign key constraint "compra_fk2"
+DETAIL:  Key (customer_utilizador_id)=(1) is not present in table "customer".
+CONTEXT:  SQL statement "insert into compra(data_compra,valor_pago,valor_do_desconto,customer_utilizador_id) values (data_compra,1,0,customer_id)"
+PL/pgSQL function make_order(integer,json,integer) line 36 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 16:29:34] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:insert or update on table "compra" violates foreign key constraint "compra_fk2"
+DETAIL:  Key (customer_utilizador_id)=(1) is not present in table "customer".
+CONTEXT:  SQL statement "insert into compra(data_compra,valor_pago,valor_do_desconto,customer_utilizador_id) values (data_compra,1,0,customer_id)"
+PL/pgSQL function make_order(integer,json,integer) line 36 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 16:31:43] "POST /dbproj/order HTTP/1.1" 200 -
+INFO:logger:User Login Product Insertion
+ERROR:logger:insert or update on table "produto" violates foreign key constraint "produto_fk1"
+DETAIL:  Key (vendedor_utilizador_id)=(2) is not present in table "vendedor".
+CONTEXT:  SQL statement "insert into produto(id,descricao,preco,stock,versao,vendedor_utilizador_id) values (0,descricao,preco,stock,1,vendedor_user_id)"
+PL/pgSQL function insert_pc(character varying,real,integer,bigint,character varying,smallint,smallint,character varying) line 28 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 16:36:22] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:logger:User Login Product Insertion
+ERROR:logger:insert or update on table "produto" violates foreign key constraint "produto_fk1"
+DETAIL:  Key (vendedor_utilizador_id)=(2) is not present in table "vendedor".
+CONTEXT:  SQL statement "insert into produto(id,descricao,preco,stock,versao,vendedor_utilizador_id) values (0,descricao,preco,stock,1,vendedor_user_id)"
+PL/pgSQL function insert_pc(character varying,real,integer,bigint,character varying,smallint,smallint,character varying) line 28 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 16:37:14] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 410-045-901
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:User Login Product Insertion
+ERROR:logger:insert or update on table "produto" violates foreign key constraint "produto_fk1"
+DETAIL:  Key (vendedor_utilizador_id)=(2) is not present in table "vendedor".
+CONTEXT:  SQL statement "insert into produto(id,descricao,preco,stock,versao,vendedor_utilizador_id) values (0,descricao,preco,stock,1,vendedor_user_id)"
+PL/pgSQL function insert_pc(character varying,real,integer,bigint,character varying,smallint,smallint,character varying) line 28 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 16:37:30] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:logger:User Login Product Insertion
+ERROR:logger:insert or update on table "produto" violates foreign key constraint "produto_fk1"
+DETAIL:  Key (vendedor_utilizador_id)=(2) is not present in table "vendedor".
+CONTEXT:  SQL statement "insert into produto(id,descricao,preco,stock,versao,vendedor_utilizador_id) values (0,descricao,preco,stock,1,vendedor_user_id)"
+PL/pgSQL function insert_pc(character varying,real,integer,bigint,character varying,smallint,smallint,character varying) line 28 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 16:37:49] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 410-045-901
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+ERROR:logger:insert or update on table "compra" violates foreign key constraint "compra_fk2"
+DETAIL:  Key (customer_utilizador_id)=(1) is not present in table "customer".
+CONTEXT:  SQL statement "insert into compra(data_compra,valor_pago,valor_do_desconto,customer_utilizador_id) values (data_compra,1,0,customer_id)"
+PL/pgSQL function make_order(integer,json,integer) line 36 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 16:41:10] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:insert or update on table "compra" violates foreign key constraint "compra_fk2"
+DETAIL:  Key (customer_utilizador_id)=(1) is not present in table "customer".
+CONTEXT:  SQL statement "insert into compra(data_compra,valor_pago,valor_do_desconto,customer_utilizador_id) values (data_compra,1,0,customer_id)"
+PL/pgSQL function make_order(integer,json,integer) line 36 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 16:41:16] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:insert or update on table "compra" violates foreign key constraint "compra_fk2"
+DETAIL:  Key (customer_utilizador_id)=(1) is not present in table "customer".
+CONTEXT:  SQL statement "insert into compra(data_compra,valor_pago,valor_do_desconto,customer_utilizador_id) values (data_compra,1,0,customer_id)"
+PL/pgSQL function make_order(integer,json,integer) line 36 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 16:42:31] "POST /dbproj/order HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 16:44:40] "[31m[1mPOST /dbproj/product/0 HTTP/1.1[0m" 405 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 0
+ERROR:logger:GET /product/<product_id> - error: id produto nao encontrado
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 16:44:57] "GET /dbproj/product/0 HTTP/1.1" 200 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+ERROR:logger:GET /product/<product_id> - error: control reached end of function without RETURN
+CONTEXT:  PL/pgSQL function get_product_id(integer)
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 16:45:06] "GET /dbproj/product/1 HTTP/1.1" 200 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+ERROR:logger:GET /product/<product_id> - error: control reached end of function without RETURN
+CONTEXT:  PL/pgSQL function get_product_id(integer)
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 16:45:39] "GET /dbproj/product/1 HTTP/1.1" 200 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+ERROR:logger:GET /product/<product_id> - error: control reached end of function without RETURN
+CONTEXT:  PL/pgSQL function get_product_id(integer)
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 16:46:23] "GET /dbproj/product/1 HTTP/1.1" 200 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+DEBUG:logger:GET /product/<product_id> - parse
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 16:47:17] "GET /dbproj/product/1 HTTP/1.1" 200 -
+ERROR:logger:insert or update on table "compra" violates foreign key constraint "compra_fk2"
+DETAIL:  Key (customer_utilizador_id)=(1) is not present in table "customer".
+CONTEXT:  SQL statement "insert into compra(data_compra,valor_pago,valor_do_desconto,customer_utilizador_id) values (data_compra,1,0,customer_id)"
+PL/pgSQL function make_order(integer,json,integer) line 36 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 16:47:29] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:insert or update on table "compra" violates foreign key constraint "compra_fk2"
+DETAIL:  Key (customer_utilizador_id)=(1) is not present in table "customer".
+CONTEXT:  SQL statement "insert into compra(data_compra,valor_pago,valor_do_desconto,customer_utilizador_id) values (data_compra,1,0,customer_id)"
+PL/pgSQL function make_order(integer,json,integer) line 36 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 16:49:24] "POST /dbproj/order HTTP/1.1" 200 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+DEBUG:logger:GET /product/<product_id> - parse
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 16:49:43] "GET /dbproj/product/1 HTTP/1.1" 200 -
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'joanauser', 'mail': 'joana@gmail.com', 'password': 'pwjoana', 'nome': 'joana', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joana'}
+INFO:logger:New user inserted
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 16:53:00] "POST /dbproj/user HTTP/1.1" 200 -
+INFO:logger:User Login
+DEBUG:logger:User login attempt
+INFO:logger:User found, creating JWT
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 16:53:30] "PUT /dbproj/user HTTP/1.1" 200 -
+ERROR:logger:teste {"4": ""}
+CONTEXT:  PL/pgSQL function notificacao_compra() line 28 at RAISE
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 16:53:50] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:teste {"4": ""}
+CONTEXT:  PL/pgSQL function notificacao_compra() line 28 at RAISE
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 16:54:45] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:teste {"4": ""}
+CONTEXT:  PL/pgSQL function notificacao_compra() line 29 at RAISE
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 16:55:08] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:teste {"4": ""}
+CONTEXT:  PL/pgSQL function notificacao_compra() line 29 at RAISE
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 16:56:37] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:teste <NULL>
+CONTEXT:  PL/pgSQL function notificacao_compra() line 29 at RAISE
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 16:56:51] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:teste <NULL>
+CONTEXT:  PL/pgSQL function notificacao_compra() line 29 at RAISE
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 17:00:08] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:teste <NULL>
+CONTEXT:  PL/pgSQL function notificacao_compra() line 29 at RAISE
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 17:00:10] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:teste <NULL>
+CONTEXT:  PL/pgSQL function notificacao_compra() line 30 at RAISE
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 17:02:07] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:teste <NULL>
+CONTEXT:  PL/pgSQL function notificacao_compra() line 30 at RAISE
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 17:03:05] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:teste <NULL>
+CONTEXT:  PL/pgSQL function notificacao_compra() line 30 at RAISE
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 17:03:07] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:teste <NULL>
+CONTEXT:  PL/pgSQL function notificacao_compra() line 30 at RAISE
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 17:03:08] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:teste <NULL>
+CONTEXT:  PL/pgSQL function notificacao_compra() line 30 at RAISE
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 17:04:19] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:could not determine polymorphic type because input has type unknown
+CONTEXT:  PL/pgSQL assignment "vendedores_json = vendedores_json::jsonb || json_build_object(vendedor_text,to_json('b'))::jsonb"
+PL/pgSQL function notificacao_compra() line 28 at assignment
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 17:04:40] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:could not determine polymorphic type because input has type unknown
+CONTEXT:  PL/pgSQL assignment "vendedores_json = vendedores_json::jsonb || json_build_object(vendedor_text,to_json('b'))::jsonb"
+PL/pgSQL function notificacao_compra() line 27 at assignment
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 17:05:23] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:could not determine polymorphic type because input has type unknown
+CONTEXT:  PL/pgSQL assignment "vendedores_json = vendedores_json::jsonb || json_build_object(vendedor_text,to_json('b'))::jsonb"
+PL/pgSQL function notificacao_compra() line 27 at assignment
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 17:05:26] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:teste <NULL>
+CONTEXT:  PL/pgSQL function notificacao_compra() line 28 at RAISE
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 17:08:20] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:teste <NULL>
+CONTEXT:  PL/pgSQL function notificacao_compra() line 28 at RAISE
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 17:08:20] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:teste <NULL>
+CONTEXT:  PL/pgSQL function notificacao_compra() line 29 at RAISE
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 17:10:18] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:teste <NULL>
+CONTEXT:  PL/pgSQL function notificacao_compra() line 29 at RAISE
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 17:10:20] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:teste <NULL>
+CONTEXT:  PL/pgSQL function notificacao_compra() line 29 at RAISE
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 17:11:02] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:teste <NULL>
+CONTEXT:  PL/pgSQL function notificacao_compra() line 29 at RAISE
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 17:11:45] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:teste <NULL>
+CONTEXT:  PL/pgSQL function notificacao_compra() line 29 at RAISE
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 17:11:48] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:teste <NULL>
+CONTEXT:  PL/pgSQL function notificacao_compra() line 29 at RAISE
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 17:11:49] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:teste <NULL>
+CONTEXT:  PL/pgSQL function notificacao_compra() line 29 at RAISE
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 17:11:49] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:teste <NULL>
+CONTEXT:  PL/pgSQL function notificacao_compra() line 29 at RAISE
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 17:12:58] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:teste <NULL>
+CONTEXT:  PL/pgSQL function notificacao_compra() line 29 at RAISE
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 17:12:58] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:teste <NULL>
+CONTEXT:  PL/pgSQL function notificacao_compra() line 29 at RAISE
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 17:12:59] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:teste <NULL>
+CONTEXT:  PL/pgSQL function notificacao_compra() line 29 at RAISE
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 17:14:14] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:teste <NULL>
+CONTEXT:  PL/pgSQL function notificacao_compra() line 29 at RAISE
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 17:14:41] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:teste <NULL>
+CONTEXT:  PL/pgSQL function notificacao_compra() line 29 at RAISE
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 17:15:17] "POST /dbproj/order HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 17:15:51] "[33mGET /dbproj/notification/6 HTTP/1.1[0m" 404 -
+INFO:logger:Get notification
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 17:15:56] "GET /dbproj/notification HTTP/1.1" 200 -
+INFO:logger:Get notification
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 17:16:04] "GET /dbproj/notification HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 17:16:18] "[31m[1mPOST /dbproj/order HTTP/1.1[0m" 400 -
+ERROR:logger:insert or update on table "compra" violates foreign key constraint "compra_fk2"
+DETAIL:  Key (customer_utilizador_id)=(1) is not present in table "customer".
+CONTEXT:  SQL statement "insert into compra(data_compra,valor_pago,valor_do_desconto,customer_utilizador_id) values (data_compra,1,0,customer_id)"
+PL/pgSQL function make_order(integer,json,integer) line 36 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 17:16:21] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:insert or update on table "compra" violates foreign key constraint "compra_fk2"
+DETAIL:  Key (customer_utilizador_id)=(1) is not present in table "customer".
+CONTEXT:  SQL statement "insert into compra(data_compra,valor_pago,valor_do_desconto,customer_utilizador_id) values (data_compra,1,0,customer_id)"
+PL/pgSQL function make_order(integer,json,integer) line 36 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 17:16:24] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:teste <NULL>
+CONTEXT:  PL/pgSQL function notificacao_compra() line 29 at RAISE
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 17:16:34] "POST /dbproj/order HTTP/1.1" 200 -
+INFO:logger:Get notification
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 17:16:42] "GET /dbproj/notification HTTP/1.1" 200 -
+ERROR:logger:teste <NULL>
+CONTEXT:  PL/pgSQL function notificacao_compra() line 29 at RAISE
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 17:17:17] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:teste <NULL>
+CONTEXT:  PL/pgSQL function notificacao_compra() line 29 at RAISE
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 17:17:31] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:teste <NULL>
+CONTEXT:  PL/pgSQL function notificacao_compra() line 29 at RAISE
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 17:17:35] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:teste <NULL>
+CONTEXT:  PL/pgSQL function notificacao_compra() line 29 at RAISE
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 17:18:00] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:teste <NULL>
+CONTEXT:  PL/pgSQL function notificacao_compra() line 30 at RAISE
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 17:21:22] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:teste {}
+CONTEXT:  PL/pgSQL function notificacao_compra() line 30 at RAISE
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 17:23:07] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:teste {"4": "  produto:1quantidade:1"}
+CONTEXT:  PL/pgSQL function notificacao_compra() line 29 at RAISE
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 17:24:16] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:teste {"4": "  produto:1quantidade:1"}
+CONTEXT:  PL/pgSQL function notificacao_compra() line 29 at RAISE
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 17:25:02] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:teste {"4": "  produto:1quantidade:1"}
+CONTEXT:  PL/pgSQL function notificacao_compra() line 29 at RAISE
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 17:25:05] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:teste {"4": "  produto:1quantidade:1"}
+CONTEXT:  PL/pgSQL function notificacao_compra() line 29 at RAISE
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 17:25:05] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:operator does not exist: json ->> bigint
+LINE 1: ...,data_notificacao,user_id) values (vendedores_json->>vendedo...
+                                                             ^
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+QUERY:  insert into notificacao_compra(descricao,lida,data_notificacao,user_id) values (vendedores_json->>vendedor_id,0,current_date,cast(vendedor_text as INTEGER))
+CONTEXT:  PL/pgSQL function notificacao_compra() line 43 at SQL statement
+SQL statement "update compra set valor_pago = total_compra,valor_do_desconto = 0 where compra.id = id_compra"
+PL/pgSQL function make_order(integer,json,integer) line 92 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 17:25:37] "POST /dbproj/order HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 17:27:05] "POST /dbproj/order HTTP/1.1" 200 -
+INFO:logger:Get notification
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 17:27:13] "GET /dbproj/notification HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 17:28:06] "POST /dbproj/order HTTP/1.1" 200 -
+INFO:logger:User Login
+DEBUG:logger:User login attempt
+INFO:logger:User found, creating JWT
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 17:29:30] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:User Login Product Insertion
+DEBUG:logger:New product added
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 17:29:47] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/May/2022 17:30:04] "POST /dbproj/order HTTP/1.1" 200 -

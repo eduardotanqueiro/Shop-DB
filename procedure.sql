@@ -521,14 +521,9 @@ else
         end if;
 
         return json_build_object('campanha subscrita id_cupao_var',id_cupao_var_maximo);
-<<<<<<< HEAD
-
-    else return json_build_object('error','campanha nao pode ser subscrita, maximo cupoes'); --falta update p campanha ficar inativa
-=======
     else
         update campanha set campanha_ativa='false' where campanha.id =campaign_id;
         return json_build_object('error','campanha nao pode ser subscrita, maximo cupoes');
->>>>>>> 69089ab (rgsdsg)
     end if;
 end if;
 end;
@@ -557,7 +552,7 @@ begin
     insert into rating(classificacao,descricao,compra_id,customer_utilizador_id,produto_id,produto_versao) values(rating,descricao,compra_id_search,utilizador_id,prod_id,max_ver);
 
 
-end,
+end;
 $$;
 
 create or replace function update_product_id(id_produto integer, detalhes_update json)
@@ -642,8 +637,9 @@ declare
     id_prod produto.id%type;
     quantidade_prod INTEGER;
     vendedor_id produto.vendedor_utilizador_id%type;
-    vendedores_json json;
-	texto_notificacao varchar(512) := CONCAT('User ',new.id,' comprou:');
+    vendedores_json json:='{}'::json;
+	texto_notificacao varchar(512) := CONCAT('User ',new.customer_utilizador_id,' comprou:');
+	vendedor_text text;
 	
     cur_produtos_comprados cursor (id_compra INTEGER)for
         select produto_id,quantidade,produto.vendedor_utilizador_id
@@ -657,30 +653,30 @@ begin
 
         fetch cur_produtos_comprados into id_prod,quantidade_prod,vendedor_id;
         exit when not found;
-        vendedor_text text;
-        vendedor_text=cast(vendedor_id as text)
+
+        vendedor_text=cast(vendedor_id as text);
+		
         --TODO FAZER NOTIFICAÇÃO PARA CADA VENDEDOR COM JSON
-        if  vendedores_json->vendedor_text is NULL then
-            vendedor text;
-            json_build_object(vendedor_text,arr);
-            vendedores_json->>vendedor_text = concat(' produto:',id_prod, 'quantidade:',quantidade_prod);
+
+        if vendedores_json->vendedor_text is NULL then
+		    vendedores_json=vendedores_json::jsonb || json_build_object(vendedor_text,concat('  produto:',id_prod, ' quantidade:',quantidade_prod))::jsonb ;
         else 
-            vendedores_json->>vendedor_text=concat(vendedores_json->>vendedor_text,concat('  produto:',id_prod, 'quantidade:',quantidade_prod));
+			vendedores_json = vendedores_json::jsonb || json_build_object(vendedor_text,concat(vendedores_json->>vendedor_text , concat('  produto:',id_prod, 'quantidade:',quantidade_prod)))::jsonb ;
         end if;
 
-        texto_notificacao = CONCAT( texto_notificacao, ' produto:',id_prod, 'quantidade:',quantidade_prod);
+        texto_notificacao = CONCAT( texto_notificacao, ' produto:',id_prod, ' quantidade:',quantidade_prod,',');
     end loop;
 
     --notificacao customer
-    insert into notificacao_compra(descricao,lida,data_compra,user_id) values (texto_notificacao,0,current_date,new.id);
+    insert into notificacao_compra(descricao,lida,data_notificacao,user_id) values (texto_notificacao,0,current_date,new.customer_utilizador_id);
 
-    vendedor_id text;
-    for vendedor_id in 
+
+    for vendedor_text in 
         select json_object_keys(vendedores_json)
     LOOP
-        insert into notificacao_compra(descricao,lida,data_compra,user_id) values (vendedores_json->>vendedor_id,0,current_date,cast(vendedor_id as INTEGER));
+        insert into notificacao_compra(descricao,lida,data_notificacao,user_id) values (vendedores_json->>vendedor_text,0,current_date,cast(vendedor_text as INTEGER));
     END LOOP;
-    
+
 	return new;
 end;
 $$;
