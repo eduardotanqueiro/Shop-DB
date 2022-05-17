@@ -75,7 +75,7 @@ CREATE TABLE comentario(
 	utilizador_id		 BIGINT NOT NULL,
 	vendedor_utilizador_id BIGINT NOT NULL,
 	produto_id		 BIGINT NOT NULL,
-	--produto_versao	 SMALLINT NOT NULL, TIRAR
+	produto_versao	 SMALLINT NOT NULL, 
 
 	PRIMARY KEY(id)
 );
@@ -183,7 +183,7 @@ ALTER TABLE pc ADD CONSTRAINT pc_fk1 FOREIGN KEY (produto_id,produto_versao) REF
 ALTER TABLE notificacao_comentario ADD CONSTRAINT notificacao_comentario_fk1 FOREIGN KEY (comentario_id) REFERENCES comentario(id);
 ALTER TABLE comentario ADD CONSTRAINT comentario_fk1 FOREIGN KEY (utilizador_id) REFERENCES utilizador(id);
 ALTER TABLE comentario ADD CONSTRAINT comentario_fk2 FOREIGN KEY (vendedor_utilizador_id) REFERENCES vendedor(utilizador_id);
-ALTER TABLE comentario ADD CONSTRAINT comentario_fk3 FOREIGN KEY (produto_id,produto_versao) REFERENCES produto(id,versao); 
+ALTER TABLE comentario ADD CONSTRAINT comentario_fk3 FOREIGN KEY (produto_id, produto_versao) REFERENCES produto(id,versao); 
 ALTER TABLE comentario ADD CONSTRAINT comentario_fk4 FOREIGN KEY (id_anterior) REFERENCES comentario(id);
 ALTER TABLE campanha ADD CONSTRAINT campanha_fk1 FOREIGN KEY (administrador_utilizador_id) REFERENCES administrador(utilizador_id);
 ALTER TABLE campanha ADD CONSTRAINT desconto CHECK (desconto < 100 AND desconto > 0);
@@ -191,7 +191,7 @@ ALTER TABLE campanha ADD CONSTRAINT numero_cupoes CHECK (numero_cupoes > 0);
 ALTER TABLE campanha ADD CONSTRAINT validade CHECK (validade_cupao > 0);
 ALTER TABLE campanha ADD CONSTRAINT data CHECK (data_inicio < data_fim);
 ALTER TABLE cupao ADD CONSTRAINT cupao_fk1 FOREIGN KEY (campanha_id) REFERENCES campanha(id); 
-ALTER TABLE notificacao_compra ADD CONSTRAINT notificacao_compra_fk1 FOREIGN KEY (compra_id) REFERENCES compra(id);
+--ALTER TABLE notificacao_compra ADD CONSTRAINT notificacao_compra_fk1 FOREIGN KEY (compra_id) REFERENCES compra(id);
 ALTER TABLE compra ADD CONSTRAINT compra_fk2 FOREIGN KEY (customer_utilizador_id) REFERENCES customer(utilizador_id);
 ALTER TABLE compra ADD CONSTRAINT valor_pago CHECK (valor_pago > 0);
 ALTER TABLE compra ADD CONSTRAINT valor_do_desconto CHECK (valor_do_desconto >= 0);
