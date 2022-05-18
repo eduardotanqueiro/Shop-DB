@@ -4865,3 +4865,19 @@ INFO:logger:Get notification
 INFO:werkzeug:127.0.0.1 - - [18/May/2022 21:40:43] "GET /dbproj/notification HTTP/1.1" 200 -
 INFO:logger:Get notification
 INFO:werkzeug:127.0.0.1 - - [18/May/2022 21:40:56] "GET /dbproj/notification HTTP/1.1" 200 -
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+DEBUG:logger:GET /product/<product_id> - parse
+INFO:werkzeug:127.0.0.1 - - [18/May/2022 21:43:26] "GET /dbproj/product/1 HTTP/1.1" 200 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 2
+ERROR:logger:GET /product/<product_id> - error: id produto nao encontrado
+INFO:werkzeug:127.0.0.1 - - [18/May/2022 21:43:46] "GET /dbproj/product/2 HTTP/1.1" 200 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 0
+DEBUG:logger:GET /product/<product_id> - parse
+INFO:werkzeug:127.0.0.1 - - [18/May/2022 21:43:50] "GET /dbproj/product/0 HTTP/1.1" 200 -

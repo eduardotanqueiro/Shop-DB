@@ -242,7 +242,8 @@ declare
     data_compra compra.data_compra%type;
 
     percentagem_desconto campanha.desconto%type;
-    campanha_ativa campanha.campanha_ativa%type;
+    dat_inicio campanha.data_inicio%type;
+    dat_fim campanha.data_fim%type;
 
     cur_id_compra cursor for
         select MAX(id)
@@ -332,11 +333,11 @@ begin
 
         --cupao existe e pertence ao user
         --verificar desconto/campanha
-        select campanha.desconto,campanha.campanha_ativa into percentagem_desconto,campanha_ativa
+        select campanha.desconto,campanha.data_inicio,campanha.data_fim into percentagem_desconto,dat_inicio,dat_fim;
         from campanha
         where campanha.id = (select campanha_id from cupao where id = id_cupao_var);
 
-        if campanha_ativa is FALSE then
+        if current_date < dat_inicio or current_date > dat_fim then
             --campanha inativa
             raise EXCEPTION 'Campaing is not active!';
         end if;

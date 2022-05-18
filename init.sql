@@ -56,7 +56,7 @@ CREATE TABLE pc (
 	marca		 VARCHAR(50) NOT NULL,
 	produto_id	 BIGINT NOT NULL,
 	produto_versao SMALLINT NOT NULL,
-	PRIMARY KEY(produto_id,produto_versao) 
+	PRIMARY KEY(produto_id,produto_versao)
 );
 
 CREATE TABLE notificacao_comentario (
