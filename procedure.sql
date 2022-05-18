@@ -363,6 +363,7 @@ declare
     prod_return json;
     json_aux json;
     precos TEXT[];
+    comentarios TEXT[];
     r TEXT;
     max_version produto.versao%type;
 
@@ -399,9 +400,16 @@ begin
             precos=precos||r;
             END LOOP;
         prod_return=json_build_object('precos',precos)::jsonb||prod_return::jsonb;
+        for r in 
+            select texto from comentario
+            where produto_id=id_produto
+            LOOP
+                comentarios=comentarios||r;
+            END LOOP;
+        prod_return=prod_return::jsonb||json_build_object('comentarios',comentarios)::jsonb;
         return prod_return;
     end if;
-
+    
     --- verificar se e smartphone
     select row_to_json(a) into prod_return from (
         select id, descricao,preco,stock,versao,marca,tamanho,rom,ram from produto join smartphone on produto.id=smartphone.produto_id and produto.versao=smartphone.produto_versao
@@ -421,6 +429,13 @@ begin
             precos=precos||r;
             END LOOP;
         prod_return=prod_return::jsonb||json_build_object('precos',precos)::jsonb;
+        for r in 
+            select texto from comentario
+            where produto_id=id_produto
+            LOOP
+                comentarios=comentarios||r;
+            END LOOP;
+        prod_return=prod_return::jsonb||json_build_object('comentarios',comentarios)::jsonb;
         return prod_return;
     end if;
 
@@ -443,6 +458,13 @@ begin
             precos=precos||r;
             END LOOP;
         prod_return=prod_return::jsonb||json_build_object('precos',precos)::jsonb;
+        for r in 
+            select texto from comentario
+            where produto_id=id_produto
+            LOOP
+                comentarios=comentarios||r;
+            END LOOP;
+        prod_return=prod_return::jsonb||json_build_object('comentarios',comentarios)::jsonb;
         return prod_return;
     end if;
 end;
