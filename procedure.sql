@@ -378,7 +378,8 @@ begin
     --ir buscar versão do produto a pesquisar
     select max(produto.versao)into max_version from produto
     group by produto.id having produto.id=id_produto;
-    if not found then return json_build_object('error','id produto nao encontrado');
+    if not found then 
+        raise notice 'id produto nao encontrado';
     end if;
 
     --verificar se é do tipo TV
@@ -592,7 +593,7 @@ begin
 end;
 $$;
 
-create or replace function update_product_id(id_produto integer, detalhes_update json)
+create or replace function update_product_id(id_produto integer, detalhes_update json, vendedor_id integer)
 returns json
 language plpgsql
 as $$
@@ -601,10 +602,12 @@ declare
     max_version integer;
 	keys_aux text;
 begin
+
     --ir buscar versão do produto a pesquisar
-    select max(produto.versao)into max_version from produto
-    group by produto.id having produto.id=id_produto;
-    if not found then return json_build_object('error','id produto nao encontrado');
+    select max(produto.versao) into max_version from produto
+    where produto.vendedor_utilizador_id=vendedor_id and produto.id=id_produto;
+    if max_version is null then 
+        raise exception 'Id produto nao encontrado para este vendedor';
     end if;
 
     --verificar se é do tipo TV

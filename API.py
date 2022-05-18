@@ -461,13 +461,9 @@ def get_product(product_id):
 
         json_result=rows[0]
 
-        if 'error' in json_result:
-                logger.error(f'GET /product/<product_id> - error: {json_result["error"]}')
-                response = {'status': StatusCodes['internal_error'], 'errors': str(json_result["error"])}
-        else:
-                logger.debug('GET /product/<product_id> - parse')
+        logger.debug('GET /product/<product_id> - parse')
 
-                response = {'status': StatusCodes['success'], 'results': json_result}
+        response = {'status': StatusCodes['success'], 'results': json_result}
 
     except (Exception, psycopg2.DatabaseError) as error:
             logger.error(f'GET /product/<product_id> - error: {error}')
@@ -487,25 +483,37 @@ def update_product(product_id):
     payload = flask.request.get_json()
     conn = db_connection()
     cur = conn.cursor()
+
+    #ler token inserido em Header Postman (authorization->Bearer Token)
+    global token
+    header=flask.request.headers
+    if 'Authorization' not in header:
+        response = {'status': StatusCodes['api_error'], 'errors': 'Missing auth token'}
+        return flask.jsonify(response)
+    else:
+        token=(header['Authorization'].split(" ")[1])
+
+    #1st check if user is customer,seller or admin
+    decode_token = jwt.decode(token,jwt_key,'HS256')
+    
+    #If user is not seller
+    if decode_token['user_type'] == user_type_hashed['customer'] or decode_token['user_type'] == user_type_hashed['administrador']:
+        response = {'status': StatusCodes['api_error'], 'errors': 'You don\'t have permission to execute this task!'}
+        return flask.jsonify(response)
+    
     try:
 
-        # #verificar se token + id existe na tabela 
-        # cur.execute("call check_token_type(%s::VARCHAR(512),%s::INTEGER)",(token,decode_token['id']))
+        #verificar se token + id existe na tabela 
+        cur.execute("call check_token_type(%s::VARCHAR(512),%s::INTEGER)",(token,decode_token['id']))
 
-        #TODO só pode dar update o vendedor que está a vender o produto, e mais ninguém
+        cur.execute('select update_product_id(%s::INTEGER,%s::json,%s::INTEGER)', (product_id,str(str(json.dumps(payload))),decode_token['id']))
 
-        cur.execute('select update_product_id(%s::INTEGER,%s::json)', (product_id,str(str(json.dumps(payload)))))
         rows = cur.fetchone()
-
         json_result=rows[0]
 
-        if 'error' in json_result:
-            logger.error(f'GET /product/<product_id> - error: {json_result["error"]}')
-            response = {'status': StatusCodes['internal_error'], 'errors': str(json_result["error"])}
-        else:
-            logger.debug('GET /product/<product_id> - parse')
+        logger.debug('GET /product/<product_id> - parse')
 
-            response = {'status': StatusCodes['success'], 'results': json_result}
+        response = {'status': StatusCodes['success'], 'results': json_result}
 
     except (Exception, psycopg2.DatabaseError) as error:
         logger.error(f'GET /product/<product_id> - error: {error}')
