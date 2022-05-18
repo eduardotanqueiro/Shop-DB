@@ -848,7 +848,7 @@ execute procedure notificacao_comentario();
 
 
 
-create or replace function stats_campaign(id_campanha campanha.id%type)
+create or replace function stats_campaign()
 returns json
 language plpgsql
 as $$
