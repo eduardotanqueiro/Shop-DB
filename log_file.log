@@ -4776,3 +4776,4 @@ WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 410-045-901
 INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
 DEBUG:logger:GET /report/<year> - parse
+INFO:werkzeug:127.0.0.1 - - [18/May/2022 20:40:50] "GET /dbproj/report/2022 HTTP/1.1" 200 -
