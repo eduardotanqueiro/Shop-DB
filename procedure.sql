@@ -814,6 +814,15 @@ as $$
 declare
 
 begin 
+
+    --notificacao vendedor
+    insert into notificacao_comentario(descricao,lida,data_notificacao,user_id,comentario_id) values (new.texto,0,current_date,new.vendedor_utilizador_id,new.id);
+
+    --verificar se é uma resposta a outro comentario, se sim, notificar o utilizador do comentario anterior
+    if new.id_anterior is not NULL then
+        insert into notificacao_comentario(descricao,lida,data_notificacao,user_id,comentario_id) values (new.concat('Responderam ao teu comentario: ',texto),0,current_date,new.vendedor_utilizador_id,new.id);
+    end if;
+
 	return new;
 end;
 $$;
