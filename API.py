@@ -519,6 +519,35 @@ def update_product(product_id):
     return flask.jsonify(response)
 
 ##
+## GET STATS FOR YEAR
+##
+@app.route('/dbproj/report/<year>', methods=['GET'])
+def get_stats_for_year(year):
+    conn = db_connection()
+    cur = conn.cursor()
+    try:
+        cur.execute('select stats_year(%s::INTEGER)', (year,))
+        rows = cur.fetchone()
+
+        json_result=rows[0]
+
+        logger.debug('GET /report/<year> - parse')
+
+        response = {'status': StatusCodes['success'], 'results': json_result}
+
+    except (Exception, psycopg2.DatabaseError) as error:
+        logger.error(f'GET /report/<year> - error: {error}')
+        response = {'status': StatusCodes['internal_error'], 'errors': str(error)}
+
+    finally:
+        if conn is not None:
+            conn.commit()
+            conn.close()
+    
+    return flask.jsonify(response)
+
+
+##
 ## ADD CAMPAIGN
 ##
 @app.route('/dbproj/campaign', methods=['POST'])

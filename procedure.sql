@@ -409,7 +409,7 @@ begin
         prod_return=prod_return::jsonb||json_build_object('comentarios',comentarios)::jsonb;
         return prod_return;
     end if;
-    
+
     --- verificar se e smartphone
     select row_to_json(a) into prod_return from (
         select id, descricao,preco,stock,versao,marca,tamanho,rom,ram from produto join smartphone on produto.id=smartphone.produto_id and produto.versao=smartphone.produto_versao
@@ -724,15 +724,16 @@ for each row
 execute procedure notificacao_compra();
 
 --stats 12 meses
-create or replace function stats_year()
-return json
+create or replace function stats_year(year_in INTEGER)
+returns json
+language plpgsql
 as $$
 begin
-
-    return select json_agg(t) from (
-                                    select DATE_TRUNC('month', compra.data_compra) as "Month", COUNT(*) as "orders", SUM(compra.valor_pago) as "total_value"
+    return json_agg(t) from (
+                                    select extract(month from compra.data_compra) as "Month", COUNT(*) as "orders", SUM(compra.valor_pago) as "total_value"
                                     from compra
-                                    GROUP BY DATE_TRUNC('month', compra.data_compra) 
+						 			where extract(year from compra.data_compra)=year_in
+                                    GROUP BY extract(month from compra.data_compra)
                                     ) AS t;
 
 end;
@@ -812,7 +813,6 @@ create or replace function notificacao_comentario() returns trigger
 language plpgsql
 as $$
 declare
-
 begin 
 
     --notificacao vendedor
