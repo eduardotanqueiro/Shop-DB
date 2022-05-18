@@ -4738,3 +4738,4 @@ INFO:werkzeug:127.0.0.1 - - [18/May/2022 19:52:33] "PUT /dbproj/product/1 HTTP/1
 INFO:logger:GET /product/<product_id>
 DEBUG:logger:product_id: 1
 DEBUG:logger:GET /product/<product_id> - parse
+INFO:werkzeug:127.0.0.1 - - [18/May/2022 19:52:37] "GET /dbproj/product/1 HTTP/1.1" 200 -
