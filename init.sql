@@ -59,7 +59,7 @@ CREATE TABLE pc (
 	PRIMARY KEY(produto_id,produto_versao)
 );
 
-CREATE TABLE notificacao_comentario (
+CREATE TABLE notificacao_comentario(
 
 	descricao	 VARCHAR(512) NOT NULL,
 	lida INTEGER NOT NULL,
@@ -80,7 +80,7 @@ CREATE TABLE comentario(
 	PRIMARY KEY(id)
 );
 
-CREATE TABLE campanha (
+CREATE TABLE campanha(
 	id				 SERIAL UNIQUE,
 	desconto			 INTEGER NOT NULL,
 	numero_cupoes		 INTEGER NOT NULL,
