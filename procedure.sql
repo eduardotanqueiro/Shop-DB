@@ -351,7 +351,7 @@ begin
 
     return id_compra;
 end;
-$$
+$$;
 
 
 ---GET PRODUTCT (PRECISA DE ALTERACOES VER MAX VERSAO E + INFORMACOES )
@@ -472,15 +472,28 @@ $$;
 
 --- INSERT CAMPAIGN PROCEDURE
 -- verificar ao inserir campanha se data de inicio maior do q todas as outras datas de fim
-create or replace function insert_campaign(desconto campanha.desconto%type, numero_cupoes campanha.numero_cupoes%type, data_inicio campanha.data_inicio%type, data_fim campanha.data_fim%type,validade_cupao campanha.validade_cupao%type, administrador_id campanha.administrador_utilizador_id%type)
+create or replace function insert_campaign(descon campanha.desconto%type, n_cupoes campanha.numero_cupoes%type, data_ini campanha.data_inicio%type, data_f campanha.data_fim%type,validade_cup campanha.validade_cupao%type, admin_id campanha.administrador_utilizador_id%type)
 returns integer
 language plpgsql
 as $$
-begin	
-        update campanha set campanha_ativa='false' where campanha.id = (select id from campanha where campanha_ativa='true');
-        insert into campanha(desconto,numero_cupoes,data_inicio,data_fim,campanha_ativa,validade_cupao,administrador_utilizador_id) values (desconto,numero_cupoes,data_inicio,data_fim,'true',validade_cupao,administrador_id);        
-
-        return (select MAX(id) from campanha);
+declare 
+	
+	data_final campanha.data_fim%type;
+	id_campanha campanha.id%type;
+begin    
+    
+    --verificar se a campanha que estamos a inserir entra em conflito com outra
+    select data_fim into data_final
+    from campanha
+    where (data_ini >= data_inicio and data_ini <= data_fim) or (data_f >= data_inicio and data_f <= data_fim);
+    if found then raise exception 'ERRO: Data da campanha a inserir entra em conflito com campanhas existentes';
+    end if;
+    
+    --inserir campanha 
+    
+    insert into campanha(desconto,numero_cupoes,data_inicio,data_fim,validade_cupao,administrador_utilizador_id) values (descon,n_cupoes,data_ini,data_f,validade_cup,admin_id) returning id into id_campanha;
+	return id_campanha;
+     
 end;
 $$;
 
@@ -504,7 +517,7 @@ declare
     cur_procura_campanha cursor for
     select numero_cupoes,data_fim
     from campanha
-    where id=campaign_id and campanha_ativa='true';
+    where id=campaign_id and current_date >= data_inicio and current_date <= data_fim; --ver se a data de hoje esta entre as datas
 
     cur_check_coupouns cursor (camp_id INTEGER) for
         select COUNT(*)
@@ -525,7 +538,6 @@ if not found then
 
 elsif data_fim_campaign < current_date  then
     --campanha já passou o dia de fim
-    update campanha set campanha_ativa = 'false' where campanha.id = campaign_id;
     return json_build_object('error','campanha já está inativa');
 
 else
@@ -552,14 +564,8 @@ else
         insert into cupao(numero,cupao_ativo,data_atribuicao,campanha_id) values(n_cupao_maximo+1,'true',current_date,campaign_id) returning id into id_cupao_var_maximo;
         insert into customer_cupao (customer_utilizador_id,id_cupao_var) values (customer_id,id_cupao_var_maximo);
 
-        if n_cupao_maximo+1 == numero_cupoes_permitidos then
-            --último cupao atribuído, colocar a campanha como inativa
-            update campanha set campanha_ativa = 'false' where campanha.id = campaign_id;
-        end if;
-
         return json_build_object('campanha subscrita id_cupao_var',id_cupao_var_maximo);
     else
-        update campanha set campanha_ativa='false' where campanha.id =campaign_id;
         return json_build_object('error','campanha nao pode ser subscrita, maximo cupoes');
     end if;
 end if;
@@ -806,7 +812,7 @@ begin
 	
 	return id_new_comment;
 end;
-$$
+$$;
 
 --trigger notificação comentario
 create or replace function notificacao_comentario() returns trigger
