@@ -584,7 +584,7 @@ def add_campaign():
         return flask.jsonify(response)
     
     #Ckeck is payload parameters are correct
-    if 'desconto' not in payload or 'numero_cupoes' not in payload or 'data_inicio' not in payload or 'data_fim' not in payload or 'validade_cupao' not in payload:
+    if 'descon' not in payload or 'n_cupoes' not in payload or 'data_ini' not in payload or 'data_f' not in payload or 'validade_cup' not in payload:
          response = {'status': StatusCodes['api_error'], 'errors': 'Missing values for product in the payload'}
          return flask.jsonify(response) 
 
@@ -596,7 +596,7 @@ def add_campaign():
         #verificar se token + id existe na tabela 
         cur.execute("call check_token_type(%s::VARCHAR(512),%s::INTEGER)",(token,decode_token['id']))
 
-        values=(payload['desconto'],payload['numero_cupoes'],payload['data_inicio'],payload['data_fim'],payload['validade_cupao'],decode_token['id'])
+        values=(payload['descon'],payload['n_cupoes'],payload['data_ini'],payload['data_f'],payload['validade_cup'],decode_token['id'])
 
         cur.execute("select insert_campaign(%s::INTEGER,%s::INTEGER,%s::DATE,%s::DATE,%s::SMALLINT,%s::INTEGER)",values)
 

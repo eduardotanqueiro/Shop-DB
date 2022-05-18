@@ -86,7 +86,7 @@ CREATE TABLE campanha (
 	numero_cupoes		 INTEGER NOT NULL,
 	data_inicio		 DATE NOT NULL,
 	data_fim			 DATE NOT NULL,
-	campanha_ativa		 BOOL NOT NULL,
+	--campanha_ativa		 BOOL NOT NULL,
 	validade_cupao		 SMALLINT NOT NULL,
 	administrador_utilizador_id BIGINT NOT NULL,
 	PRIMARY KEY(id)
@@ -181,6 +181,8 @@ ALTER TABLE smartphone ADD CONSTRAINT smartphone_fk1 FOREIGN KEY (produto_id,pro
 ALTER TABLE tv ADD CONSTRAINT tv_fk1 FOREIGN KEY (produto_id,produto_versao) REFERENCES produto(id,versao); 
 ALTER TABLE pc ADD CONSTRAINT pc_fk1 FOREIGN KEY (produto_id,produto_versao) REFERENCES produto(id,versao);
 ALTER TABLE notificacao_comentario ADD CONSTRAINT notificacao_comentario_fk1 FOREIGN KEY (comentario_id) REFERENCES comentario(id);
+ALTER TABLE notificacao_comentario ADD CONSTRAINT notificacao_comentario_fk2 FOREIGN KEY (user_id) REFERENCES utilizador(id);
+ALTER TABLE notificacao_compra ADD CONSTRAINT notificacao_compra_fk1 FOREIGN KEY (user_id) REFERENCES utilizador(id);
 ALTER TABLE comentario ADD CONSTRAINT comentario_fk1 FOREIGN KEY (utilizador_id) REFERENCES utilizador(id);
 ALTER TABLE comentario ADD CONSTRAINT comentario_fk2 FOREIGN KEY (vendedor_utilizador_id) REFERENCES vendedor(utilizador_id);
 ALTER TABLE comentario ADD CONSTRAINT comentario_fk3 FOREIGN KEY (produto_id, produto_versao) REFERENCES produto(id,versao); 
@@ -191,7 +193,6 @@ ALTER TABLE campanha ADD CONSTRAINT numero_cupoes CHECK (numero_cupoes > 0);
 ALTER TABLE campanha ADD CONSTRAINT validade CHECK (validade_cupao > 0);
 ALTER TABLE campanha ADD CONSTRAINT data CHECK (data_inicio < data_fim);
 ALTER TABLE cupao ADD CONSTRAINT cupao_fk1 FOREIGN KEY (campanha_id) REFERENCES campanha(id); 
---ALTER TABLE notificacao_compra ADD CONSTRAINT notificacao_compra_fk1 FOREIGN KEY (compra_id) REFERENCES compra(id);
 ALTER TABLE compra ADD CONSTRAINT compra_fk2 FOREIGN KEY (customer_utilizador_id) REFERENCES customer(utilizador_id);
 ALTER TABLE compra ADD CONSTRAINT valor_pago CHECK (valor_pago > 0);
 ALTER TABLE compra ADD CONSTRAINT valor_do_desconto CHECK (valor_do_desconto >= 0);
@@ -211,6 +212,7 @@ ALTER TABLE compra_cupao ADD CONSTRAINT compra_cupao_fk1 FOREIGN KEY (id_cupao) 
 ALTER TABLE compra_cupao ADD CONSTRAINT compra_cupao_fk2 FOREIGN KEY (id_compra) REFERENCES compra(id);
 ALTER TABLE customer_cupao ADD CONSTRAINT customer_cupao_fk1 FOREIGN KEY (customer_utilizador_id) REFERENCES customer(utilizador_id);
 ALTER TABLE customer_cupao ADD CONSTRAINT customer_cupao_fk2 FOREIGN KEY (id_cupao) REFERENCES cupao(id);
+
 
 --GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO ProjetoBD;
 
