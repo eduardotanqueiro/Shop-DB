@@ -540,10 +540,6 @@ if not found then
 
 elsif data_fim_campaign < current_date  then
     --campanha já passou o dia de fim
-<<<<<<< HEAD
-=======
-    update campanha set campanha_ativa = 'false' where campanha.id = campaign_id; -- TODO change
->>>>>>> c2ff30e5d5007c9b885096094ddfa8aa90f4ee69
     return json_build_object('error','campanha já está inativa');
 
 else
@@ -849,3 +845,25 @@ create trigger trig_comment
 after insert on comentario
 for each row
 execute procedure notificacao_comentario();
+
+
+
+create or replace function stats_campaign()
+returns json
+language plpgsql
+as $$
+begin
+    return json_agg(t) from (
+        select distinct t1.id as "campaign_id", coalesce(max(t2.numero),0) as "generated_coupons", count(t3.id_cupao) as "used_coupons", coalesce(sum(t4.valor_do_desconto),0) as "total_discount_value"
+                from campanha as t1
+                left join cupao  as t2 on t1.id = t2.campanha_id
+                left join compra_cupao as t3 on  t2.id = t3.id_cupao
+                left join compra as t4 on t3.id_compra = t4.id 
+                group by t1.id
+                --t2 cupao
+                --t3 compra cupao
+                --t4 compra         
+     ) AS t;
+
+end;
+$$;
