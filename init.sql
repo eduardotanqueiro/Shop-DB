@@ -2,13 +2,11 @@ CREATE TABLE customer (
 	pais		 VARCHAR(30) NOT NULL,
 	cidade	 VARCHAR(35) NOT NULL,
 	rua		 VARCHAR(130) NOT NULL,
-	--nif		 INTEGER, --tirar nif??? muito trabalho
 	utilizador_id INTEGER UNIQUE,
 	PRIMARY KEY(utilizador_id)
 );
 
 CREATE TABLE vendedor (
-	--nif		 INTEGER UNIQUE NOT NULL, --tirar nif??? muito trabalho
 	pais		 VARCHAR(30) NOT NULL,
 	cidade	 VARCHAR(35) NOT NULL,
 	rua		 VARCHAR(130) NOT NULL,
@@ -64,8 +62,8 @@ CREATE TABLE notificacao_comentario (
 	descricao	 VARCHAR(512) NOT NULL,
 	lida INTEGER NOT NULL,
 	data_notificacao DATE NOT NULL,
-	user_id BIGINT NOT NULL, --FALTA FOREIGN KEY
-	comentario_id			INTEGER NOT NULL --FALTA FOREIGN KEY
+	user_id BIGINT NOT NULL
+	comentario_id INTEGER NOT NULL
 );
 
 CREATE TABLE comentario(
@@ -86,7 +84,7 @@ CREATE TABLE campanha (
 	numero_cupoes		 INTEGER NOT NULL,
 	data_inicio		 DATE NOT NULL,
 	data_fim			 DATE NOT NULL,
-	--campanha_ativa		 BOOL NOT NULL,
+	campanha_ativa		 BOOL NOT NULL,
 	validade_cupao		 SMALLINT NOT NULL,
 	administrador_utilizador_id BIGINT NOT NULL,
 	PRIMARY KEY(id)
@@ -107,7 +105,7 @@ CREATE TABLE notificacao_compra(
 	descricao	 VARCHAR(512) NOT NULL,
 	lida INTEGER NOT NULL,
 	data_notificacao DATE NOT NULL,
-	user_id BIGINT NOT NULL --FALTA FOREIGN KEY
+	user_id BIGINT NOT NULL 
 
 );
 

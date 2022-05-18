@@ -96,9 +96,6 @@ def add_user():
     hash_pw = hs.md5( bin_pw ).hexdigest()
 
 
-
-    #TODO -> FAZER A VERIFICAÇÃO SE VIER COM NIF OU NÃO (TIRAR NIF??)
-
     try:
 
         if 'type' not in payload:
@@ -554,6 +551,33 @@ def get_stats_for_year(year):
     
     return flask.jsonify(response)
 
+##
+## GET STATS CAMPAIGN
+##
+@app.route('/dbproj/report/campaign', methods=['GET'])
+def get_stats_campaign():
+    conn = db_connection()
+    cur = conn.cursor()
+    try:
+        cur.execute('select stats_campaign()')
+        rows = cur.fetchone()
+
+        json_result=rows[0]
+
+        logger.debug('GET /report/campaign - parse')
+
+        response = {'status': StatusCodes['success'], 'results': json_result}
+
+    except (Exception, psycopg2.DatabaseError) as error:
+        logger.error(f'GET /report/campaign - error: {error}')
+        response = {'status': StatusCodes['internal_error'], 'errors': str(error)}
+
+    finally:
+        if conn is not None:
+            conn.commit()
+            conn.close()
+    
+    return flask.jsonify(response)
 
 ##
 ## ADD CAMPAIGN
@@ -818,7 +842,6 @@ def get_notifications():
 @app.route('/dbproj/questions/<product_id>/<parent_id>', methods = ['POST'])
 def make_comment(product_id,parent_id):
 
-
     payload = flask.request.get_json()
 
     conn = db_connection()
@@ -843,7 +866,6 @@ def make_comment(product_id,parent_id):
     if 'question' not in payload:
         response = {'status': StatusCodes['api_error'], 'errors': 'Missing question'}
         return flask.jsonify(response)
-
 
     try:
         #verificar se token + id existe na tabela 

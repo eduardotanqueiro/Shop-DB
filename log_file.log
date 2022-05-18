@@ -4881,3 +4881,43 @@ INFO:logger:GET /product/<product_id>
 DEBUG:logger:product_id: 0
 DEBUG:logger:GET /product/<product_id> - parse
 INFO:werkzeug:127.0.0.1 - - [18/May/2022 21:43:50] "GET /dbproj/product/0 HTTP/1.1" 200 -
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 410-045-901
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 410-045-901
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:Make Comment
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 00:11:26] "POST /dbproj/questions/1 HTTP/1.1" 200 -
+INFO:logger:Make Comment
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 00:12:02] "[35m[1mPOST /dbproj/questions/1 HTTP/1.1[0m" 500 -
+INFO:logger:Make Comment
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 00:12:19] "[35m[1mPOST /dbproj/questions/1 HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 410-045-901
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:Make Comment
+ERROR:logger:Token invalid!
+CONTEXT:  PL/pgSQL function check_token_type(character varying,bigint) line 7 at RAISE
+
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 00:14:01] "POST /dbproj/questions/1 HTTP/1.1" 200 -
+INFO:logger:Make Comment
+ERROR:logger:Token invalid!
+CONTEXT:  PL/pgSQL function check_token_type(character varying,bigint) line 7 at RAISE
+
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 00:14:33] "POST /dbproj/questions/1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 00:15:33] "[31m[1mGET /dbproj/questions/1/1 HTTP/1.1[0m" 405 -
+INFO:logger:Make Comment
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 00:15:43] "POST /dbproj/questions/1/1 HTTP/1.1" 200 -
+INFO:logger:Make Comment
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 00:15:44] "POST /dbproj/questions/1/1 HTTP/1.1" 200 -
+INFO:logger:Get notification
+ERROR:logger:Token invalid!
+CONTEXT:  PL/pgSQL function check_token_type(character varying,bigint) line 7 at RAISE
+
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 00:18:16] "GET /dbproj/notification HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
