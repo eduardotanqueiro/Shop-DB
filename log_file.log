@@ -4777,3 +4777,91 @@ INFO:werkzeug: * Debugger PIN: 410-045-901
 INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
 DEBUG:logger:GET /report/<year> - parse
 INFO:werkzeug:127.0.0.1 - - [18/May/2022 20:40:50] "GET /dbproj/report/2022 HTTP/1.1" 200 -
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 982-140-900
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:User Login
+DEBUG:logger:User login attempt
+INFO:logger:User found, creating JWT
+ERROR:logger:duplicate key value violates unique constraint "login_token_pkey"
+DETAIL:  Key (token)=(eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VybmFtZSI6ImpvYW5hdXNlciIsInVzZXJfdHlwZSI6IjkxZWMxZjkzMjQ3NTMwNDhjMDA5NmQwMzZhNjk0Zjg2In0.VzWeoi3m9rLFu9GhBTONq1QrvH7EkU2S-H0xHlW06tw) already exists.
+
+INFO:werkzeug:127.0.0.1 - - [18/May/2022 21:22:26] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:User Login Product Insertion
+INFO:werkzeug:127.0.0.1 - - [18/May/2022 21:22:49] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:logger:Get notification
+INFO:werkzeug:127.0.0.1 - - [18/May/2022 21:23:13] "GET /dbproj/notification HTTP/1.1" 200 -
+INFO:logger:Get notification
+INFO:werkzeug:127.0.0.1 - - [18/May/2022 21:24:30] "GET /dbproj/notification HTTP/1.1" 200 -
+INFO:logger:Make Comment
+ERROR:logger:column "produto.vendedor_utilizador_id" must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: select vendedor_utilizador_id,MAX(versao)
+               ^
+QUERY:  select vendedor_utilizador_id,MAX(versao)
+        from produto
+        where produto.id = id_prod
+CONTEXT:  PL/pgSQL function make_comment(bigint,integer,integer,character varying) line 15 at OPEN
+
+INFO:werkzeug:127.0.0.1 - - [18/May/2022 21:24:44] "POST /dbproj/questions/1 HTTP/1.1" 200 -
+INFO:logger:Make Comment
+ERROR:logger:column "prod_id" of relation "comentario" does not exist
+LINE 1: ...terior,texto,utilizador_id,vendedor_utilizador_id,prod_id,pr...
+                                                             ^
+QUERY:  insert into comentario (id_anterior,texto,utilizador_id,vendedor_utilizador_id,prod_id,produto_versao) values (NULL,comment,id_user,id_vendedor,id_product,version) returning id
+CONTEXT:  PL/pgSQL function make_comment(bigint,integer,integer,character varying) line 24 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [18/May/2022 21:26:27] "POST /dbproj/questions/1 HTTP/1.1" 200 -
+INFO:logger:Make Comment
+INFO:werkzeug:127.0.0.1 - - [18/May/2022 21:27:50] "POST /dbproj/questions/1 HTTP/1.1" 200 -
+INFO:logger:Make Comment
+ERROR:logger:INSERT has more target columns than expressions
+LINE 1: ...o,utilizador_id,vendedor_utilizador_id,produto_id,produto_ve...
+                                                             ^
+QUERY:  insert into comentario (id_anterior,texto,utilizador_id,vendedor_utilizador_id,produto_id,produto_versao) values (id_last_comment,comment,id_user,id_vendedor,version) returning id
+CONTEXT:  PL/pgSQL function make_comment(bigint,integer,integer,character varying) line 26 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [18/May/2022 21:30:27] "POST /dbproj/questions/1/2 HTTP/1.1" 200 -
+INFO:logger:Make Comment
+ERROR:logger:INSERT has more target columns than expressions
+LINE 1: ...o,utilizador_id,vendedor_utilizador_id,produto_id,produto_ve...
+                                                             ^
+QUERY:  insert into comentario (id_anterior,texto,utilizador_id,vendedor_utilizador_id,produto_id,produto_versao) values (id_last_comment,comment,id_user,id_vendedor,version) returning id
+CONTEXT:  PL/pgSQL function make_comment(bigint,integer,integer,character varying) line 26 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [18/May/2022 21:31:03] "POST /dbproj/questions/1/2 HTTP/1.1" 200 -
+INFO:logger:Make Comment
+INFO:werkzeug:127.0.0.1 - - [18/May/2022 21:31:50] "POST /dbproj/questions/1/2 HTTP/1.1" 200 -
+INFO:logger:Make Comment
+ERROR:logger:cross-database references are not implemented: new.id_anterior.utilizador_id.id
+LINE 1: ...o ',new.produto_id,': ',new.texto),0,current_date,new.id_ant...
+                                                             ^
+QUERY:  insert into notificacao_comentario(descricao,lida,data_notificacao,user_id,comentario_id) values (concat('Responderam ao teu comentario no produto ',new.produto_id,': ',new.texto),0,current_date,new.id_anterior.utilizador_id.id,new.id)
+CONTEXT:  PL/pgSQL function notificacao_comentario() line 10 at SQL statement
+SQL statement "insert into comentario (id_anterior,texto,utilizador_id,vendedor_utilizador_id,produto_id,produto_versao) values (id_last_comment,comment,id_user,id_vendedor,id_product,version) returning id"
+PL/pgSQL function make_comment(bigint,integer,integer,character varying) line 26 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [18/May/2022 21:34:12] "POST /dbproj/questions/1/3 HTTP/1.1" 200 -
+INFO:logger:Make Comment
+ERROR:logger:insert or update on table "comentario" violates foreign key constraint "comentario_fk4"
+DETAIL:  Key (id_anterior)=(3) is not present in table "comentario".
+CONTEXT:  SQL statement "insert into comentario (id_anterior,texto,utilizador_id,vendedor_utilizador_id,produto_id,produto_versao) values (id_last_comment,comment,id_user,id_vendedor,id_product,version) returning id"
+PL/pgSQL function make_comment(bigint,integer,integer,character varying) line 26 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [18/May/2022 21:35:07] "POST /dbproj/questions/1/3 HTTP/1.1" 200 -
+INFO:logger:Make Comment
+ERROR:logger:missing FROM-clause entry for table "id_anterior"
+LINE 1: ...o ',new.produto_id,': ',new.texto),0,current_date,new.id_ant...
+                                                             ^
+QUERY:  insert into notificacao_comentario(descricao,lida,data_notificacao,user_id,comentario_id) values (concat('Responderam ao teu comentario no produto ',new.produto_id,': ',new.texto),0,current_date,new.id_anterior.utilizador_id,new.id)
+CONTEXT:  PL/pgSQL function notificacao_comentario() line 10 at SQL statement
+SQL statement "insert into comentario (id_anterior,texto,utilizador_id,vendedor_utilizador_id,produto_id,produto_versao) values (id_last_comment,comment,id_user,id_vendedor,id_product,version) returning id"
+PL/pgSQL function make_comment(bigint,integer,integer,character varying) line 26 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [18/May/2022 21:35:18] "POST /dbproj/questions/1/2 HTTP/1.1" 200 -
+INFO:logger:Make Comment
+INFO:werkzeug:127.0.0.1 - - [18/May/2022 21:40:12] "POST /dbproj/questions/1/2 HTTP/1.1" 200 -
+INFO:logger:Get notification
+INFO:werkzeug:127.0.0.1 - - [18/May/2022 21:40:43] "GET /dbproj/notification HTTP/1.1" 200 -
+INFO:logger:Get notification
+INFO:werkzeug:127.0.0.1 - - [18/May/2022 21:40:56] "GET /dbproj/notification HTTP/1.1" 200 -

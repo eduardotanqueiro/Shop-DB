@@ -538,6 +538,10 @@ if not found then
 
 elsif data_fim_campaign < current_date  then
     --campanha já passou o dia de fim
+<<<<<<< HEAD
+=======
+    update campanha set campanha_ativa = 'false' where campanha.id = campaign_id; -- TODO change
+>>>>>>> c2ff30e5d5007c9b885096094ddfa8aa90f4ee69
     return json_build_object('error','campanha já está inativa');
 
 else
@@ -792,7 +796,8 @@ declare
     c_check_product cursor(id_prod produto.id%type) for
         select vendedor_utilizador_id,MAX(versao)
         from produto
-        where produto.id = id_prod;
+        where produto.id = id_prod
+        group by vendedor_utilizador_id;
 
 begin
 
@@ -805,9 +810,9 @@ begin
 
     --insert into comments table
     if id_last_comment = -1 then
-        insert into comentario (id_anterior,texto,utilizador_id,vendedor_utilizador_id,prod_id,produto_versao) values (NULL,comment,id_user,id_vendedor,id_product,version) returning id into id_new_comment;
+        insert into comentario (id_anterior,texto,utilizador_id,vendedor_utilizador_id,produto_id,produto_versao) values (NULL,comment,id_user,id_vendedor,id_product,version) returning id into id_new_comment;
     else
-        insert into comentario (id_anterior,texto,utilizador_id,vendedor_utilizador_id,prod_id,produto_versao) values (id_last_comment,comment,id_user,id_vendedor,version) returning id into id_new_comment;
+        insert into comentario (id_anterior,texto,utilizador_id,vendedor_utilizador_id,produto_id,produto_versao) values (id_last_comment,comment,id_user,id_vendedor,id_product,version) returning id into id_new_comment;
     end if;
 	
 	return id_new_comment;
@@ -819,14 +824,17 @@ create or replace function notificacao_comentario() returns trigger
 language plpgsql
 as $$
 declare
+    parent_question_user comentario.utilizador_id%type;
+
 begin 
 
     --notificacao vendedor
-    insert into notificacao_comentario(descricao,lida,data_notificacao,user_id,comentario_id) values (new.texto,0,current_date,new.vendedor_utilizador_id,new.id);
+    insert into notificacao_comentario(descricao,lida,data_notificacao,user_id,comentario_id) values (concat('Comentaram no teu produto com id ',new.produto_id,': ',new.texto),0,current_date,new.vendedor_utilizador_id,new.id);
 
     --verificar se é uma resposta a outro comentario, se sim, notificar o utilizador do comentario anterior
     if new.id_anterior is not NULL then
-        insert into notificacao_comentario(descricao,lida,data_notificacao,user_id,comentario_id) values (new.concat('Responderam ao teu comentario: ',texto),0,current_date,new.vendedor_utilizador_id,new.id);
+        select utilizador_id into parent_question_user from comentario where comentario.id_anterior = new.id_anterior;
+        insert into notificacao_comentario(descricao,lida,data_notificacao,user_id,comentario_id) values (concat('Responderam ao teu comentario no produto ',new.produto_id,': ',new.texto),0,current_date,parent_question_user,new.id);
     end if;
 
 	return new;
