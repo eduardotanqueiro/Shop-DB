@@ -349,7 +349,7 @@ def make_order():
     #Decode Toke
     decode_token = jwt.decode(token,jwt_key,'HS256')
 
-     #If user is not customer
+    #If user is not customer
     if decode_token['user_type'] == user_type_hashed['vendedor'] or decode_token['user_type'] == user_type_hashed['administrador']:
         response = {'status': StatusCodes['api_error'], 'errors': 'You don\'t have permission to execute this task!'}
         return flask.jsonify(response)
@@ -703,7 +703,7 @@ def subscribe_campaign(campaign_id):
         result=cur.fetchone()
         conn.commit()
 
-        print(result[0])
+        result=result[0]
 
         if 'error' in result[0]:
              response = {'status': StatusCodes['api_error'], 'errors': result[0]['error']}

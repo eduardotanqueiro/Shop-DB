@@ -713,7 +713,7 @@ declare
 	vendedor_text text;
 	
     cur_produtos_comprados cursor (id_compra INTEGER)for
-        select produto_id,quantidade,produto.vendedor_utilizador_id
+        select distinct produto_id,quantidade,produto.vendedor_utilizador_id
         from transacao_compra,produto
         where compra_id = id_compra and produto_id = produto.id;
 begin 
