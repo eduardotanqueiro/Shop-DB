@@ -349,6 +349,12 @@ def make_order():
     #Decode Toke
     decode_token = jwt.decode(token,jwt_key,'HS256')
 
+     #If user is not customer
+    if decode_token['user_type'] == user_type_hashed['vendedor'] or decode_token['user_type'] == user_type_hashed['administrador']:
+        response = {'status': StatusCodes['api_error'], 'errors': 'You don\'t have permission to execute this task!'}
+        return flask.jsonify(response)
+
+
     #Check payload arguments
     if 'cart' not in payload or payload['cart'] == '':
         response = {'status': StatusCodes['api_error'], 'errors': 'No cart given or empty'}

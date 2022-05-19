@@ -84,7 +84,6 @@ CREATE TABLE campanha(
 	numero_cupoes		 INTEGER NOT NULL,
 	data_inicio		 DATE NOT NULL,
 	data_fim			 DATE NOT NULL,
-	campanha_ativa		 BOOL NOT NULL,
 	validade_cupao		 SMALLINT NOT NULL,
 	administrador_utilizador_id BIGINT NOT NULL,
 	PRIMARY KEY(id)

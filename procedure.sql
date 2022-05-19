@@ -370,9 +370,11 @@ declare
 
     cursor_avg_rating cursor (id_p integer) for
         select row_to_json(a) from (
-            select avg(classificacao) from rating
+            select avg(classificacao) as "media rating" from rating
             group by produto_id having produto_id=id_p
             ) as a;
+    
+    
 
 begin
 
@@ -408,7 +410,13 @@ begin
             LOOP
                 comentarios=comentarios||r;
             END LOOP;
+        for r in
+            select descricao from rating
+            where produto_id = id_produto
+            loop comentarios = comentarios||r;
+            end loop;
         prod_return=prod_return::jsonb||json_build_object('comentarios',comentarios)::jsonb;
+
         return prod_return;
     end if;
 
@@ -437,6 +445,11 @@ begin
             LOOP
                 comentarios=comentarios||r;
             END LOOP;
+			for r in
+            select descricao from rating
+            where produto_id = id_produto
+            loop comentarios = comentarios||r;
+            end loop;
         prod_return=prod_return::jsonb||json_build_object('comentarios',comentarios)::jsonb;
         return prod_return;
     end if;
@@ -466,6 +479,11 @@ begin
             LOOP
                 comentarios=comentarios||r;
             END LOOP;
+			for r in
+            select descricao from rating
+            where produto_id = id_produto
+            loop comentarios = comentarios||r;
+            end loop;
         prod_return=prod_return::jsonb||json_build_object('comentarios',comentarios)::jsonb;
         return prod_return;
     end if;
@@ -524,7 +542,7 @@ declare
     cur_check_coupouns cursor (camp_id INTEGER) for
         select COUNT(*)
         from customer_cupao
-        where id_cupao_var in (select id from cupao where cupao.campanha_id = camp_id)
+        where id_cupao in (select id from cupao where cupao.campanha_id = camp_id)
         group by customer_utilizador_id;
 
 
@@ -536,11 +554,11 @@ close cur_procura_campanha;
 
 if not found then 
     -- campanha nao exixte
-    return json_build_object('error','campanha nao encontrada');
+    return json_build_object('error','campanha nao encontrada'); --erro
 
 elsif data_fim_campaign < current_date  then
     --campanha já passou o dia de fim
-    return json_build_object('error','campanha já está inativa');
+    return json_build_object('error','campanha já está inativa'); --erro
 
 else
     open cur_cupao_maximo;
@@ -553,7 +571,7 @@ else
     fetch cur_check_coupouns into nr_cupoes_atribuidos_campanha;
 
     if nr_cupoes_atribuidos_campanha is not NULL then
-        return json_build_object('error','o user já subscreveu esta campanha!');
+        return json_build_object('error','o user já subscreveu esta campanha!'); --erro
     end if;
     close cur_check_coupouns;
 
@@ -564,11 +582,11 @@ else
 
     if (n_cupao_maximo+1<=numero_cupoes_permitidos) then
         insert into cupao(numero,cupao_ativo,data_atribuicao,campanha_id) values(n_cupao_maximo+1,'true',current_date,campaign_id) returning id into id_cupao_var_maximo;
-        insert into customer_cupao (customer_utilizador_id,id_cupao_var) values (customer_id,id_cupao_var_maximo);
+        insert into customer_cupao (customer_utilizador_id,id_cupao) values (customer_id,id_cupao_var_maximo);
 
-        return json_build_object('campanha subscrita id_cupao_var',id_cupao_var_maximo);
+        return json_build_object('campanha subscrita id_cupao_var',id_cupao_var_maximo); --erro
     else
-        return json_build_object('error','campanha nao pode ser subscrita, maximo cupoes');
+        return json_build_object('error','campanha nao pode ser subscrita, maximo cupoes'); 
     end if;
 end if;
 end;

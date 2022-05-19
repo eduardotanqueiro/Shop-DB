@@ -4921,3 +4921,363 @@ CONTEXT:  PL/pgSQL function check_token_type(character varying,bigint) line 7 at
 INFO:werkzeug:127.0.0.1 - - [19/May/2022 00:18:16] "GET /dbproj/notification HTTP/1.1" 200 -
 INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
 INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:User Login
+DEBUG:logger:User login attempt
+INFO:logger:User found, creating JWT
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 00:55:37] "[37mPUT /dbproj/user HTTP/1.1[0m" 200 -
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'joaovendedor', 'mail': 'joao_vendedor@gmail.com', 'password': 'pwjoao', 'nome': 'joao', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joao', 'type': 'vendedor'}
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 00:57:22] "[37mPOST /dbproj/user HTTP/1.1[0m" 200 -
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'joaovendedor', 'mail': 'joao_vendedor@gmail.com', 'password': 'pwjoao', 'nome': 'joao', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joao', 'type': 'vendedor'}
+INFO:logger:New user inserted
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 00:57:29] "[37mPOST /dbproj/user HTTP/1.1[0m" 200 -
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'joanauser', 'mail': 'joana@gmail.com', 'password': 'pwjoana', 'nome': 'joana', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joana'}
+INFO:logger:New user inserted
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 00:59:03] "[37mPOST /dbproj/user HTTP/1.1[0m" 200 -
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'franciscouser', 'mail': 'francisco@gmail.com', 'password': 'pwfrancisco', 'nome': 'francisco', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua francisco'}
+INFO:logger:New user inserted
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 00:59:41] "[37mPOST /dbproj/user HTTP/1.1[0m" 200 -
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'tomasvendedor', 'mail': 'tomas_vendedor@gmail.com', 'password': 'pwtomas', 'nome': 'tomas', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua tomas', 'type': 'vendedor'}
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:02:17] "[37mPOST /dbproj/user HTTP/1.1[0m" 200 -
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'tomasvendedor', 'mail': 'tomas_vendedor@gmail.com', 'password': 'pwtomas', 'nome': 'tomas', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua tomas', 'type': 'vendedor'}
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:02:22] "[37mPOST /dbproj/user HTTP/1.1[0m" 200 -
+INFO:logger:User Login
+DEBUG:logger:User login attempt
+INFO:logger:User found, creating JWT
+ERROR:logger:duplicate key value violates unique constraint "login_token_pkey"
+DETAIL:  Key (token)=(eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VybmFtZSI6InVzZXJfYWRtaW4xIiwidXNlcl90eXBlIjoiOTFmNTE2N2MzNGM0MDA3NTgxMTVjMmE2ODI2ZWMyZTMifQ.oaXMJP0f_BJcMIErmQJP_ie7107jBoHS_wiJmT8p3fg) already exists.
+
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:02:33] "[37mPUT /dbproj/user HTTP/1.1[0m" 200 -
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'tomasvendedor', 'mail': 'tomas_vendedor@gmail.com', 'password': 'pwtomas', 'nome': 'tomas', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua tomas', 'type': 'vendedor'}
+INFO:logger:New user inserted
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:03:00] "[37mPOST /dbproj/user HTTP/1.1[0m" 200 -
+INFO:logger:User Login
+DEBUG:logger:User login attempt
+INFO:logger:User found, creating JWT
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:03:34] "[37mPUT /dbproj/user HTTP/1.1[0m" 200 -
+INFO:logger:User Login Product Insertion
+DEBUG:logger:New product added
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:03:46] "[37mPOST /dbproj/product HTTP/1.1[0m" 200 -
+INFO:logger:User Login Product Insertion
+DEBUG:logger:New product added
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:04:26] "[37mPOST /dbproj/product HTTP/1.1[0m" 200 -
+INFO:logger:User Login
+DEBUG:logger:User login attempt
+INFO:logger:User found, creating JWT
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:05:03] "[37mPUT /dbproj/user HTTP/1.1[0m" 200 -
+INFO:logger:User Login Product Insertion
+DEBUG:logger:New product added
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:05:19] "[37mPOST /dbproj/product HTTP/1.1[0m" 200 -
+INFO:logger:User Login Product Insertion
+DEBUG:logger:New product added
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:05:42] "[37mPOST /dbproj/product HTTP/1.1[0m" 200 -
+INFO:logger:User Login
+DEBUG:logger:User login attempt
+ERROR:logger:Invalid user or password!
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:05:53] "[37mPUT /dbproj/user HTTP/1.1[0m" 200 -
+INFO:logger:User Login
+DEBUG:logger:User login attempt
+ERROR:logger:Invalid user or password!
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:06:01] "[37mPUT /dbproj/user HTTP/1.1[0m" 200 -
+INFO:logger:User Login
+DEBUG:logger:User login attempt
+INFO:logger:User found, creating JWT
+ERROR:logger:duplicate key value violates unique constraint "login_token_pkey"
+DETAIL:  Key (token)=(eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjIiLCJ1c2VybmFtZSI6ImpvYW92ZW5kZWRvciIsInVzZXJfdHlwZSI6IjA0MDdlOGM4Mjg1YWI4NTUwOWFjMjg4NDAyNWRjZjQyIn0.LSmgUQswBjM3Gxw9ISWaBT-sjcnYU8mrQmkyUDJ0IsM) already exists.
+
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:06:07] "[37mPUT /dbproj/user HTTP/1.1[0m" 200 -
+INFO:logger:User Login
+DEBUG:logger:User login attempt
+ERROR:logger:Invalid user or password!
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:07:03] "[37mPUT /dbproj/user HTTP/1.1[0m" 200 -
+INFO:logger:User Login
+DEBUG:logger:User login attempt
+INFO:logger:User found, creating JWT
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:07:12] "[37mPUT /dbproj/user HTTP/1.1[0m" 200 -
+INFO:logger:User Login Product Insertion
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:07:22] "[37mPOST /dbproj/product HTTP/1.1[0m" 200 -
+INFO:logger:User Login Campaign Insertion
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:07:58] "[37mPOST /dbproj/campaign HTTP/1.1[0m" 200 -
+INFO:logger:User Login Campaign Insertion
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:08:11] "[37mPOST /dbproj/campaign HTTP/1.1[0m" 200 -
+INFO:logger:User Login Campaign Insertion
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:08:45] "[37mPOST /dbproj/campaign HTTP/1.1[0m" 200 -
+INFO:logger:User Login Campaign Insertion
+ERROR:logger:null value in column "campanha_ativa" of relation "campanha" violates not-null constraint
+DETAIL:  Failing row contains (1, 30, 5, 2022-05-08, 2022-05-16, null, 3, 1).
+CONTEXT:  SQL statement "insert into campanha(desconto,numero_cupoes,data_inicio,data_fim,validade_cupao,administrador_utilizador_id) values (descon,n_cupoes,data_ini,data_f,validade_cup,admin_id) returning id"
+PL/pgSQL function insert_campaign(integer,integer,date,date,smallint,bigint) line 17 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:09:33] "[37mPOST /dbproj/campaign HTTP/1.1[0m" 200 -
+INFO:logger:User Login Campaign Insertion
+DEBUG:logger:New campaign added
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:10:21] "[37mPOST /dbproj/campaign HTTP/1.1[0m" 200 -
+INFO:logger:User Login Campaign Insertion
+ERROR:logger:ERRO: Data da campanha a inserir entra em conflito com campanhas existentes
+CONTEXT:  PL/pgSQL function insert_campaign(integer,integer,date,date,smallint,bigint) line 12 at RAISE
+
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:10:35] "[37mPOST /dbproj/campaign HTTP/1.1[0m" 200 -
+INFO:logger:User Login Campaign Insertion
+DEBUG:logger:New campaign added
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:10:49] "[37mPOST /dbproj/campaign HTTP/1.1[0m" 200 -
+INFO:logger:User Login Campaign Insertion
+ERROR:logger:ERRO: Data da campanha a inserir entra em conflito com campanhas existentes
+CONTEXT:  PL/pgSQL function insert_campaign(integer,integer,date,date,smallint,bigint) line 12 at RAISE
+
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:12:02] "[37mPOST /dbproj/campaign HTTP/1.1[0m" 200 -
+INFO:logger:User Login Campaign Insertion
+ERROR:logger:ERRO: Data da campanha a inserir entra em conflito com campanhas existentes
+CONTEXT:  PL/pgSQL function insert_campaign(integer,integer,date,date,smallint,bigint) line 12 at RAISE
+
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:12:23] "[37mPOST /dbproj/campaign HTTP/1.1[0m" 200 -
+INFO:logger:User Login Campaign Insertion
+DEBUG:logger:New campaign added
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:12:50] "[37mPOST /dbproj/campaign HTTP/1.1[0m" 200 -
+INFO:logger:User Login Campaign Insertion
+ERROR:logger:ERRO: Data da campanha a inserir entra em conflito com campanhas existentes
+CONTEXT:  PL/pgSQL function insert_campaign(integer,integer,date,date,smallint,bigint) line 12 at RAISE
+
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:12:58] "[37mPOST /dbproj/campaign HTTP/1.1[0m" 200 -
+INFO:logger:User Login Campaign Insertion
+DEBUG:logger:New campaign added
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:13:07] "[37mPOST /dbproj/campaign HTTP/1.1[0m" 200 -
+INFO:logger:User Login Campaign Insertion
+ERROR:logger:new row for relation "campanha" violates check constraint "data"
+DETAIL:  Failing row contains (1, 30, 5, 2024-04-02, 2024-03-09, 3, 1).
+CONTEXT:  SQL statement "insert into campanha(desconto,numero_cupoes,data_inicio,data_fim,validade_cupao,administrador_utilizador_id) values (descon,n_cupoes,data_ini,data_f,validade_cup,admin_id) returning id"
+PL/pgSQL function insert_campaign(integer,integer,date,date,smallint,bigint) line 17 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:14:37] "[37mPOST /dbproj/campaign HTTP/1.1[0m" 200 -
+INFO:logger:User Login Campaign Insertion
+ERROR:logger:date/time field value out of range: "25-5-2024"
+LINE 1: ...ampaign(30::INTEGER,5::INTEGER,'05-02-2022'::DATE,'25-5-2024...
+                                                             ^
+HINT:  Perhaps you need a different "datestyle" setting.
+
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:15:06] "[37mPOST /dbproj/campaign HTTP/1.1[0m" 200 -
+INFO:logger:User Login Campaign Insertion
+DEBUG:logger:New campaign added
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:16:42] "[37mPOST /dbproj/campaign HTTP/1.1[0m" 200 -
+INFO:logger:User Login Campaign Insertion
+ERROR:logger:ERRO: Data da campanha a inserir entra em conflito com campanhas existentes
+CONTEXT:  PL/pgSQL function insert_campaign(integer,integer,date,date,smallint,bigint) line 12 at RAISE
+
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:16:56] "[37mPOST /dbproj/campaign HTTP/1.1[0m" 200 -
+INFO:logger:User Login Campaign Insertion
+DEBUG:logger:New campaign added
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:17:02] "[37mPOST /dbproj/campaign HTTP/1.1[0m" 200 -
+INFO:logger:User Login Campaign Subscribe
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:18:37] "[37mPUT /dbproj/subscribe/3 HTTP/1.1[0m" 200 -
+INFO:logger:User Login Campaign Subscribe
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:19:23] "[37mPUT /dbproj/subscribe/3 HTTP/1.1[0m" 200 -
+INFO:logger:User Login Campaign Subscribe
+ERROR:logger:tuple indices must be integers or slices, not str
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:19:31] "[37mPUT /dbproj/subscribe/3 HTTP/1.1[0m" 200 -
+INFO:logger:User Login Campaign Subscribe
+ERROR:logger:tuple indices must be integers or slices, not str
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:20:17] "[37mPUT /dbproj/subscribe/3 HTTP/1.1[0m" 200 -
+INFO:logger:User Login Campaign Subscribe
+ERROR:logger:tuple indices must be integers or slices, not str
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:20:19] "[37mPUT /dbproj/subscribe/3 HTTP/1.1[0m" 200 -
+INFO:logger:User Login Campaign Subscribe
+ERROR:logger:column "id_cupao_var" does not exist
+LINE 3:         where id_cupao_var in (select id from cupao where cu...
+                      ^
+QUERY:  select COUNT(*)
+        from customer_cupao
+        where id_cupao_var in (select id from cupao where cupao.campanha_id = camp_id)
+        group by customer_utilizador_id
+CONTEXT:  PL/pgSQL function subscribe_campaign(integer,bigint) line 47 at OPEN
+
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:20:25] "[37mPUT /dbproj/subscribe/2 HTTP/1.1[0m" 200 -
+INFO:logger:User Login Campaign Subscribe
+ERROR:logger:tuple indices must be integers or slices, not str
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:23:16] "[37mPUT /dbproj/subscribe/1 HTTP/1.1[0m" 200 -
+INFO:logger:User Login Campaign Subscribe
+ERROR:logger:column "id_cupao_var" does not exist
+LINE 3:         where id_cupao_var in (select id from cupao where cu...
+                      ^
+QUERY:  select COUNT(*)
+        from customer_cupao
+        where id_cupao_var in (select id from cupao where cupao.campanha_id = camp_id)
+        group by customer_utilizador_id
+CONTEXT:  PL/pgSQL function subscribe_campaign(integer,bigint) line 47 at OPEN
+
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:23:20] "[37mPUT /dbproj/subscribe/2 HTTP/1.1[0m" 200 -
+INFO:logger:User Login Campaign Subscribe
+ERROR:logger:column "id_cupao_var" does not exist
+LINE 3:         where id_cupao_var in (select id from cupao where cu...
+                      ^
+QUERY:  select COUNT(*)
+        from customer_cupao
+        where id_cupao_var in (select id from cupao where cupao.campanha_id = camp_id)
+        group by customer_utilizador_id
+CONTEXT:  PL/pgSQL function subscribe_campaign(integer,bigint) line 47 at OPEN
+
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:23:55] "[37mPUT /dbproj/subscribe/2 HTTP/1.1[0m" 200 -
+INFO:logger:API v1.0 online: http://127.0.0.1:8080
+INFO:logger:API v1.0 online: http://127.0.0.1:8080
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:User Login Campaign Subscribe
+ERROR:logger:column "id_cupao_var" does not exist
+LINE 3:         where id_cupao_var in (select id from cupao where cu...
+                      ^
+QUERY:  select COUNT(*)
+        from customer_cupao
+        where id_cupao_var in (select id from cupao where cupao.campanha_id = camp_id)
+        group by customer_utilizador_id
+CONTEXT:  PL/pgSQL function subscribe_campaign(integer,bigint) line 47 at OPEN
+
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:24:33] "[37mPUT /dbproj/subscribe/2 HTTP/1.1[0m" 200 -
+INFO:logger:User Login Campaign Subscribe
+ERROR:logger:column "id_cupao_var" of relation "customer_cupao" does not exist
+LINE 1: ...nsert into customer_cupao (customer_utilizador_id,id_cupao_v...
+                                                             ^
+QUERY:  insert into customer_cupao (customer_utilizador_id,id_cupao_var) values (customer_id,id_cupao_var_maximo)
+CONTEXT:  PL/pgSQL function subscribe_campaign(integer,bigint) line 62 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:25:04] "[37mPUT /dbproj/subscribe/2 HTTP/1.1[0m" 200 -
+INFO:logger:User Login Campaign Subscribe
+DEBUG:logger:Subscribe campaign
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:26:01] "[37mPUT /dbproj/subscribe/2 HTTP/1.1[0m" 200 -
+INFO:logger:User Login Campaign Subscribe
+ERROR:logger:tuple indices must be integers or slices, not str
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:26:12] "[37mPUT /dbproj/subscribe/3 HTTP/1.1[0m" 200 -
+INFO:logger:User Login Campaign Subscribe
+ERROR:logger:tuple indices must be integers or slices, not str
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:28:00] "[37mPUT /dbproj/subscribe/54 HTTP/1.1[0m" 200 -
+INFO:logger:User Login Campaign Subscribe
+ERROR:logger:tuple indices must be integers or slices, not str
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:28:07] "[37mPUT /dbproj/subscribe/5 HTTP/1.1[0m" 200 -
+INFO:logger:User Login Campaign Subscribe
+ERROR:logger:tuple indices must be integers or slices, not str
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:28:14] "[37mPUT /dbproj/subscribe/2 HTTP/1.1[0m" 200 -
+INFO:logger:User Login Campaign Subscribe
+ERROR:logger:tuple indices must be integers or slices, not str
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:34:24] "[37mPUT /dbproj/subscribe/2 HTTP/1.1[0m" 200 -
+INFO:logger:User Login Campaign Subscribe
+ERROR:logger:tuple indices must be integers or slices, not str
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:34:28] "[37mPUT /dbproj/subscribe/2 HTTP/1.1[0m" 200 -
+INFO:logger:User Login Campaign Subscribe
+ERROR:logger:tuple indices must be integers or slices, not str
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:35:01] "[37mPUT /dbproj/subscribe/2 HTTP/1.1[0m" 200 -
+INFO:logger:User Login
+DEBUG:logger:User login attempt
+ERROR:logger:Invalid user or password!
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:35:22] "[37mPUT /dbproj/user HTTP/1.1[0m" 200 -
+INFO:logger:User Login
+DEBUG:logger:User login attempt
+INFO:logger:User found, creating JWT
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:35:34] "[37mPUT /dbproj/user HTTP/1.1[0m" 200 -
+INFO:logger:User Login Campaign Subscribe
+ERROR:logger:tuple indices must be integers or slices, not str
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:37:38] "[37mPUT /dbproj/subscribe/2 HTTP/1.1[0m" 200 -
+INFO:logger:User Login Campaign Subscribe
+ERROR:logger:tuple indices must be integers or slices, not str
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:37:44] "[37mPUT /dbproj/subscribe/1 HTTP/1.1[0m" 200 -
+INFO:logger:User Login Campaign Subscribe
+ERROR:logger:tuple indices must be integers or slices, not str
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:37:46] "[37mPUT /dbproj/subscribe/2 HTTP/1.1[0m" 200 -
+INFO:logger:User Login Campaign Subscribe
+ERROR:logger:tuple indices must be integers or slices, not str
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:38:18] "[37mPUT /dbproj/subscribe/2 HTTP/1.1[0m" 200 -
+DEBUG:logger:GET /product/<product_id> - parse
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:39:14] "[37mPUT /dbproj/product/0 HTTP/1.1[0m" 200 -
+ERROR:logger:GET /product/<product_id> - error: Id produto nao encontrado para este vendedor
+CONTEXT:  PL/pgSQL function update_product_id(integer,json,integer) line 12 at RAISE
+
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:39:27] "[37mPUT /dbproj/product/6 HTTP/1.1[0m" 200 -
+ERROR:logger:GET /product/<product_id> - error: Id produto nao encontrado para este vendedor
+CONTEXT:  PL/pgSQL function update_product_id(integer,json,integer) line 12 at RAISE
+
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:39:34] "[37mPUT /dbproj/product/4 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:40:48] "[37mPOST /dbproj/order HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:42:05] "[31m[1mPOST /dbproj/order HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:42:12] "[31m[1mPOST /dbproj/order HTTP/1.1[0m" 400 -
+DEBUG:logger:Buying with coupon
+ERROR:logger:Given coupon doesn't exist or doesn't belong to the user!
+CONTEXT:  PL/pgSQL function make_order(integer,json,integer) line 100 at RAISE
+
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:42:27] "[37mPOST /dbproj/order HTTP/1.1[0m" 200 -
+DEBUG:logger:Buying with coupon
+ERROR:logger:Given coupon doesn't exist or doesn't belong to the user!
+CONTEXT:  PL/pgSQL function make_order(integer,json,integer) line 100 at RAISE
+
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:42:33] "[37mPOST /dbproj/order HTTP/1.1[0m" 200 -
+DEBUG:logger:Buying with coupon
+ERROR:logger:Given coupon doesn't exist or doesn't belong to the user!
+CONTEXT:  PL/pgSQL function make_order(integer,json,integer) line 100 at RAISE
+
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:42:42] "[37mPOST /dbproj/order HTTP/1.1[0m" 200 -
+DEBUG:logger:Buying with coupon
+ERROR:logger:insert or update on table "compra" violates foreign key constraint "compra_fk2"
+DETAIL:  Key (customer_utilizador_id)=(2) is not present in table "customer".
+CONTEXT:  SQL statement "insert into compra(data_compra,valor_pago,valor_do_desconto,customer_utilizador_id) values (data_compra,1,0,customer_id)"
+PL/pgSQL function make_order(integer,json,integer) line 37 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:43:06] "[37mPOST /dbproj/order HTTP/1.1[0m" 200 -
+DEBUG:logger:Buying with coupon
+ERROR:logger:Given coupon doesn't exist or doesn't belong to the user!
+CONTEXT:  PL/pgSQL function make_order(integer,json,integer) line 100 at RAISE
+
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:43:45] "[37mPOST /dbproj/order HTTP/1.1[0m" 200 -
+DEBUG:logger:Buying with coupon
+ERROR:logger:Given coupon doesn't exist or doesn't belong to the user!
+CONTEXT:  PL/pgSQL function make_order(integer,json,integer) line 100 at RAISE
+
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:43:49] "[37mPOST /dbproj/order HTTP/1.1[0m" 200 -
+DEBUG:logger:Buying with coupon
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 01:43:52] "[37mPOST /dbproj/order HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
