@@ -333,7 +333,7 @@ begin
 
         --cupao existe e pertence ao user
         --verificar desconto/campanha
-        select campanha.desconto,campanha.data_inicio,campanha.data_fim into percentagem_desconto,dat_inicio,dat_fim;
+        select campanha.desconto,campanha.data_inicio,campanha.data_fim into percentagem_desconto,dat_inicio,dat_fim
         from campanha
         where campanha.id = (select campanha_id from cupao where id = id_cupao_var);
 
@@ -534,20 +534,20 @@ declare
     from cupao
     group by campanha_id having campanha_id=campaign_id;
 
-    cur_procura_campanha cursor for
+    cur_procura_campanha cursor(id_camp campanha.id%type) for
     select numero_cupoes,data_fim
     from campanha
-    where id=campaign_id and current_date >= data_inicio and current_date <= data_fim; --ver se a data de hoje esta entre as datas
+    where id= id_camp and current_date >= data_inicio and current_date <= data_fim; --ver se a data de hoje esta entre as datas
 
-    cur_check_coupouns cursor (camp_id INTEGER) for
+    cur_check_coupouns cursor (camp_id INTEGER ,user_id BIGINT) for
         select COUNT(*)
         from customer_cupao
-        where id_cupao in (select id from cupao where cupao.campanha_id = camp_id)
+        where id_cupao in (select id from cupao where cupao.campanha_id = camp_id) and customer_utilizador_id = user_id
         group by customer_utilizador_id;
 
 
 begin
-open cur_procura_campanha;
+open cur_procura_campanha(campaign_id);
 fetch cur_procura_campanha
 into numero_cupoes_permitidos, data_fim_campaign;
 close cur_procura_campanha;
@@ -567,7 +567,7 @@ else
     close cur_cupao_maximo;
 
     --verificar se o user já tem cupao daquela campanha
-    open cur_check_coupouns(campaign_id);
+    open cur_check_coupouns(campaign_id,customer_id);
     fetch cur_check_coupouns into nr_cupoes_atribuidos_campanha;
 
     if nr_cupoes_atribuidos_campanha is not NULL then
@@ -739,7 +739,7 @@ begin
     for vendedor_text in 
         select json_object_keys(vendedores_json)
     LOOP
-        insert into notificacao_compra(descricao,lida,data_notificacao,user_id) values (vendedores_json->>vendedor_text,0,current_date,cast(vendedor_text as INTEGER));
+        insert into notificacao_compra(descricao,lida,data_notificacao,user_id) values (concat('Compraram: ',vendedores_json->>vendedor_text),0,current_date,cast(vendedor_text as INTEGER));
     END LOOP;
 
 	return new;
