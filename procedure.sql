@@ -328,6 +328,12 @@ begin
             raise EXCEPTION 'Given coupon doesn''t exist or doesn''t belong to the user!';
         end if;
 
+        --verificar se o cupao do user está válid
+        --TODO VERIFICAR DATA EXPIRAÇÃO
+        if not EXISTS(select from cupao where id = id_cupao_var and cupao_ativo = 'true') then
+            raise EXCEPTION 'Given coupon is not valid anymore';
+        end if;
+
         --meter o cupao como usado
         update cupao set cupao_ativo = 'false' where cupao.id = id_cupao_var;
 

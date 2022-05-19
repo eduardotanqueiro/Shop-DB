@@ -706,7 +706,7 @@ def subscribe_campaign(campaign_id):
         print(result[0])
 
         if 'error' in result[0]:
-             response = {'status': StatusCodes['api_error'], 'errors': result['error']}
+             response = {'status': StatusCodes['api_error'], 'errors': result[0]['error']}
              logger.debug('Not subscribe campaign')
         else:
             response = {'status': StatusCodes['success'], 'results': result}
