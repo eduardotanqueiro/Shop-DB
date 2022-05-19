@@ -43,7 +43,7 @@ returns integer
 language plpgsql
 as $$
 declare
-    id_inserido INT;
+    id_inserido integer;
 
 begin
 
