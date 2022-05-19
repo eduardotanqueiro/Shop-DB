@@ -1,4 +1,3 @@
-from genericpath import exists
 import flask
 import logging
 import psycopg2
@@ -16,7 +15,8 @@ StatusCodes = {
     'internal_error': 500
 }
 
-jwt_key = 'chave_jwt' #CHANGE TO RANDOM 
+f=open("jwt_key.txt","r")
+jwt_key = f.readline()
 
 user_type_hashed = {'customer': hs.md5('customer'.encode('ascii')).hexdigest(), 'administrador': hs.md5('administrador'.encode('ascii')).hexdigest(), 'vendedor': hs.md5('vendedor'.encode('ascii')).hexdigest()}
 
@@ -25,9 +25,10 @@ user_type_hashed = {'customer': hs.md5('customer'.encode('ascii')).hexdigest(), 
 ##########################################################
 
 def db_connection():
+    f=open("pb_w.txt")
     db = psycopg2.connect(
         user='ProjetoBD',
-        password='ProjetoBD',
+        password=f.readline(),
         host='127.0.0.1',
         port='5432',
         database='ProjetoBD'
@@ -36,7 +37,6 @@ def db_connection():
     db.set_session(autocommit=False)
 
     return db
-
 
 ##########################################################
 ## ENDPOINTS

@@ -5354,3 +5354,124 @@ INFO:logger:Get notification
 INFO:werkzeug:127.0.0.1 - - [19/May/2022 15:36:41] "GET /dbproj/notification HTTP/1.1" 200 -
 INFO:logger:Get notification
 INFO:werkzeug:127.0.0.1 - - [19/May/2022 15:39:46] "GET /dbproj/notification HTTP/1.1" 200 -
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 410-045-901
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:User Login
+DEBUG:logger:User login attempt
+INFO:logger:User found, creating JWT
+ERROR:logger:duplicate key value violates unique constraint "login_token_pkey"
+DETAIL:  Key (token)=(eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjQiLCJ1c2VybmFtZSI6InVzZXJfdmVuZGVkb3IxIiwidXNlcl90eXBlIjoiMDQwN2U4YzgyODVhYjg1NTA5YWMyODg0MDI1ZGNmNDIifQ.HQdouRTYGHcS797bBDE8VAEVUlRCYT5UZlYCLg34uEo) already exists.
+
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 16:01:42] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:User Login Product Insertion
+DEBUG:logger:New product added
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 16:02:05] "POST /dbproj/product HTTP/1.1" 200 -
+ERROR:logger:Product 2 does not have any stock!
+CONTEXT:  PL/pgSQL function make_order(integer,json,integer) line 71 at RAISE
+
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 16:02:18] "POST /dbproj/order HTTP/1.1" 200 -
+ERROR:logger:Product 2 does not have any stock!
+CONTEXT:  PL/pgSQL function make_order(integer,json,integer) line 71 at RAISE
+
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 16:02:23] "POST /dbproj/order HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 16:02:42] "POST /dbproj/order HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 16:03:16] "POST /dbproj/order HTTP/1.1" 200 -
+INFO:logger:Get notification
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 16:03:24] "GET /dbproj/notification HTTP/1.1" 200 -
+INFO:logger:Get notification
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 16:03:39] "GET /dbproj/notification HTTP/1.1" 200 -
+INFO:logger:Get notification
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 16:03:40] "GET /dbproj/notification HTTP/1.1" 200 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+DEBUG:logger:GET /product/<product_id> - parse
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 16:03:47] "GET /dbproj/product/1 HTTP/1.1" 200 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 2
+DEBUG:logger:GET /product/<product_id> - parse
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 16:03:56] "GET /dbproj/product/2 HTTP/1.1" 200 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 3
+DEBUG:logger:GET /product/<product_id> - parse
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 16:04:01] "GET /dbproj/product/3 HTTP/1.1" 200 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 2
+DEBUG:logger:GET /product/<product_id> - parse
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 16:04:06] "GET /dbproj/product/2 HTTP/1.1" 200 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 4
+DEBUG:logger:GET /product/<product_id> - parse
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 16:04:10] "GET /dbproj/product/4 HTTP/1.1" 200 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 3
+DEBUG:logger:GET /product/<product_id> - parse
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 16:04:15] "GET /dbproj/product/3 HTTP/1.1" 200 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 4
+DEBUG:logger:GET /product/<product_id> - parse
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 16:04:19] "GET /dbproj/product/4 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 410-045-901
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 410-045-901
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 410-045-901
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 410-045-901
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 410-045-901
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:User Login
+DEBUG:logger:User login attempt
+INFO:logger:User found, creating JWT
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 16:17:02] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:Get notification
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 16:17:24] "GET /dbproj/notification HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 410-045-901
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 410-045-901
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 410-045-901
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\Asus\\OneDrive\\Documentos\\Faculdade\\Segundo Ano\\BD\\PROJETO_BD_PL5\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 410-045-901
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:Get notification
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 16:19:39] "GET /dbproj/notification HTTP/1.1" 200 -
+INFO:logger:Get notification
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 16:19:42] "GET /dbproj/notification HTTP/1.1" 200 -
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'tomasvendedor', 'mail': 'tomas_vendedor@gmail.com', 'password': 'pwtomas', 'nome': 'tomas', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua tomas', 'type': 'vendedor'}
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 16:19:48] "[35m[1mPOST /dbproj/user HTTP/1.1[0m" 500 -
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'tomasvendedor', 'mail': 'tomas_vendedor@gmail.com', 'password': 'pwtomas', 'nome': 'tomas', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua tomas', 'type': 'vendedor'}
+INFO:logger:New user inserted
+INFO:werkzeug:127.0.0.1 - - [19/May/2022 16:20:13] "POST /dbproj/user HTTP/1.1" 200 -
