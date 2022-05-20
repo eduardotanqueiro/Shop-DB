@@ -329,7 +329,12 @@ begin
         end if;
 
         --verificar se o cupao do user está válid
-        --TODO VERIFICAR DATA EXPIRAÇÃO
+        if exists (select
+            from cupao join campanha on cupao.campanha_id = campanha.id
+            where cupao.id = id_cupao_var and (cupao.data_atribuicao +  cast(campanha.validade_cupao||' days' as interval)) < current_date) 
+            then raise exception 'Tempo de validade ja passou';
+            end if; 
+        
         if not EXISTS(select from cupao where id = id_cupao_var and cupao_ativo = 'true') then
             raise EXCEPTION 'Given coupon is not valid anymore';
         end if;

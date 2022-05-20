@@ -5475,3 +5475,365 @@ INFO:logger:POST /customer
 DEBUG:logger:POST /customer - payload: {'username': 'tomasvendedor', 'mail': 'tomas_vendedor@gmail.com', 'password': 'pwtomas', 'nome': 'tomas', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua tomas', 'type': 'vendedor'}
 INFO:logger:New user inserted
 INFO:werkzeug:127.0.0.1 - - [19/May/2022 16:20:13] "POST /dbproj/user HTTP/1.1" 200 -
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\scipy\\sparse\\construct.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\scipy\\sparse\\extract.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\scipy\\sparse\\_matrix_io.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\scipy\\spatial\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\scipy\\spatial\\kdtree.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\scipy\\spatial\\_plotutils.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\scipy\\special\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\scipy\\special\\_basic.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\scipy\\stats\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\scipy\\stats\\stats.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\scipy\\stats\\distributions.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\scipy\\stats\\_continuous_distns.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\scipy\\stats\\_discrete_distns.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\scipy\\stats\\morestats.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\scipy\\stats\\_binned_statistic.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\scipy\\stats\\_multivariate.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\scipy\\version.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\scipy\\__config__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\scipy\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\numpy\\random\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\scripts\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\seaborn\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\skimage\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\base.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\calibration.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\cluster\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\cluster\\_spectral.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\cluster\\_mean_shift.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\cluster\\_affinity_propagation.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\cluster\\_agglomerative.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\cluster\\_kmeans.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\cluster\\_dbscan.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\cluster\\_optics.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\cluster\\_bicluster.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\cluster\\_birch.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\compose\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\compose\\_column_transformer.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\compose\\_target.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\conftest.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\covariance\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\covariance\\_empirical_covariance.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\covariance\\_shrunk_covariance.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\covariance\\_robust_covariance.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\covariance\\_graph_lasso.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\covariance\\_elliptic_envelope.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\cross_decomposition\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\cross_decomposition\\_pls.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\cross_decomposition\\_cca.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\datasets\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\datasets\\_base.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\datasets\\_covtype.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\datasets\\_kddcup99.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\datasets\\_lfw.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\datasets\\_twenty_newsgroups.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\datasets\\_openml.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\datasets\\_samples_generator.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\datasets\\_svmlight_format_io.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\datasets\\_olivetti_faces.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\datasets\\_species_distributions.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\datasets\\_california_housing.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\datasets\\_rcv1.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\decomposition\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\decomposition\\_nmf.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\decomposition\\_incremental_pca.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\decomposition\\_kernel_pca.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\decomposition\\_sparse_pca.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\decomposition\\_truncated_svd.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\decomposition\\_fastica.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\decomposition\\_dict_learning.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\decomposition\\_factor_analysis.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\utils\\extmath.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\decomposition\\_lda.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\discriminant_analysis.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\dummy.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\ensemble\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\ensemble\\_base.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\ensemble\\_forest.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sklearn\\ensemble\\_bagging.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\core\\symbol.py', reloading
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\core\\numbers.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\core\\mul.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\core\\add.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\core\\mod.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\core\\relational.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\core\\multidimensional.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\core\\function.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\core\\containers.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\core\\exprtools.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\core\\parameters.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\logic\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\logic\\boolalg.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\logic\\inference.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\assumptions\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\assumptions\\assume.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\assumptions\\ask.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\assumptions\\refine.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\polys\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\polys\\polytools.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\polys\\polyfuncs.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\polys\\rationaltools.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\polys\\polyerrors.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\polys\\numberfields.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\polys\\monomials.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\polys\\orderings.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\polys\\rootoftools.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\polys\\polyroots.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\polys\\domains\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\polys\\domains\\domain.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\polys\\domains\\finitefield.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\polys\\domains\\integerring.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\polys\\domains\\rationalfield.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\polys\\domains\\realfield.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\polys\\domains\\complexfield.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\polys\\domains\\pythonfinitefield.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\polys\\domains\\gmpyfinitefield.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\polys\\domains\\pythonintegerring.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\polys\\domains\\gmpyintegerring.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\polys\\domains\\pythonrational.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\polys\\domains\\gmpyrationalfield.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\polys\\domains\\algebraicfield.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\polys\\domains\\polynomialring.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\polys\\domains\\fractionfield.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\polys\\domains\\expressiondomain.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\polys\\constructor.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\polys\\specialpolys.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\polys\\orthopolys.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\polys\\partfrac.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\polys\\polyoptions.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\polys\\rings.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\polys\\fields.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\series\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\series\\order.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\series\\limits.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\series\\gruntz.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\series\\approximants.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\series\\residues.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\series\\sequences.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\series\\fourier.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\series\\formal.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\series\\limitseq.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\functions\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\functions\\combinatorial\\factorials.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\functions\\combinatorial\\numbers.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\functions\\elementary\\miscellaneous.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\functions\\elementary\\complexes.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\functions\\elementary\\trigonometric.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\functions\\elementary\\exponential.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\functions\\elementary\\hyperbolic.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\functions\\elementary\\integers.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\functions\\elementary\\piecewise.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\functions\\special\\error_functions.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\functions\\special\\gamma_functions.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\functions\\special\\zeta_functions.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\functions\\special\\tensor_functions.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\functions\\special\\singularity_functions.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\functions\\special\\delta_functions.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\functions\\special\\bsplines.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\functions\\special\\bessel.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\functions\\special\\hyper.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\functions\\special\\polynomials.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\functions\\special\\spherical_harmonics.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\functions\\special\\elliptic_integrals.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\functions\\special\\beta_functions.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\functions\\special\\mathieu_functions.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\ntheory\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\ntheory\\generate.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\ntheory\\primetest.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\ntheory\\factor_.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\ntheory\\partitions_.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\ntheory\\residue_ntheory.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\ntheory\\multinomial.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\ntheory\\continued_fraction.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\ntheory\\egyptian_fraction.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\concrete\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\sympy\\concrete\\products.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\terminado\\__init__.py', reloading
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\testpath\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\tifffile\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\tifffile\\tifffile.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\tlz\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\toolz\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\tornado\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\tqdm\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\tqdm\\std.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\tqdm\\gui.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\tqdm\\_tqdm_pandas.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\tqdm\\cli.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\tqdm\\_monitor.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\tqdm\\_version.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\traitlets\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\unicodecsv\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\watchdog\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\wcwidth\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\wcwidth\\wcwidth.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\wcwidth\\unicode_versions.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\webencodings\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\werkzeug\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\wheel\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\widgetsnbextension\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\win32com\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\win32ctypes\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\winpty\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\win_unicode_console\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\wrapt\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\xlrd\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\xlrd\\formula.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\xlrd\\timemachine.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\xlsxwriter\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\xlwings\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\xlwt\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\yapf\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\yapftests\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\zict\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\zmq\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\zmq\\backend\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\zmq\\sugar\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\zmq\\error.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\zmq\\sugar\\context.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\zmq\\sugar\\tracker.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\zmq\\sugar\\socket.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\zmq\\sugar\\constants.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\zmq\\sugar\\frame.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\zmq\\sugar\\poll.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\zmq\\sugar\\version.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\zope\\__init__.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\site-packages\\pythonwin\\pywin\\__init__.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'tomasuser', 'mail': 'tomas@gmail.com', 'password': 'pwtomas', 'nome': 'tomas', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua tomas'}
+INFO:werkzeug:127.0.0.1 - - [20/May/2022 18:16:57] "[35m[1mPOST /dbproj/user HTTP/1.1[0m" 500 -
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'tomasuser', 'mail': 'tomas@gmail.com', 'password': 'pwtomas', 'nome': 'tomas', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua tomas'}
+INFO:werkzeug:127.0.0.1 - - [20/May/2022 18:17:45] "[35m[1mPOST /dbproj/user HTTP/1.1[0m" 500 -
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'tomasuser', 'mail': 'tomas@gmail.com', 'password': 'pwtomas', 'nome': 'tomas', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua tomas'}
+INFO:werkzeug:127.0.0.1 - - [20/May/2022 18:20:03] "[35m[1mPOST /dbproj/user HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\io.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\35191\\anaconda3\\Lib\\typing.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:API v1.0 online: http://127.0.0.1:8080
+INFO:logger:API v1.0 online: http://127.0.0.1:8080
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:logger:API v1.0 online: http://127.0.0.1:8080
+INFO:logger:API v1.0 online: http://127.0.0.1:8080
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'tomasuser', 'mail': 'tomas@gmail.com', 'password': 'pwtomas', 'nome': 'tomas', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua tomas'}
+INFO:werkzeug:127.0.0.1 - - [20/May/2022 18:41:25] "[35m[1mPOST /dbproj/user HTTP/1.1[0m" 500 -
+INFO:logger:User Login Campaign Insertion
+INFO:werkzeug:127.0.0.1 - - [20/May/2022 18:43:03] "[35m[1mPOST /dbproj/campaign HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'tomasuser', 'mail': 'tomas@gmail.com', 'password': 'pwtomas', 'nome': 'tomas', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua tomas'}
+INFO:werkzeug:127.0.0.1 - - [20/May/2022 18:44:29] "[35m[1mPOST /dbproj/user HTTP/1.1[0m" 500 -
+INFO:logger:User Login
+DEBUG:logger:User login attempt
+INFO:logger:User found, creating JWT
+INFO:werkzeug:127.0.0.1 - - [20/May/2022 18:47:35] "[37mPUT /dbproj/user HTTP/1.1[0m" 200 -
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'tomasuser', 'mail': 'tomas@gmail.com', 'password': 'pwtomas', 'nome': 'tomas', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua tomas'}
+INFO:logger:New user inserted
+INFO:werkzeug:127.0.0.1 - - [20/May/2022 18:47:52] "[37mPOST /dbproj/user HTTP/1.1[0m" 200 -
+INFO:logger:User Login
+DEBUG:logger:User login attempt
+INFO:logger:User found, creating JWT
+INFO:werkzeug:127.0.0.1 - - [20/May/2022 18:48:42] "[37mPUT /dbproj/user HTTP/1.1[0m" 200 -
+INFO:logger:User Login Campaign Subscribe
+ERROR:logger:0
+INFO:werkzeug:127.0.0.1 - - [20/May/2022 18:48:56] "[37mPUT /dbproj/subscribe/1 HTTP/1.1[0m" 200 -
+INFO:logger:User Login Campaign Subscribe
+ERROR:logger:0
+INFO:werkzeug:127.0.0.1 - - [20/May/2022 18:49:00] "[37mPUT /dbproj/subscribe/2 HTTP/1.1[0m" 200 -
+INFO:logger:User Login Campaign Subscribe
+ERROR:logger:0
+INFO:werkzeug:127.0.0.1 - - [20/May/2022 18:49:03] "[37mPUT /dbproj/subscribe/3 HTTP/1.1[0m" 200 -
+INFO:logger:User Login Campaign Subscribe
+ERROR:logger:0
+INFO:werkzeug:127.0.0.1 - - [20/May/2022 18:49:08] "[37mPUT /dbproj/subscribe/2 HTTP/1.1[0m" 200 -
+INFO:logger:User Login Campaign Subscribe
+ERROR:logger:0
+INFO:werkzeug:127.0.0.1 - - [20/May/2022 18:50:06] "[37mPUT /dbproj/subscribe/2 HTTP/1.1[0m" 200 -
+INFO:logger:User Login Campaign Subscribe
+ERROR:logger:0
+INFO:werkzeug:127.0.0.1 - - [20/May/2022 18:50:32] "[37mPUT /dbproj/subscribe/2 HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Detected change in 'c:\\Users\\35191\\PROJETOSUC\\ProjetoBD\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 247-247-708
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:User Login Campaign Subscribe
+DEBUG:logger:Not subscribe campaign
+INFO:werkzeug:127.0.0.1 - - [20/May/2022 18:56:12] "[37mPUT /dbproj/subscribe/2 HTTP/1.1[0m" 200 -
+DEBUG:logger:Buying with coupon
+ERROR:logger:Tempo de validade ja passou
+CONTEXT:  PL/pgSQL function make_order(integer,json,integer) line 107 at RAISE
+
+INFO:werkzeug:127.0.0.1 - - [20/May/2022 19:11:23] "[37mPOST /dbproj/order HTTP/1.1[0m" 200 -
+DEBUG:logger:Buying with coupon
+INFO:werkzeug:127.0.0.1 - - [20/May/2022 19:17:00] "[37mPOST /dbproj/order HTTP/1.1[0m" 200 -
+INFO:logger:API v1.0 online: http://127.0.0.1:8080
+INFO:logger:API v1.0 online: http://127.0.0.1:8080

@@ -18,6 +18,7 @@ StatusCodes = {
 f=open("jwt_key.txt","r")
 jwt_key = f.readline()
 
+
 user_type_hashed = {'customer': hs.md5('customer'.encode('ascii')).hexdigest(), 'administrador': hs.md5('administrador'.encode('ascii')).hexdigest(), 'vendedor': hs.md5('vendedor'.encode('ascii')).hexdigest()}
 
 ##########################################################
@@ -25,7 +26,7 @@ user_type_hashed = {'customer': hs.md5('customer'.encode('ascii')).hexdigest(), 
 ##########################################################
 
 def db_connection():
-    f=open("pb_w.txt")
+    f=open("pb_w.txt", "r")
     db = psycopg2.connect(
         user='ProjetoBD',
         password=f.readline(),
@@ -61,13 +62,14 @@ def add_user():
     #ler token inserido em Header Postman (authorization->Bearer Token)
     global token
     header=flask.request.headers
-    if 'Authorization' not in header:
-        response = {'status': StatusCodes['api_error'], 'errors': 'Missing auth token'}
-        return flask.jsonify(response)
-    else:
-        token=(header['Authorization'].split(" ")[1])
+    if 'type' not in payload:
+        if 'Authorization' not in header:
+            response = {'status': StatusCodes['api_error'], 'errors': 'Missing auth token'}
+            return flask.jsonify(response)
+        else:
+            token=(header['Authorization'].split(" ")[1])
 
-    decode_token = jwt.decode(token,jwt_key,'HS256')
+        decode_token = jwt.decode(token,jwt_key,'HS256')
     
     if 'type' in payload:
         #é para introduzir vendedor ou admin, e isto só os admins podem fazer
@@ -703,7 +705,6 @@ def subscribe_campaign(campaign_id):
         result=cur.fetchone()
         conn.commit()
 
-        result=result[0]
 
         if 'error' in result[0]:
              response = {'status': StatusCodes['api_error'], 'errors': result[0]['error']}
