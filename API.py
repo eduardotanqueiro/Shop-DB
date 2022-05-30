@@ -62,7 +62,10 @@ def add_user():
     #ler token inserido em Header Postman (authorization->Bearer Token)
     global token
     header=flask.request.headers
-    if 'type' not in payload:
+
+    if 'type' in payload:
+
+        #é para introduzir vendedor ou admin, e isto só os admins podem fazer
         if 'Authorization' not in header:
             response = {'status': StatusCodes['api_error'], 'errors': 'Missing auth token'}
             return flask.jsonify(response)
@@ -70,16 +73,13 @@ def add_user():
             token=(header['Authorization'].split(" ")[1])
 
         decode_token = jwt.decode(token,jwt_key,'HS256')
-    
-    if 'type' in payload:
-        #é para introduzir vendedor ou admin, e isto só os admins podem fazer
 
         #If user is not admin
         if decode_token['user_type'] == user_type_hashed['customer'] or decode_token['user_type'] == user_type_hashed['vendedor']:
             response = {'status': StatusCodes['api_error'], 'errors': 'You don\'t have permission to execute this task!'}
             return flask.jsonify(response)
         
-        if payload[ 'type'] == 'vendedor':
+        if payload['type'] == 'vendedor':
                 #verify arguments
                 if 'username' not in payload or 'mail' not in payload or 'password' not in payload or 'pais' not in payload or 'cidade' not in payload or 'rua' not in payload:
                     response = {'status': StatusCodes['api_error'], 'results': 'Missing value(s) in the payload'}

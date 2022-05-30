@@ -498,6 +498,8 @@ begin
         prod_return=prod_return::jsonb||json_build_object('comentarios',comentarios)::jsonb;
         return prod_return;
     end if;
+
+    raise EXCEPTION 'Produto não existe!';
 end;
 $$;
 

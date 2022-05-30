@@ -209,32 +209,3 @@ ALTER TABLE compra_cupao ADD CONSTRAINT compra_cupao_fk1 FOREIGN KEY (id_cupao) 
 ALTER TABLE compra_cupao ADD CONSTRAINT compra_cupao_fk2 FOREIGN KEY (id_compra) REFERENCES compra(id);
 ALTER TABLE customer_cupao ADD CONSTRAINT customer_cupao_fk1 FOREIGN KEY (customer_utilizador_id) REFERENCES customer(utilizador_id);
 ALTER TABLE customer_cupao ADD CONSTRAINT customer_cupao_fk2 FOREIGN KEY (id_cupao) REFERENCES cupao(id);
-
-
---GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO ProjetoBD;
-
-/*
-
-CREATE SEQUENCE utilizador_id;
-ALTER TABLE utilizador ALTER id SET DEFAULT NEXTVAL('utilizador_id');
-
-CREATE SEQUENCE compra_id;
-ALTER TABLE compra_notificacao_c ALTER id SET DEFAULT NEXTVAL('compra_id');
-
-CREATE SEQUENCE produto_id;
-ALTER TABLE produto ALTER id SET DEFAULT NEXTVAL('produto_id');
-
-CREATE SEQUENCE rating_id;
-ALTER TABLE rating ALTER id SET DEFAULT NEXTVAL('rating_id');
-
-CREATE SEQUENCE cupao_id;
-ALTER TABLE cupao ALTER id SET DEFAULT NEXTVAL('cupao_id');
-
-CREATE SEQUENCE campanha_id;
-ALTER TABLE campanha ALTER id SET DEFAULT NEXTVAL('campanha_id');
-
-CREATE SEQUENCE com_not_id;
-ALTER TABLE comentario_notificacao_com ALTER id SET DEFAULT NEXTVAL('com_not_id');
-
-GRANT USAGE, SELECT ON ALL SEQUENCES IN SCHEMA public TO ProjetoBD
-*/

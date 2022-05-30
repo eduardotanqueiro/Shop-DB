@@ -5837,3 +5837,276 @@ DEBUG:logger:Buying with coupon
 INFO:werkzeug:127.0.0.1 - - [20/May/2022 19:17:00] "[37mPOST /dbproj/order HTTP/1.1[0m" 200 -
 INFO:logger:API v1.0 online: http://127.0.0.1:8080
 INFO:logger:API v1.0 online: http://127.0.0.1:8080
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'joaouser', 'mail': 'joao@gmail.com', 'password': 'pwjoao', 'nome': 'joao', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joao'}
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 10:03:36] "[35m[1mPOST /dbproj/user HTTP/1.1[0m" 500 -
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'joaouser', 'mail': 'joao@gmail.com', 'password': 'pwjoao', 'nome': 'joao', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joao'}
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 10:04:24] "[35m[1mPOST /dbproj/user HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'joaouser', 'mail': 'joao@gmail.com', 'password': 'pwjoao', 'nome': 'joao', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joao'}
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 10:06:57] "[35m[1mPOST /dbproj/user HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'joaouser', 'mail': 'joao@gmail.com', 'password': 'pwjoao', 'nome': 'joao', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joao'}
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 10:07:49] "[35m[1mPOST /dbproj/user HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'joaouser', 'mail': 'joao@gmail.com', 'password': 'pwjoao', 'nome': 'joao', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joao'}
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 10:55:27] "[35m[1mPOST /dbproj/user HTTP/1.1[0m" 500 -
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'joaouser', 'mail': 'joao@gmail.com', 'password': 'pwjoao', 'nome': 'joao', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joao'}
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:01:38] "POST /dbproj/user HTTP/1.1" 200 -
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'joaouser', 'mail': 'joao@gmail.com', 'password': 'pwjoao', 'nome': 'joao', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joao'}
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:01:44] "POST /dbproj/user HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\Admin\\Documents\\Universidade\\2º Ano\\2semestre\\BD\\Trabalho Prático\\Code\\Shop-DB\\API.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'joaouser', 'mail': 'joao@gmail.com', 'password': 'pwjoao', 'nome': 'joao', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joao'}
+INFO:logger:New user inserted
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:05:50] "POST /dbproj/user HTTP/1.1" 200 -
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'tomasvendedor', 'mail': 'tomas_vendedor@gmail.com', 'password': 'pwtomas', 'nome': 'tomas', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua tomas', 'type': 'vendedor'}
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:08:03] "[35m[1mPOST /dbproj/user HTTP/1.1[0m" 500 -
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'tomasvendedor', 'mail': 'tomas_vendedor@gmail.com', 'password': 'pwtomas', 'nome': 'tomas', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua tomas', 'type': 'vendedor'}
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:08:18] "POST /dbproj/user HTTP/1.1" 200 -
+INFO:logger:User Login
+DEBUG:logger:User login attempt
+INFO:logger:User found, creating JWT
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:09:40] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:User Login
+DEBUG:logger:User login attempt
+INFO:logger:User found, creating JWT
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:23:50] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'tomasvendedor', 'mail': 'tomas_vendedor@gmail.com', 'password': 'pwtomas', 'nome': 'tomas', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua tomas', 'type': 'vendedor'}
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:24:14] "POST /dbproj/user HTTP/1.1" 200 -
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'tomasvendedor', 'mail': 'tomas_vendedor@gmail.com', 'password': 'pwtomas', 'nome': 'tomas', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua tomas', 'type': 'vendedor'}
+INFO:logger:New user inserted
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:24:24] "POST /dbproj/user HTTP/1.1" 200 -
+INFO:logger:User Login
+DEBUG:logger:User login attempt
+ERROR:logger:Invalid user or password!
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:24:42] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:User Login
+DEBUG:logger:User login attempt
+INFO:logger:User found, creating JWT
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:24:51] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:User Login Product Insertion
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:25:14] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:logger:User Login Product Insertion
+DEBUG:logger:New product added
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:25:23] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:logger:User Login Campaign Insertion
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:25:42] "POST /dbproj/campaign HTTP/1.1" 200 -
+INFO:logger:User Login Campaign Insertion
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:25:50] "POST /dbproj/campaign HTTP/1.1" 200 -
+INFO:logger:User Login Campaign Insertion
+DEBUG:logger:New campaign added
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:25:55] "POST /dbproj/campaign HTTP/1.1" 200 -
+INFO:logger:User Login Campaign Subscribe
+DEBUG:logger:Subscribe campaign
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:26:08] "PUT /dbproj/subscribe/1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:26:22] "PUT /dbproj/product/1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:26:30] "PUT /dbproj/product/1 HTTP/1.1" 200 -
+ERROR:logger:GET /product/<product_id> - error: Id produto nao encontrado para este vendedor
+CONTEXT:  PL/pgSQL function update_product_id(integer,json,integer) line 12 at RAISE
+
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:26:38] "PUT /dbproj/product/1 HTTP/1.1" 200 -
+DEBUG:logger:GET /product/<product_id> - parse
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:26:57] "PUT /dbproj/product/0 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:27:17] "POST /dbproj/order HTTP/1.1" 200 -
+INFO:logger:Rating the product 0
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:28:32] "POST /dbproj/rating/0 HTTP/1.1" 200 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+ERROR:logger:GET /product/<product_id> - error: control reached end of function without RETURN
+CONTEXT:  PL/pgSQL function get_product_id(integer)
+
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:28:59] "GET /dbproj/product/1 HTTP/1.1" 200 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+ERROR:logger:GET /product/<product_id> - error: control reached end of function without RETURN
+CONTEXT:  PL/pgSQL function get_product_id(integer)
+
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:39:23] "GET /dbproj/product/1 HTTP/1.1" 200 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 0
+DEBUG:logger:GET /product/<product_id> - parse
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:39:29] "GET /dbproj/product/0 HTTP/1.1" 200 -
+INFO:logger:Get notification
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:40:27] "GET /dbproj/notification HTTP/1.1" 200 -
+INFO:logger:Get notification
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:40:31] "GET /dbproj/notification HTTP/1.1" 200 -
+INFO:logger:Get notification
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:40:36] "GET /dbproj/notification HTTP/1.1" 200 -
+INFO:logger:Get notification
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:40:41] "GET /dbproj/notification HTTP/1.1" 200 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+ERROR:logger:GET /product/<product_id> - error: control reached end of function without RETURN
+CONTEXT:  PL/pgSQL function get_product_id(integer)
+
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:40:55] "GET /dbproj/product/1 HTTP/1.1" 200 -
+INFO:logger:Make Comment
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:41:28] "[35m[1mPOST /dbproj/questions/1 HTTP/1.1[0m" 500 -
+INFO:logger:Make Comment
+ERROR:logger:Product does not exist!
+CONTEXT:  PL/pgSQL function make_comment(bigint,integer,integer,character varying) line 18 at RAISE
+
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:41:39] "POST /dbproj/questions/1 HTTP/1.1" 200 -
+INFO:logger:Make Comment
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:41:47] "POST /dbproj/questions/0 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:41:58] "[31m[1mGET /dbproj/questions/1/1 HTTP/1.1[0m" 405 -
+INFO:logger:Make Comment
+ERROR:logger:Product does not exist!
+CONTEXT:  PL/pgSQL function make_comment(bigint,integer,integer,character varying) line 18 at RAISE
+
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:42:19] "POST /dbproj/questions/1/1 HTTP/1.1" 200 -
+INFO:logger:Make Comment
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:42:25] "POST /dbproj/questions/0/1 HTTP/1.1" 200 -
+INFO:logger:Get notification
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:42:32] "GET /dbproj/notification HTTP/1.1" 200 -
+DEBUG:logger:GET /report/<year> - parse
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:43:13] "GET /dbproj/report/2022 HTTP/1.1" 200 -
+DEBUG:logger:GET /report/campaign - parse
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:43:20] "GET /dbproj/report/campaign HTTP/1.1" 200 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+ERROR:logger:GET /product/<product_id> - error: Produto não existe!
+CONTEXT:  PL/pgSQL function get_product_id(integer) line 130 at RAISE
+
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:45:05] "GET /dbproj/product/1 HTTP/1.1" 200 -
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'joaouser', 'mail': 'joao@gmail.com', 'password': 'pwjoao', 'nome': 'joao', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joao'}
+ERROR:logger:POST /customer - error: duplicate key value violates unique constraint "utilizador_username_key"
+DETAIL:  Key (username)=(joaouser) already exists.
+CONTEXT:  SQL statement "insert into utilizador(username,password,mail,nome) values (username,pw,mail,nome) returning id"
+PL/pgSQL function insert_customer(character varying,character varying,character varying,character varying,character varying,character varying,character varying) line 8 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:45:46] "POST /dbproj/user HTTP/1.1" 200 -
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'joouser', 'mail': 'joao@gmail.com', 'password': 'pwjoao', 'nome': 'joao', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joao'}
+ERROR:logger:POST /customer - error: duplicate key value violates unique constraint "utilizador_mail_key"
+DETAIL:  Key (mail)=(joao@gmail.com) already exists.
+CONTEXT:  SQL statement "insert into utilizador(username,password,mail,nome) values (username,pw,mail,nome) returning id"
+PL/pgSQL function insert_customer(character varying,character varying,character varying,character varying,character varying,character varying,character varying) line 8 at SQL statement
+
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:45:52] "POST /dbproj/user HTTP/1.1" 200 -
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'joouser', 'mail': 'joo@gmail.com', 'password': 'pwjoao', 'nome': 'joao', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joao'}
+INFO:logger:New user inserted
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:45:57] "POST /dbproj/user HTTP/1.1" 200 -
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 896-313-328
+INFO:werkzeug: * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'tomasuser', 'mail': 'tomas@gmail.com', 'password': 'pwtomas', 'nome': 'tomas', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua tomas'}
+INFO:logger:New user inserted
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:56:08] "POST /dbproj/user HTTP/1.1" 200 -
+INFO:logger:User Login
+DEBUG:logger:User login attempt
+INFO:logger:User found, creating JWT
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:56:41] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'tomasvendedor', 'mail': 'tomas_vendedor@gmail.com', 'password': 'pwtomas', 'nome': 'tomas', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua tomas', 'type': 'vendedor'}
+INFO:logger:New user inserted
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:56:55] "POST /dbproj/user HTTP/1.1" 200 -
+INFO:logger:POST /customer
+DEBUG:logger:POST /customer - payload: {'username': 'joaouser', 'mail': 'joao@gmail.com', 'password': 'pwtomas', 'nome': 'joao', 'pais': 'Portugal', 'cidade': 'Coimbra', 'rua': 'Rua Joao'}
+INFO:logger:New user inserted
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:57:34] "POST /dbproj/user HTTP/1.1" 200 -
+INFO:logger:User Login
+DEBUG:logger:User login attempt
+ERROR:logger:Invalid user or password!
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:57:43] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:User Login
+DEBUG:logger:User login attempt
+INFO:logger:User found, creating JWT
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:57:55] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:User Login
+DEBUG:logger:User login attempt
+INFO:logger:User found, creating JWT
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:58:16] "PUT /dbproj/user HTTP/1.1" 200 -
+INFO:logger:User Login Product Insertion
+DEBUG:logger:New product added
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:58:27] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:logger:User Login Product Insertion
+DEBUG:logger:New product added
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:58:32] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:logger:User Login Product Insertion
+DEBUG:logger:New product added
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:58:36] "POST /dbproj/product HTTP/1.1" 200 -
+INFO:logger:User Login Campaign Insertion
+DEBUG:logger:New campaign added
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:58:51] "POST /dbproj/campaign HTTP/1.1" 200 -
+INFO:logger:User Login Campaign Subscribe
+DEBUG:logger:Subscribe campaign
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:59:02] "PUT /dbproj/subscribe/1 HTTP/1.1" 200 -
+DEBUG:logger:GET /product/<product_id> - parse
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:59:13] "PUT /dbproj/product/0 HTTP/1.1" 200 -
+ERROR:logger:GET /product/<product_id> - error: Id produto nao encontrado para este vendedor
+CONTEXT:  PL/pgSQL function update_product_id(integer,json,integer) line 12 at RAISE
+
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:59:20] "PUT /dbproj/product/20 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 11:59:49] "POST /dbproj/order HTTP/1.1" 200 -
+DEBUG:logger:Buying with coupon
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 12:01:03] "POST /dbproj/order HTTP/1.1" 200 -
+INFO:logger:Rating the product 0
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 12:01:59] "POST /dbproj/rating/0 HTTP/1.1" 200 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 1
+DEBUG:logger:GET /product/<product_id> - parse
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 12:02:03] "GET /dbproj/product/1 HTTP/1.1" 200 -
+INFO:logger:GET /product/<product_id>
+DEBUG:logger:product_id: 0
+DEBUG:logger:GET /product/<product_id> - parse
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 12:02:09] "GET /dbproj/product/0 HTTP/1.1" 200 -
+INFO:logger:Make Comment
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 12:02:32] "POST /dbproj/questions/0 HTTP/1.1" 200 -
+INFO:logger:Make Comment
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 12:02:38] "POST /dbproj/questions/0/1 HTTP/1.1" 200 -
+DEBUG:logger:GET /report/<year> - parse
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 12:02:51] "GET /dbproj/report/2022 HTTP/1.1" 200 -
+DEBUG:logger:GET /report/campaign - parse
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 12:02:56] "GET /dbproj/report/campaign HTTP/1.1" 200 -
+DEBUG:logger:GET /report/campaign - parse
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 12:04:09] "GET /dbproj/report/campaign HTTP/1.1" 200 -
+INFO:logger:Get notification
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 12:04:19] "GET /dbproj/notification HTTP/1.1" 200 -
+DEBUG:logger:GET /report/campaign - parse
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 12:08:34] "GET /dbproj/report/campaign HTTP/1.1" 200 -
+DEBUG:logger:GET /report/<year> - parse
+INFO:werkzeug:127.0.0.1 - - [30/May/2022 12:08:36] "GET /dbproj/report/2022 HTTP/1.1" 200 -
